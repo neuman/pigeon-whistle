@@ -13,7 +13,7 @@
     "content_digest": "a0cf57e0649a56551c5debcb6bd0134c4730709b624e0ac92d05fb31a5bdedd5",
     "name": "pigeon-whistle",
     "records_digest": "a1e1f24ed70d12920bcdabdfbbeaf359c3572b2e21c1e5faebe76ec5915670c8",
-    "resolution_digest": "a970d397bfe2679010309950f3946dd239c1c42ae77c89934974b4848bb4e55d",
+    "resolution_digest": "583812d938ef7553935ff12fd0a517e970404d3026f54e9c21f5b29dea7a03fa",
     "revision": "v0.1",
     "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency",
     "views": {}
@@ -104,7 +104,7 @@
   ],
   "schema": 1,
   "sections": [],
-  "self": "7875bc3fe7ee99e4dde69c884564f5cb35b88d5610c63e1da4124e34723bdf58",
+  "self": "17dfbe42f505bd097c85ffde7c47e6a980c3d59ff7c7c38a8630e1d8003a3da5",
   "story": null,
   "verdict": {
     "headline": "v0.1 has no claims, so nothing is evaluated.",

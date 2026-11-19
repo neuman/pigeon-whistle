@@ -194,7 +194,7 @@
   "meta": {
     "name": "pigeon-whistle",
     "records_digest": "a1e1f24ed70d12920bcdabdfbbeaf359c3572b2e21c1e5faebe76ec5915670c8",
-    "resolution_digest": "a970d397bfe2679010309950f3946dd239c1c42ae77c89934974b4848bb4e55d"
+    "resolution_digest": "583812d938ef7553935ff12fd0a517e970404d3026f54e9c21f5b29dea7a03fa"
   },
   "nodes": [
     {
@@ -283,7 +283,7 @@
     }
   ],
   "schema": 2,
-  "self": "c0fdb83b408cce66aabd2bf008ddc3964007d39c38203516325ddd3f7685c955",
+  "self": "40fdae94b0ea3c42ec923b1098bedeaa7a0be39fcaf4ed4fdd5c51bb2fb1a303",
   "trace": {
     "amber": "none",
     "key": null,
