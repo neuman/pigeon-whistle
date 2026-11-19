@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+  The site's root: a redirect to the engineering page. HACKABLE, YOURS, NEVER
+  REGENERATED, like the two pages it points at.
+
+  The site has two pages, each in its own folder so that the addresses
+  /engineering/ and /marketing/ work on any static host (a flat
+  engineering.html is served at /engineering by some hosts and not by
+  `python -m http.server`). This file sends a reader at / to the engineering
+  page: the script first, so a link to `#claim=C1` keeps its fragment and its
+  query, then the refresh tag for a browser without JavaScript, then a sentence
+  with both links for a reader whose browser follows neither.
+
+  Opened from the disk (file:), a folder does not open its index.html: the
+  browser lists the folder. So the script names engineering/index.html in full
+  there, and the refresh tag and the two links name each page's index.html at
+  every address (a web server serves that form too). What slipped through
+  (review of SPEC 40): every target was `engineering/`, so a person who opened
+  this file from the disk got an empty folder listing, and never the page's
+  own help, "Serve the page through a web server".
+
+  The meta tag `nopekit-views` says this root is the redirect. `site build`
+  never writes this file, so a project whose root is still its front page from
+  before the two pages keeps it, gets engineering/ and marketing/ beside it,
+  and is told how to move to this redirect.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="nopekit-views" content="1">
+    <script>
+      var page = location.protocol === "file:" ? "engineering/index.html" : "engineering/";
+      location.replace(page + location.search + location.hash);
+    </script>
+    <meta http-equiv="refresh" content="0; url=engineering/index.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>nopekit project</title>
+    <link rel="stylesheet" href="page.css" />
+  </head>
+
+  <body>
+    <main class="redirect">
+      <p>This site has two pages. The engineering page shows each claim and its evidence. The marketing page tells the story of the design.</p>
+      <p><a href="engineering/index.html">Go to the engineering page</a>. <a href="marketing/index.html">Go to the marketing page</a>.</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+# `nopekit site vendor` writes three.js here. It is a third-party copy,
+# it is large, and the site loads the same version from a CDN without it —
+# so it is not ours to commit. Delete the vendor/ line (and only that line)
+# if you want an offline, self-contained archive of the project in git.
+vendor/
+
+# `site build` writes the build time and each result's age here. It changes on
+# every build, so git ignores it. The page works without it.
+data/build.json

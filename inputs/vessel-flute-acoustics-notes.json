@@ -1,0 +1,7 @@
+{
+  "path": "inputs/references/vessel-flute-acoustics-notes.md",
+  "kind": "reference",
+  "description": "Research notes with sources: Helmholtz vessel-flute model, end corrections, published validation instruments, voicing rules, error band",
+  "sha256": "a0aba38647cc7e3f6beacbb39222a3e5dd058ba33396f773d87bd392a8fd8e26",
+  "added": "2026-11-19T21:02:59Z"
+}

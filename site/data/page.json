@@ -1,0 +1,304 @@
+{
+  "claims": {},
+  "decisions": [],
+  "decisions_more": "",
+  "description": {
+    "notice": "",
+    "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency"
+  },
+  "generated": "nopekit site build wrote this file from the records, the results in .nopekit/verdicts/ and site/content/. It is not a source. Change those, then build again.",
+  "intro": null,
+  "losers": [],
+  "meta": {
+    "content_digest": "a0cf57e0649a56551c5debcb6bd0134c4730709b624e0ac92d05fb31a5bdedd5",
+    "name": "pigeon-whistle",
+    "records_digest": "a1e1f24ed70d12920bcdabdfbbeaf359c3572b2e21c1e5faebe76ec5915670c8",
+    "resolution_digest": "a970d397bfe2679010309950f3946dd239c1c42ae77c89934974b4848bb4e55d",
+    "revision": "v0.1",
+    "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency",
+    "views": {}
+  },
+  "next": {
+    "milestones": [],
+    "open": [],
+    "project": {
+      "description": "",
+      "id": null,
+      "missing": [],
+      "next": true,
+      "ready": false,
+      "sentence": "v0.1 has no claims, so nothing is evaluated. A project with no claims is not ready. Write claims/C1.json with a statement and an acceptance condition to start. No claim is checked on any built part.",
+      "steps": [],
+      "token": "not-ready",
+      "word": "not ready"
+    },
+    "prose": null,
+    "rebuild": []
+  },
+  "outline": 1,
+  "problems": [],
+  "representation": {
+    "alternates": [],
+    "controls": null,
+    "figure": null,
+    "kind": null,
+    "notice": "Add a model3d view to show the design here. An image view or a diagram view also works.",
+    "title": "",
+    "view": null
+  },
+  "requirements": [
+    {
+      "claims": [],
+      "errored": false,
+      "id": "R1",
+      "marks": [],
+      "statement": "It looks like a pigeon: a chubby, cute city pigeon",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "R2",
+      "marks": [],
+      "statement": "It sounds like a pigeon: the same frequency as a city/feral pigeon's coo, matched to the loudest part of the coo, about 340 Hz rising to about 470 Hz",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "R3",
+      "marks": [],
+      "statement": "It can be 3D printed on my FDM printer with a 0.4 mm nozzle in PLA or PETG; I can print high quality for smoother air chambers",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "R4",
+      "marks": [],
+      "statement": "Palm size, about 10-12 cm",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "R5",
+      "marks": [],
+      "statement": "One finger hole for the 'roo': rocking a finger over it gives the rolling coo-roo-coo",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "R6",
+      "marks": [],
+      "statement": "It is a toy, gift or desk piece: fun to blow and recognisably pigeon-ish; it does not have to fool a bird",
+      "token": "gap",
+      "word": "gap"
+    }
+  ],
+  "schema": 1,
+  "sections": [],
+  "self": "7875bc3fe7ee99e4dde69c884564f5cb35b88d5610c63e1da4124e34723bdf58",
+  "story": null,
+  "verdict": {
+    "headline": "v0.1 has no claims, so nothing is evaluated.",
+    "limits": "Checked does not mean true. Its evaluators have shown that they can fail. They have not shown that they are correct or sufficient. Nothing outside the 0 claims on this page is evaluated.",
+    "notice": "",
+    "notice_public": "",
+    "ready": false,
+    "sentence": "v0.1 has no claims, so nothing is evaluated. A project with no claims is not ready. Write claims/C1.json with a statement and an acceptance condition to start. No claim is checked on any built part.",
+    "stale": false,
+    "tally": [],
+    "token": "not-ready"
+  },
+  "words": {
+    "basis": {
+      "established": "An existing tool gives the answer.",
+      "model-only": "A model wrote the logic. It has no outside source.",
+      "sourced": "The logic follows a cited outside source.",
+      "undeclared": "The evaluator does not say where its answers come from."
+    },
+    "by": {
+      "automated": "An evaluator settles it.",
+      "closed_form": "A formula settles it.",
+      "datasheet": "A datasheet settles it.",
+      "human": "A person settles it.",
+      "measurement": "A measurement on a built part settles it.",
+      "none": "Nothing settles it. It is accepted for now.",
+      "solver": "A solver settles it."
+    },
+    "figure": {
+      "chart_empty": "This chart has no series. There is nothing to draw.",
+      "current": "This picture is from the result on this page.",
+      "drawn": "That other result: {outcome}, {value}.",
+      "drawn_bare": "That other result: {outcome}.",
+      "judged": "Value from {gate}",
+      "limit_label": "Limit {limit}",
+      "live": "This 3D view is on this computer only. The site keeps it after nopekit export runs this result again.",
+      "none": "No picture of this result is on the page.",
+      "older": "This picture is from another result. The result on this page has no picture yet.",
+      "other": "The pictures of {gate} come from its result {entry}. This page shows another result of {gate}.",
+      "others": "Other evaluators",
+      "pictures": "Pictures: {n}. Show them.",
+      "reason": "{gate}: {text}",
+      "reason_prerequisite": "{gate} did not run, because {root} did not pass first.",
+      "reason_prerequisite_named": "{gate} did not run, because {root} did not pass first ({claims}).",
+      "shown": "The pictures of {gate} come from its result {entry}. This page shows that result.",
+      "stale": "This picture is from the result on this page. That result is not current.",
+      "table": "The chart did not load. This table shows its numbers.",
+      "table_band": "{lo} to {hi}",
+      "table_more": "{n} more rows are not in this table.",
+      "tool_unchecked": "The tool that drew this picture is not the build that the pack locks.",
+      "turn": "Turn it in 3D",
+      "turn_failed": "The 3D view did not load.",
+      "unseen": "This picture is from the result on this page. Its evaluator reads inputs that nopekit cannot see, so only a check run can show that the result is current."
+    },
+    "headings": {
+      "asked": "What it must do",
+      "decisions": "The choices behind it",
+      "evidence": "See the evidence",
+      "floor": "Show the data",
+      "losers": "Other values and what lost to them",
+      "made_with": "Made with nopekit",
+      "map": "Grounding map",
+      "next": "Next steps",
+      "open": "Other open claims",
+      "project": "This revision",
+      "rebuild": "Parts to build again",
+      "story": "The story",
+      "technical": "Technical record",
+      "unsettled": "What is not settled",
+      "whole_decision": "Read the whole decision"
+    },
+    "kinds": {
+      "assumption": "Assumption",
+      "measurable": "Automated",
+      "physical": "Test on a built part"
+    },
+    "lanes": {
+      "boards": "Claims",
+      "requirements": "What was asked",
+      "stations": "Shared values",
+      "zones": "Choices"
+    },
+    "notices": {
+      "build_failed": "The last build failed. This page shows the build before it.",
+      "disagree": "The status and the evidence of this claim disagree. This is a defect in nopekit. Report it.",
+      "invalidated": "Some results are older than the design. Run nopekit check, then build the site again.",
+      "no_intro": "Add site/content/intro.md to describe the design.",
+      "no_story": "Add site/content/story.md to tell the story of the design.",
+      "prose_stale": "This text was written before the latest results. The data below shows the results now.",
+      "prose_unstamped": "This text has no stamp. It can be older than the results. The data below shows the results now.",
+      "reads_all": "This evaluator reads every value of the design.",
+      "stale_public": "Some results are older than the design.",
+      "unmatched": "No result on this page has this number.",
+      "unmatched_note": "A number with this mark is not in a result on this page.",
+      "unseen": "Some evaluators read inputs that nopekit cannot see. Their results are from the last check run, and this page cannot show that they are still current. Only the output of a check run can: nopekit check{tier_flag}.",
+      "unseen_public": "This page cannot show that some results are current."
+    },
+    "outcome": {
+      "errored": "errored",
+      "fail": "fail",
+      "not-counted": "does not count",
+      "outside-context": "outside its range",
+      "pass": "pass",
+      "skipped": "skipped",
+      "unqualified": "does not count",
+      "unrun": "did not run"
+    },
+    "ready": {
+      "not-ready": "not ready",
+      "ready": "ready"
+    },
+    "tokens": {
+      "assumed": {
+        "hint": "A person accepts this claim for now.",
+        "term": "Assumed",
+        "word": "assumed"
+      },
+      "checked": {
+        "hint": "Every evaluator showed that it can fail, and each one passed on the current design.",
+        "term": "Checked",
+        "word": "checked"
+      },
+      "errored": {
+        "hint": "An evaluator stopped with an error. A crash settles nothing.",
+        "term": "Skipped",
+        "word": "skipped"
+      },
+      "failing": {
+        "hint": "An evaluator or a test on a built part failed the current design.",
+        "term": "Failing",
+        "word": "failing"
+      },
+      "gap": {
+        "hint": "Nothing can settle this claim yet.",
+        "term": "Gap",
+        "word": "gap"
+      },
+      "open": {
+        "hint": "An evaluator can settle this claim. It did not run on the current design.",
+        "term": "Open",
+        "word": "open"
+      },
+      "pending_build": {
+        "hint": "Only a test on a built part can settle this claim.",
+        "term": "Pending build",
+        "word": "pending build"
+      },
+      "skipped": {
+        "hint": "An evaluator did not run. A tool or a value that it needs is missing, or an evaluator that it needs first did not pass.",
+        "term": "Skipped",
+        "word": "skipped"
+      },
+      "stale": {
+        "hint": "The design changed after the result, or nopekit cannot see if the result is current.",
+        "term": "Stale",
+        "word": "stale"
+      }
+    },
+    "trace": {
+      "amber_flips": "This pass changes to a fail if an assumption is wrong by 10%.",
+      "amber_group": "A pass of one of its claims changes to a fail if an assumption is wrong by 10%.",
+      "amber_holds": "This pass stays a pass if an assumption is wrong by 10%.",
+      "amber_item": "If {choice} changes by {step} ({assumption}), {evaluator} gives {value_text}.",
+      "amber_legend": "Amber: passes if the assumptions hold.",
+      "amber_not_current": "The assumption test for this pass is out of date.",
+      "amber_unclear": "The assumption test for this pass did not give an answer.",
+      "amber_untraced": "The assumptions under this pass are not tested yet.",
+      "caption": "Each line is one claim. It goes through the shared values that its evaluators read, in the order that the test found. It ends on its board.",
+      "fed_by": "Fed by",
+      "feeds_key": "A thin line shows which shared values a group of choices changes.",
+      "notice_traced": "At round {round}, the model was built again with each choice changed by 10%. A thin line joins a group of choices to each shared value that moved.",
+      "notice_traced_no_round": "The model was built again with each choice changed by 10%. A thin line joins a group of choices to each shared value that moved.",
+      "notice_untraced": "The links from the choices are not measured yet. Each line starts at the values that its evaluators read.",
+      "rides": "Rides",
+      "running": "The links from the choices are being measured now.",
+      "sets": "This assumption sets choices that change these shared values.",
+      "settles": "This test on a built part settles the assumptions at these shared values.",
+      "skipped": "The test did not change {n} choices: {names}. The map cannot show what they change.",
+      "skipped_one": "The test did not change the choice {names}. The map cannot show what it changes.",
+      "sources": {
+        "assumption": "Assumption",
+        "chosen": "Design choice",
+        "datasheet": "Datasheet",
+        "estimate": "Estimate",
+        "unrecorded": "No source recorded"
+      },
+      "unmoved": "The test did not see {n} shared values change: {names}. This does not show that no choice changes them.",
+      "unmoved_one": "The test did not see the shared value {names} change. This does not show that no choice changes it.",
+      "unseen_line": "The test did not see a change in the values that this claim reads.",
+      "upstream_rides": "Before them, from the test",
+      "upstream_stop": "The test puts this value before the values that this claim reads.",
+      "zone_idle": "No line uses these choices.",
+      "zone_unmeasured": "The test did not measure what these choices change.",
+      "zones_summary": "{n} choices in {z} groups. The bar shows where each number comes from."
+    }
+  }
+}

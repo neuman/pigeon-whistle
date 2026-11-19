@@ -1,0 +1,8 @@
+{
+  "path": "inputs/measurements/coo-sangli-blue-rock-pigeon.wav",
+  "kind": "measurement",
+  "description": "Blue rock pigeon song recorded May 2012 at Sangli, India; pulsed coos, 100 Hz hum",
+  "sha256": "3b80a0babedf6042a7911ec50833942d89ce5d3725c3eb5dd33d9b0c658fc7d5",
+  "added": "2026-11-19T21:02:58Z",
+  "licence": "CC BY-SA 4.0, Sharadapte, https://commons.wikimedia.org/wiki/File:Blue_rock_pigeon_song_recorded_in_May_2012_at_Sangli.wav"
+}

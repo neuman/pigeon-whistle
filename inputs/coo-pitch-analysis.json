@@ -1,0 +1,7 @@
+{
+  "path": "inputs/measurements/coo-pitch-analysis.md",
+  "kind": "measurement",
+  "description": "Independent pitch analysis of the three coo recordings: F0 and loudest-partial tracks per note, spread, and how thin the evidence is",
+  "sha256": "53d2a0fd3a0f641ff7f8397ef365d06b14b4eef8b940ac1bd9a6fb95a57455b1",
+  "added": "2026-11-19T21:02:59Z"
+}

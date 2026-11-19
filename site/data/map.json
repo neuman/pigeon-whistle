@@ -1,0 +1,301 @@
+{
+  "columns": {
+    "requirements": 0
+  },
+  "edges": {
+    "contradicts": {},
+    "needs": {
+      "evaluator:cad.assembly_connected": [
+        "evaluator:cad.is_volume"
+      ],
+      "evaluator:cad.clash": [
+        "evaluator:cad.is_volume"
+      ],
+      "evaluator:cad.wall_thickness": [
+        "evaluator:cad.watertight"
+      ],
+      "evaluator:fdm.bed_fit": [
+        "evaluator:fdm.process_model_valid"
+      ],
+      "evaluator:fdm.bridge_span": [
+        "evaluator:fdm.process_model_valid"
+      ],
+      "evaluator:fdm.layer_alignment": [
+        "evaluator:fdm.process_model_valid"
+      ],
+      "evaluator:fdm.min_wall": [
+        "evaluator:fdm.process_model_valid"
+      ],
+      "evaluator:fdm.overhang": [
+        "evaluator:fdm.process_model_valid"
+      ],
+      "evaluator:fdm.print_time_est": [
+        "evaluator:fdm.process_model_valid"
+      ]
+    },
+    "reads": {},
+    "resolves": {},
+    "rests_on": {},
+    "serves": {},
+    "settles": {},
+    "sources": {}
+  },
+  "evaluators": {
+    "cad.assembly_connected": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "unqualified",
+      "outcome_word": "does not count",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 1
+    },
+    "cad.bounding": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 0
+    },
+    "cad.clash": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "unqualified",
+      "outcome_word": "does not count",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 1
+    },
+    "cad.degenerate_faces": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "unqualified",
+      "outcome_word": "does not count",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 1
+    },
+    "cad.is_volume": {
+      "basis": "established",
+      "claims": [],
+      "current": false,
+      "outcome": "unqualified",
+      "outcome_word": "does not count",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 1
+    },
+    "cad.wall_thickness": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "unqualified",
+      "outcome_word": "does not count",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 1
+    },
+    "cad.watertight": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "unqualified",
+      "outcome_word": "does not count",
+      "pack": "cad-solid",
+      "registered": true,
+      "tier": 1
+    },
+    "fdm.bed_fit": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 0
+    },
+    "fdm.bridge_span": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 1
+    },
+    "fdm.layer_alignment": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 0
+    },
+    "fdm.min_wall": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 0
+    },
+    "fdm.overhang": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 1
+    },
+    "fdm.print_time_est": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 0
+    },
+    "fdm.process_model_valid": {
+      "basis": "model-only",
+      "claims": [],
+      "current": false,
+      "outcome": "skipped",
+      "outcome_word": "skipped",
+      "pack": "fdm-print",
+      "registered": true,
+      "tier": 0
+    }
+  },
+  "feeds": [],
+  "generated": "nopekit site build wrote this file from the records, the results in .nopekit/verdicts/ and site/content/. It is not a source. Change those, then build again.",
+  "lanes": [
+    "requirements",
+    "boards"
+  ],
+  "layers": [],
+  "legend": [],
+  "lines": [],
+  "meta": {
+    "name": "pigeon-whistle",
+    "records_digest": "a1e1f24ed70d12920bcdabdfbbeaf359c3572b2e21c1e5faebe76ec5915670c8",
+    "resolution_digest": "a970d397bfe2679010309950f3946dd239c1c42ae77c89934974b4848bb4e55d"
+  },
+  "nodes": [
+    {
+      "claims": [],
+      "errored": false,
+      "id": "requirement:R1",
+      "key": "R1",
+      "kind": "requirement",
+      "lane": "requirements",
+      "marks": [],
+      "order": 0,
+      "rank": 0,
+      "title": "It looks like a pigeon: a chubby, cute city pigeon",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "requirement:R2",
+      "key": "R2",
+      "kind": "requirement",
+      "lane": "requirements",
+      "marks": [],
+      "order": 1,
+      "rank": 1,
+      "title": "It sounds like a pigeon: the same frequency as a city/feral pigeon's coo, matched to the loudest part of the coo, about 340 Hz rising to about 470 Hz",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "requirement:R3",
+      "key": "R3",
+      "kind": "requirement",
+      "lane": "requirements",
+      "marks": [],
+      "order": 2,
+      "rank": 2,
+      "title": "It can be 3D printed on my FDM printer with a 0.4 mm nozzle in PLA or PETG; I can print high quality for smoother air chambers",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "requirement:R4",
+      "key": "R4",
+      "kind": "requirement",
+      "lane": "requirements",
+      "marks": [],
+      "order": 3,
+      "rank": 3,
+      "title": "Palm size, about 10-12 cm",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "requirement:R5",
+      "key": "R5",
+      "kind": "requirement",
+      "lane": "requirements",
+      "marks": [],
+      "order": 4,
+      "rank": 4,
+      "title": "One finger hole for the 'roo': rocking a finger over it gives the rolling coo-roo-coo",
+      "token": "gap",
+      "word": "gap"
+    },
+    {
+      "claims": [],
+      "errored": false,
+      "id": "requirement:R6",
+      "key": "R6",
+      "kind": "requirement",
+      "lane": "requirements",
+      "marks": [],
+      "order": 5,
+      "rank": 5,
+      "title": "It is a toy, gift or desk piece: fun to blow and recognisably pigeon-ish; it does not have to fool a bird",
+      "token": "gap",
+      "word": "gap"
+    }
+  ],
+  "schema": 2,
+  "self": "c0fdb83b408cce66aabd2bf008ddc3964007d39c38203516325ddd3f7685c955",
+  "trace": {
+    "amber": "none",
+    "key": null,
+    "notice": "The links from the choices are not measured yet. Each line starts at the values that its evaluators read.",
+    "round": null,
+    "singles": 0,
+    "skipped": {},
+    "state": "untraced",
+    "text": "",
+    "ties": 0,
+    "unmoved": []
+  },
+  "unread": [],
+  "values": {}
+}

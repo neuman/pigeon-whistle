@@ -5,7 +5,10 @@
   "created": "2026-11-19T19:44:30Z",
   "revision": "v0.1",
   "model_entry": "",
-  "packs": [],
+  "packs": [
+    "fdm-print",
+    "cad-solid"
+  ],
   "spine_version": "0.1.0",
   "people": [
     {
