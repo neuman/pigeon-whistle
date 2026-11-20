@@ -66,6 +66,23 @@
         document.documentElement.dataset.three = vendored ? "vendor" : "cdn";
       })();
     </script>
+    <script>
+      // pigeon-whistle: the grounding map is ALWAYS the drawing, as on nopekitchen and
+      // PETGasusDrone. page.js swaps it for a card list under 760 px ("map-phone"), which
+      // drops the lines that join choices, implications and claims, the one thing the map
+      // is for. page.js is refreshed by `site build`, so the swap is turned off here, in
+      // the file the project owns: its phone query is answered "no". The map then scales
+      // to the screen and is dragged and pinched like the desk one. Remove this when
+      // nopekit fixes it (neuman/nopekit#23).
+      (function () {
+        var real = window.matchMedia && window.matchMedia.bind(window);
+        if (!real) return;
+        window.matchMedia = function (q) {
+          if (String(q).replace(/\s+/g, "") !== "(max-width:759px)") return real(q);
+          return { matches: false, media: q, addEventListener: function () {}, removeEventListener: function () {}, addListener: function () {}, removeListener: function () {} };
+        };
+      })();
+    </script>
   </head>
 
   <body>
