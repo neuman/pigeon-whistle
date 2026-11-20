@@ -1,0 +1,17 @@
+{
+  "path": "inputs/data/first-print-pitch-analysis.py",
+  "kind": "data",
+  "description": "Pitch track of the first print test (picture, data, script)",
+  "sha256": "f289ae0fb72766acf8b6de7db74658b7f6ce0924fefd3b42d519f7638bc890e2",
+  "added": "2026-11-20T21:44:26Z",
+  "extractions": [
+    {
+      "what": "Script that produced the pitch track and the stable segments from the video's audio",
+      "grounds": [
+        "C21",
+        "C22"
+      ]
+    }
+  ],
+  "licence": "the person's own recording; may be redistributed with this project"
+}

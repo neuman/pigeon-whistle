@@ -3255,7 +3255,7 @@
       {
         "runs": [
           {
-            "t": "Nothing is printed yet, and nothing is blown. Each pitch is a modelled passive resonance: the note at which the air in the chamber rings. The jet, the lips, the temperature and the printer are outside the model."
+            "t": "The person printed the first whistle from this file and played it on video (input first-print-test). It is one piece and it speaks. At a soft breath both notes sit close to the model, and a harder breath raises them well above it. The person has not recorded a result yet, so no claim has moved. Each pitch is a modelled passive resonance: the note at which the air in the chamber rings. The jet, the lips, the temperature and the printer are outside the model."
           }
         ],
         "type": "p"
@@ -3504,10 +3504,10 @@
     }
   ],
   "meta": {
-    "content_digest": "18628b541ad2a8dd2add32c94599ac2959b8d5edbbf39439d46de10bc6b943dc",
+    "content_digest": "987cbae67defcaf17c829b00aec744137d6486536420b47081138b30879c6243",
     "name": "pigeon-whistle",
-    "records_digest": "f62da91e09fbb319fd9717973d0f3a463298b80baa16863a8f900c8d97afc9fe",
-    "resolution_digest": "ad025c00805cc6b36b15fd488aa2990ec18b809254cc1220d21d521c5abef6a4",
+    "records_digest": "c5113f2f194f062ec6ecb4a60d7559a510e556fb80c600bfb0511b7c1e128c54",
+    "resolution_digest": "67c4542bd8f1470434a3d8c08629786b8cea52e75b69685483dc5b95690188da",
     "revision": "v0.1",
     "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency",
     "views": {
@@ -3711,7 +3711,7 @@
         {
           "runs": [
             {
-              "t": "The next steps belong to the person, in this order. Nothing is printed yet, and nothing is blown."
+              "t": "The next steps belong to the person, in this order. The first whistle is printed and played on video (input first-print-test). Its results wait for the person to record them."
             }
           ],
           "type": "p"
@@ -3719,7 +3719,7 @@
         {
           "runs": [
             {
-              "t": "Wait for the next candidate before you print"
+              "t": "What the review found"
             }
           ],
           "type": "h3"
@@ -3727,7 +3727,7 @@
         {
           "runs": [
             {
-              "t": "An adversarial review read this candidate after it was built. It found no reason for the print to fail. It did find changes that are worth making before a long print:"
+              "t": "An adversarial review read this candidate after it was built. It found no reason for the print to fail, and the print did not fail. It found these changes for the next candidate:"
             }
           ],
           "type": "p"
@@ -3741,7 +3741,7 @@
             ],
             [
               {
-                "t": "The pitch. The walls of the chamber take a little energy from the note, and the model leaves that out. The first print is then more likely flat than sharp."
+                "t": "The pitch. The review expected the first print to play flat, because the walls of the chamber take a little energy from the note. The test video shows the other side: at a normal breath it plays sharp, because the jet pushes the note up."
               }
             ],
             [
@@ -3767,7 +3767,7 @@
         {
           "runs": [
             {
-              "t": "These changes are in work for the next candidate. Look at this candidate, and say what you think of the shape and of the two notes."
+              "t": "These changes are in work for the next candidate. Record the results of the first print first, as the last section says."
             }
           ],
           "type": "p"
@@ -5120,7 +5120,21 @@
           {
             "runs": [
               {
-                "t": "Nothing is printed yet, and nothing is blown. No evaluator settles a played note."
+                "t": "The person printed the first whistle and played it on video (input first-print-test). At a soft breath both notes sit close to the model. A harder breath raises them well above it, because the jet pushes the note up and the model leaves the jet out. No evaluator settles a played note: the person records "
+              },
+              {
+                "claim": "C21",
+                "t": "C21"
+              },
+              {
+                "t": " and "
+              },
+              {
+                "claim": "C22",
+                "t": "C22"
+              },
+              {
+                "t": "."
               }
             ],
             "type": "p"
@@ -5938,7 +5952,7 @@
           {
             "runs": [
               {
-                "t": "Nothing is sliced, and nothing is printed. The evaluators judge the geometry of the file. Some faults show only on a built part ("
+                "t": "The person printed the file in one piece, and it speaks (input first-print-test). No print result is recorded yet. The evaluators judge the geometry of the file. Some faults show only on a built part ("
               },
               {
                 "claim": "C24",
@@ -6339,7 +6353,7 @@
       "word": "gap"
     }
   ],
-  "self": "17270df6ff990b042300cb8668dab22428ef1f887b2128e9ab279dd65e19f020",
+  "self": "36c71c2a9ace12371eb74a6726b4ee31ad0e5ee484b954ac96b7644412b126ac",
   "story": {
     "as_of": "ee075d6919967a95",
     "blocks": [
@@ -6481,7 +6495,7 @@
       {
         "runs": [
           {
-            "t": "Nothing is printed yet, and nothing is blown. Each pitch is a modelled passive resonance of the air in the chamber. A first print can miss by about "
+            "t": "The person printed the first whistle from this file and played it on video (input first-print-test). It is one piece and it speaks. At a soft breath both notes sit close to the model, and a harder breath raises them well above it. The person has not recorded a result yet, so no claim has moved. Each pitch is a modelled passive resonance of the air in the chamber. A first print can miss by about "
           },
           {
             "match": true,

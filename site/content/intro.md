@@ -20,7 +20,7 @@ Each evaluator passes a known-good case and fails a known-bad case before its ve
 
 ## What is not checked
 
-Nothing is printed yet, and nothing is blown. Each pitch is a modelled passive resonance: the note at which the air in the chamber rings. The jet, the lips, the temperature and the printer are outside the model.
+The person printed the first whistle from this file and played it on video (input first-print-test). It is one piece and it speaks. At a soft breath both notes sit close to the model, and a harder breath raises them well above it. The person has not recorded a result yet, so no claim has moved. Each pitch is a modelled passive resonance: the note at which the air in the chamber rings. The jet, the lips, the temperature and the printer are outside the model.
 
 A first print can miss a target by about 10 %. The vent trim recovers about 5 % each way (C4).
 

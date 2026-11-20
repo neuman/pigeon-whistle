@@ -21,6 +21,6 @@ Three recordings of real pigeons stand behind the two numbers. An independent re
 
 ## Where the design is now
 
-Nothing is printed yet, and nothing is blown. Each pitch is a modelled passive resonance of the air in the chamber. A first print can miss by about 10 %, and the vent recovers about 5 % each way.
+The person printed the first whistle from this file and played it on video (input first-print-test). It is one piece and it speaks. At a soft breath both notes sit close to the model, and a harder breath raises them well above it. The person has not recorded a result yet, so no claim has moved. Each pitch is a modelled passive resonance of the air in the chamber. A first print can miss by about 10 %, and the vent recovers about 5 % each way.
 
 The design is not ready: 12 of 32 required claims are unresolved. 7 are gaps that only the person can close, and 5 wait for a built part. 20 of 32 claims are checked against the current inputs. No claim is checked on a built part. The 20 claims that the first print requires are all checked.

@@ -5,7 +5,7 @@ With the one finger hole closed it is designed to sound 340 Hz, and with the hol
 loudest part of a feral pigeon's coo, as the owner of this project chose it. It prints belly-down in
 one piece, with supports off.
 
-**State: nothing has been printed or blown yet.** Both pitches are modelled passive resonances of the
+**State: the first whistle is printed and played** (video and pitch analysis in `inputs/measurements/first-print-test*`). At a soft breath both notes sit close to the model; a harder breath plays sharp. No physical result is recorded yet. Both pitches are modelled passive resonances of the
 air in the chamber. A first print can miss by about 10 %; the tuning vent on the rump recovers about
 5 % each way. The low note of 340 Hz is the owner's choice; an independent re-measurement of the
 recordings reads the coo's low note nearer 380 Hz. `nopekit status` says what is checked and what is

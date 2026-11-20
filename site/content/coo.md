@@ -37,7 +37,7 @@ The window opens straight into the chamber. The chamber section beside the jet i
 
 ## What this board does not show
 
-Nothing is printed yet, and nothing is blown. No evaluator settles a played note.
+The person printed the first whistle and played it on video (input first-print-test). At a soft breath both notes sit close to the model. A harder breath raises them well above it, because the jet pushes the note up and the model leaves the jet out. No evaluator settles a played note: the person records C21 and C22.
 
 - A printed whistle must sound between 313 and 367 Hz with the hole closed, after the trim (C21).
 - It must sound between 432 and 508 Hz with the hole open (C22).

@@ -922,6 +922,9 @@
         "value:windway_gap_comp_mm",
         "value:windway_gap_exit_mm"
       ],
+      "input:first-print-test-analysis": [
+        "value:blow_pressure_pa"
+      ],
       "input:vessel-flute-acoustics-notes": [
         "value:blow_pressure_pa",
         "value:c_air_m_s",
@@ -4398,8 +4401,8 @@
   ],
   "meta": {
     "name": "pigeon-whistle",
-    "records_digest": "f62da91e09fbb319fd9717973d0f3a463298b80baa16863a8f900c8d97afc9fe",
-    "resolution_digest": "ad025c00805cc6b36b15fd488aa2990ec18b809254cc1220d21d521c5abef6a4"
+    "records_digest": "c5113f2f194f062ec6ecb4a60d7559a510e556fb80c600bfb0511b7c1e128c54",
+    "resolution_digest": "67c4542bd8f1470434a3d8c08629786b8cea52e75b69685483dc5b95690188da"
   },
   "nodes": [
     {
@@ -6866,7 +6869,7 @@
     }
   ],
   "schema": 2,
-  "self": "43ada952814b17b2f63e0ad83c0438a62bd7f12a6c17066fae30034db60dd34d",
+  "self": "67c698695032cb9921fbf229ee4f85782976364291e64f3a0bf60d580818cc03",
   "trace": {
     "amber": "current",
     "key": "68012afe3d21",

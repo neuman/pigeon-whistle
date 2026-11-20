@@ -1,0 +1,18 @@
+{
+  "path": "inputs/data/first-print-pitch-track.png",
+  "kind": "data",
+  "description": "Pitch track of the first print test (picture, data, script)",
+  "sha256": "150f9508727ffe972e03cd881a364e00c189313b2604c20d4ba3bdc401512a26",
+  "added": "2026-11-20T21:44:26Z",
+  "extractions": [
+    {
+      "what": "Picture of the played pitch against the C21 and C22 bands and the model lines",
+      "grounds": [
+        "C21",
+        "C22"
+      ],
+      "confidence": "measured"
+    }
+  ],
+  "licence": "the person's own recording; may be redistributed with this project"
+}

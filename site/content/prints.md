@@ -28,6 +28,6 @@ A wall this thick can print airtight. Only a built part shows that it does.
 
 ## What this board does not show
 
-Nothing is sliced, and nothing is printed. The evaluators judge the geometry of the file. Some faults show only on a built part (C24): strings, sag in the two bridges, a seam on the labium, a closed windway and a leak in a wall.
+The person printed the file in one piece, and it speaks (input first-print-test). No print result is recorded yet. The evaluators judge the geometry of the file. Some faults show only on a built part (C24): strings, sag in the two bridges, a seam on the labium, a closed windway and a leak in a wall.
 
 Two assumptions stand under this board, and the person has not recorded them. The bird prints in one piece with no supports in the airway (C28). The printer bed is 180 mm or more each way (C32). The bird is 117.8 mm long and 67.7 mm wide.

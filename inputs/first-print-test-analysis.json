@@ -1,0 +1,28 @@
+{
+  "path": "inputs/measurements/first-print-test-analysis.md",
+  "kind": "measurement",
+  "description": "Pitch analysis of the first print test video: played notes against the model and against C21, C22",
+  "sha256": "3eae20e1b67718668dbf5424d1a960183542a2c0f41703ed19c60e5e0da796d2",
+  "added": "2026-11-20T21:44:26Z",
+  "extractions": [
+    {
+      "what": "At a soft breath both played notes sit within about 15 cents of the modelled passive resonances (340.1 and 469.8 Hz); a harder breath raises them by up to about 120 cents (open) and 200 cents (closed), an effect of the jet the model leaves out",
+      "grounds": [
+        "C1",
+        "C2",
+        "C31",
+        "blow_pressure_pa"
+      ],
+      "confidence": "measured"
+    },
+    {
+      "what": "Played interval at one breath strength about 600 cents (503 / 356 Hz), against 560 cents in the model",
+      "grounds": [
+        "C2",
+        "C25"
+      ],
+      "confidence": "measured"
+    }
+  ],
+  "licence": "the person's own recording; may be redistributed with this project"
+}

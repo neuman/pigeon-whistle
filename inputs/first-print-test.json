@@ -1,0 +1,46 @@
+{
+  "path": "inputs/measurements/first-print-test.mp4",
+  "kind": "measurement",
+  "description": "Phone video of the first printed whistle (v0.1 print file, article 0efcea4610ab) shown in one piece and played: closed and open notes, finger moves between them",
+  "sha256": "56c131ca842356c1e208671e00294fd0c52a44e1fdf11f5ab78d59562f6d51b6",
+  "added": "2026-11-20T21:44:26Z",
+  "extractions": [
+    {
+      "what": "The first print (v0.1 file) is one piece and speaks: a clear tone from 7.6 s to 14.7 s, 524 playing frames, none without a clear tone",
+      "grounds": [
+        "C24"
+      ],
+      "confidence": "measured"
+    },
+    {
+      "what": "Closed note as played, untrimmed vent: 342.8 Hz at the softest stable breath, 355.9 Hz middle, 380.5 Hz loudest (C21 band 313 to 367 Hz)",
+      "grounds": [
+        "C21",
+        "C1"
+      ],
+      "confidence": "measured"
+    },
+    {
+      "what": "Open note as played: stable segments 497.6 to 512.6 Hz, median 503.1 Hz, falling to about 472 Hz near -20 dBFS as the breath fades (C22 band 432 to 508 Hz)",
+      "grounds": [
+        "C22",
+        "C2"
+      ],
+      "confidence": "measured"
+    },
+    {
+      "what": "The note moves between the closed and open pitches through 400 to 410 Hz with no break in the tone",
+      "grounds": [
+        "C25"
+      ],
+      "confidence": "measured"
+    },
+    {
+      "what": "Loudness is not readable from this video: uncalibrated phone level (dBFS), unknown distance, possible automatic gain",
+      "grounds": [
+        "C26"
+      ]
+    }
+  ],
+  "licence": "the person's own recording; may be redistributed with this project"
+}

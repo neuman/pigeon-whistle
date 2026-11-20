@@ -2920,6 +2920,180 @@
       "url": ""
     },
     {
+      "added": "2026-11-20T21:44:26Z",
+      "basis": "",
+      "bytes": 3146,
+      "description": "Pitch track of the first print test (picture, data, script)",
+      "extracted": true,
+      "extractions": [
+        {
+          "confidence": "stated",
+          "grounds": [
+            "C21",
+            "C22"
+          ],
+          "note": "",
+          "what": "Script that produced the pitch track and the stable segments from the video's audio"
+        }
+      ],
+      "id": "first-print-pitch-analysis",
+      "kind": "data",
+      "licence": "the person's own recording; may be redistributed with this project",
+      "note": "",
+      "path": "inputs/data/first-print-pitch-analysis.py",
+      "proposer": "",
+      "sha256": "f289ae0fb72766acf8b6de7db74658b7f6ce0924fefd3b42d519f7638bc890e2",
+      "url": ""
+    },
+    {
+      "added": "2026-11-20T21:44:26Z",
+      "basis": "",
+      "bytes": 86475,
+      "description": "Pitch track of the first print test (picture, data, script)",
+      "extracted": true,
+      "extractions": [
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C21",
+            "C22"
+          ],
+          "note": "",
+          "what": "Picture of the played pitch against the C21 and C22 bands and the model lines"
+        }
+      ],
+      "id": "first-print-pitch-track",
+      "kind": "data",
+      "licence": "the person's own recording; may be redistributed with this project",
+      "note": "",
+      "path": "inputs/data/first-print-pitch-track.png",
+      "proposer": "",
+      "sha256": "150f9508727ffe972e03cd881a364e00c189313b2604c20d4ba3bdc401512a26",
+      "url": ""
+    },
+    {
+      "added": "2026-11-20T21:44:26Z",
+      "basis": "",
+      "bytes": 34994,
+      "description": "Pitch track of the first print test (picture, data, script)",
+      "extracted": true,
+      "extractions": [
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C21",
+            "C22"
+          ],
+          "note": "",
+          "what": "Full pitch track, 10 ms frames: time, loudest peak 250 to 700 Hz, level in dBFS"
+        }
+      ],
+      "id": "first-print-pitch-track-2",
+      "kind": "data",
+      "licence": "the person's own recording; may be redistributed with this project",
+      "note": "",
+      "path": "inputs/data/first-print-pitch-track.csv",
+      "proposer": "",
+      "sha256": "e84d00cbbe9f1b1450bde5e5617bc0cf0795e07811739573b030ce21bbc3ec9b",
+      "url": ""
+    },
+    {
+      "added": "2026-11-20T21:44:26Z",
+      "basis": "",
+      "bytes": 20340706,
+      "description": "Phone video of the first printed whistle (v0.1 print file, article 0efcea4610ab) shown in one piece and played: closed and open notes, finger moves between them",
+      "extracted": true,
+      "extractions": [
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C24"
+          ],
+          "note": "",
+          "what": "The first print (v0.1 file) is one piece and speaks: a clear tone from 7.6 s to 14.7 s, 524 playing frames, none without a clear tone"
+        },
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C21",
+            "C1"
+          ],
+          "note": "",
+          "what": "Closed note as played, untrimmed vent: 342.8 Hz at the softest stable breath, 355.9 Hz middle, 380.5 Hz loudest (C21 band 313 to 367 Hz)"
+        },
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C22",
+            "C2"
+          ],
+          "note": "",
+          "what": "Open note as played: stable segments 497.6 to 512.6 Hz, median 503.1 Hz, falling to about 472 Hz near -20 dBFS as the breath fades (C22 band 432 to 508 Hz)"
+        },
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C25"
+          ],
+          "note": "",
+          "what": "The note moves between the closed and open pitches through 400 to 410 Hz with no break in the tone"
+        },
+        {
+          "confidence": "stated",
+          "grounds": [
+            "C26"
+          ],
+          "note": "",
+          "what": "Loudness is not readable from this video: uncalibrated phone level (dBFS), unknown distance, possible automatic gain"
+        }
+      ],
+      "id": "first-print-test",
+      "kind": "measurement",
+      "licence": "the person's own recording; may be redistributed with this project",
+      "note": "",
+      "path": "inputs/measurements/first-print-test.mp4",
+      "proposer": "",
+      "sha256": "56c131ca842356c1e208671e00294fd0c52a44e1fdf11f5ab78d59562f6d51b6",
+      "url": ""
+    },
+    {
+      "added": "2026-11-20T21:44:26Z",
+      "basis": "",
+      "bytes": 3727,
+      "description": "Pitch analysis of the first print test video: played notes against the model and against C21, C22",
+      "extracted": true,
+      "extractions": [
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C1",
+            "C2",
+            "C31",
+            "blow_pressure_pa"
+          ],
+          "note": "",
+          "what": "At a soft breath both played notes sit within about 15 cents of the modelled passive resonances (340.1 and 469.8 Hz); a harder breath raises them by up to about 120 cents (open) and 200 cents (closed), an effect of the jet the model leaves out"
+        },
+        {
+          "confidence": "measured",
+          "grounds": [
+            "C2",
+            "C25"
+          ],
+          "note": "",
+          "what": "Played interval at one breath strength about 600 cents (503 / 356 Hz), against 560 cents in the model"
+        }
+      ],
+      "id": "first-print-test-analysis",
+      "kind": "measurement",
+      "licence": "the person's own recording; may be redistributed with this project",
+      "note": "",
+      "path": "inputs/measurements/first-print-test-analysis.md",
+      "proposer": "",
+      "sha256": "3eae20e1b67718668dbf5424d1a960183542a2c0f41703ed19c60e5e0da796d2",
+      "url": ""
+    },
+    {
       "added": "2026-11-19T21:02:59Z",
       "basis": "",
       "bytes": 41963,
@@ -3062,8 +3236,8 @@
       "fdm-print",
       "cad-solid"
     ],
-    "records_digest": "f62da91e09fbb319fd9717973d0f3a463298b80baa16863a8f900c8d97afc9fe",
-    "resolution_digest": "ad025c00805cc6b36b15fd488aa2990ec18b809254cc1220d21d521c5abef6a4",
+    "records_digest": "c5113f2f194f062ec6ecb4a60d7559a510e556fb80c600bfb0511b7c1e128c54",
+    "resolution_digest": "67c4542bd8f1470434a3d8c08629786b8cea52e75b69685483dc5b95690188da",
     "revision": "v0.1",
     "spine_version": "0.1.0",
     "stale": false,
@@ -5629,6 +5803,7 @@
       "source": "",
       "sourced_from": [
         "claim:C31",
+        "input:first-print-test-analysis",
         "input:vessel-flute-acoustics-notes"
       ],
       "tags": [],

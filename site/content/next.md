@@ -2,18 +2,18 @@
 as_of: 433fa2140dffcd62
 ---
 
-The next steps belong to the person, in this order. Nothing is printed yet, and nothing is blown.
+The next steps belong to the person, in this order. The first whistle is printed and played on video (input first-print-test). Its results wait for the person to record them.
 
-## Wait for the next candidate before you print
+## What the review found
 
-An adversarial review read this candidate after it was built. It found no reason for the print to fail. It did find changes that are worth making before a long print:
+An adversarial review read this candidate after it was built. It found no reason for the print to fail, and the print did not fail. It found these changes for the next candidate:
 
 - The look. The eyes, the feet and the wings can read more as a pigeon, and the side view is weak.
-- The pitch. The walls of the chamber take a little energy from the note, and the model leaves that out. The first print is then more likely flat than sharp.
+- The pitch. The review expected the first print to play flat, because the walls of the chamber take a little energy from the note. The test video shows the other side: at a normal breath it plays sharp, because the jet pushes the note up.
 - The print file. No evaluator reads the windway gap or the labium from the file itself, and the file name does not change when some construction constants change.
 - The print package. `PRINT.md` does not give the top and bottom layers, the seam or the care of the bird. No small test print comes before the long one.
 
-These changes are in work for the next candidate. Look at this candidate, and say what you think of the shape and of the two notes.
+These changes are in work for the next candidate. Record the results of the first print first, as the last section says.
 
 ## Record what only you can record
 

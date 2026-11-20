@@ -1,0 +1,18 @@
+{
+  "path": "inputs/data/first-print-pitch-track.csv",
+  "kind": "data",
+  "description": "Pitch track of the first print test (picture, data, script)",
+  "sha256": "e84d00cbbe9f1b1450bde5e5617bc0cf0795e07811739573b030ce21bbc3ec9b",
+  "added": "2026-11-20T21:44:26Z",
+  "extractions": [
+    {
+      "what": "Full pitch track, 10 ms frames: time, loudest peak 250 to 700 Hz, level in dBFS",
+      "grounds": [
+        "C21",
+        "C22"
+      ],
+      "confidence": "measured"
+    }
+  ],
+  "licence": "the person's own recording; may be redistributed with this project"
+}
