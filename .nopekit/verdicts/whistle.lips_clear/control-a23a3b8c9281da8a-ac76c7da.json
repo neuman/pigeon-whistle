@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.lips_clear",
+  "rho": "a23a3b8c9281da8a468edb36ab94f2a1f434c55d40be26dde66d88a7352dd573",
+  "static": "767d00bc18e17ec9f93ea6d5cbac6f4f7446c4b7ef925ab8a34da83107f90c22",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "e20fba082ba00682713a5b8e615e12ceb151ce404a3193016be5781fc0b23f7e",
+      "files": [
+        "gates/form.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:lips_on_window",
+      "expect": "fail",
+      "note": "the lip stop at x = 22.6 mm: the lips stop 7.4 mm from the window, the distance at which the character judge found the mouth corner on it",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "lip_stop_x_mm"
+        ],
+        "9894faef49d96ccd4154f1da7aa08d2c4c468dbfca495dbee20dd05039219518",
+        22.6
+      ],
+      [
+        [
+          "lip_to_window_mm"
+        ],
+        "15ffd7e32bff1d229d3487b90b253e8653bb78fba3cbbf06f66c53523f06d3e7",
+        7.4
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C10": "8571bd3fc52b01724f70adde97c41189c6044e370eadd4ec65570a17aac04be2",
+      "acceptance:C10": "37c15690a5fc9d189514fabdb6c4c4d140d2793f24ebf309455257f6db97e98f"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "lip_stop_x_mm"
+          ],
+          "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+          15.0
+        ],
+        [
+          [
+            "lip_to_window_mm"
+          ],
+          "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+          15.0
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C10": "8571bd3fc52b01724f70adde97c41189c6044e370eadd4ec65570a17aac04be2",
+        "acceptance:C10": "37c15690a5fc9d189514fabdb6c4c4d140d2793f24ebf309455257f6db97e98f"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 15.0,
+    "limit": 12.0,
+    "units": "mm",
+    "detail": "lip stop at x = 15 mm, window from x = 30 mm: 15.0 mm between them (limit 12.0 mm)",
+    "goalpost": [
+      {
+        "key": "C10",
+        "measured": 15.0,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 1.2000000000000002,
+            "outcome": "pass",
+            "measured": 15.0,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 6.0,
+            "outcome": "pass",
+            "measured": 15.0,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 24.0,
+            "outcome": "fail",
+            "measured": 15.0,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 120.0,
+            "outcome": "fail",
+            "measured": 15.0,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 39,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "lip_to_window_mm"
+        ],
+        "before": 15.0,
+        "after": 10.2,
+        "outcome": "fail",
+        "measured": 10.2,
+        "limit": 12.0
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "lip_stop_x_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:lips_on_window (the lip stop at x = 22.6 mm: the lips stop 7.4 mm from the window, the distance at which the character judge found the mouth corner on it): lip stop at x = 22.6 mm, window from x = 30 mm: 7.4 mm between them (limit 12.0 mm)",
+  "measured": 7.4,
+  "limit": 12.0,
+  "units": "mm",
+  "digest": "17873866a536fc2e972e383e960fd4f52bc6a1d7a1d2538992b41dbda82252b9"
+}

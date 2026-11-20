@@ -386,7 +386,7 @@ def airway(ctx: ViewContext) -> View | None:
         _row("cutup", "window: cut-up (windway exit to labium edge)", p["window_cutup_mm"], "mm", built % "window_cutup_mm", 1),
         _row("window_height", "window: height (the jet's width)", p["window_height_mm"], "mm", built % "window_height_mm", 1),
         _row("window_area", "window: area", p["window_area_mm2"], "mm^2", built % "window_area_mm2", 1),
-        _row("window_depth", "window: wall depth", p["window_depth_mm"], "mm", built % "window_depth_mm", 2),
+        _row("window_depth", "window: wall depth to the design plane of the flank (the built flank is about 1 mm further out)", p["window_depth_mm"], "mm", built % "window_depth_mm", 2),
         _row("window_aperture", "window: aperture with its haunches", p["window_aperture_mm2"], "mm^2", built % "window_aperture_mm2", 1),
         _row("window_sill", "window: sill above the bed", p["window_sill_z_mm"], "mm", built % "window_sill_z_mm", 1),
         _row("lintel", "window: flat bridge over it", p["lintel_flat_mm"], "mm", cfg % "lintel_flat_mm", 1),
@@ -470,7 +470,7 @@ def size_print(ctx: ViewContext) -> View | None:
         _row("density", "filament density (PLA)", p["filament_density_g_cm3"], "g/cm^3", cfg % "filament_density_g_cm3", 2),
         _row("head", "head diameter", 2.0 * p["head_radius_mm"], "mm", "arithmetic on Config: head_radius_mm", 0),
         _row("head_ratio", "head diameter over body width", p["head_radius_mm"] / p["body_radius_y_mm"], "ratio", "arithmetic on Config", 2),
-        _row("tail_width", "tail width at its root", 2.0 * p["tail_half_width_mm"], "mm", "arithmetic on Config: tail_half_width_mm", 0),
+        _row("tail_width", "tail width at its root, before the blend into the rump (the built root is about 2 mm wider)", 2.0 * p["tail_half_width_mm"], "mm", "arithmetic on Config: tail_half_width_mm", 0),
         _row("mouthpiece_width", "mouthpiece width at the tail tip", 2.0 * p["tail_tip_half_width_mm"], "mm", "arithmetic on Config: tail_tip_half_width_mm", 1),
         _row("mouthpiece_height", "mouthpiece height", p["tail_top_z_mm"], "mm", cfg % "tail_top_z_mm", 0),
         _row("nozzle", "nozzle", p["nozzle_d_mm"], "mm", cfg % "nozzle_d_mm", 1),
@@ -660,7 +660,7 @@ def pitch_per_tenth(ctx: ViewContext) -> View | None:
         _row("step_holes", "step used for the finger hole", 0.2, "mm", "sensitivity runs", 1),
         _row("step_window", "step used for the cut-up and the window height", 0.5, "mm", "sensitivity runs", 1),
     ]
-    for key, word in (("desk", "on a desk or a flat palm"), ("pad_3", "fingertip 3 mm off the window"),
+    for key, word in (("desk", "on a desk or a flat palm"), ("pad_3", "fingertip close to the window (3 mm off the design plane, about 2 mm off the built flank)"),
                       ("pad_0", "fingertip flat on the window")):
         closed, opened = _mean(sens[key][2]), _mean(sens[key][3])
         rows += [
@@ -711,7 +711,7 @@ def playing(ctx: ViewContext) -> View | None:
     rows = [
         _row("pressure", "blowing pressure assumed", p["blow_pressure_pa"], "Pa", cfg % "blow_pressure_pa", 0),
         _row("jet_speed", "jet speed at the windway exit", p["jet_speed_m_s"], "m/s", built % "jet_speed_m_s", 1),
-        _row("flow", "air flow", p["flow_l_min"], "L/min", built % "flow_l_min", 1),
+        _row("flow", "air flow, upper estimate (no losses in the windway)", p["flow_l_min"], "L/min", built % "flow_l_min", 1),
         _row("strouhal_closed", "Strouhal number, closed note", p["strouhal_closed"], "ratio", built % "strouhal_closed", 2),
         _row("strouhal_open", "Strouhal number, open note", p["strouhal_open"], "ratio", built % "strouhal_open", 2),
         _row("strouhal_low", "playable band, low edge", acoustics.STROUHAL_PLAYABLE[0], "ratio", "model/acoustics.py STROUHAL_PLAYABLE", 2),
@@ -720,7 +720,7 @@ def playing(ctx: ViewContext) -> View | None:
         _row("strouhal_best_high", "best band, high edge", acoustics.STROUHAL_BEST[1], "ratio", "model/acoustics.py STROUHAL_BEST", 2),
         _row("jet_thickness", "jet thickness (windway exit gap)", p["windway_gap_exit_mm"], "mm", cfg % "windway_gap_exit_mm", 1),
         _row("jet_travel", "jet travel (cut-up)", p["window_cutup_mm"], "mm", built % "window_cutup_mm", 1),
-        _row("radiated", "share of the jet's power radiated as sound, estimate", 100.0 * p["radiated_fraction"], "%", built % "radiated_fraction", 1),
+        _row("radiated", "share of the resonator's losses that leaves as sound (passive Q over radiation Q), an upper estimate for ranking chambers; not the share of the jet's power", 100.0 * p["radiated_fraction"], "%", built % "radiated_fraction", 1),
         _row("speed_of_sound", "speed of sound assumed", p["c_air_m_s"], "m/s", cfg % "c_air_m_s", 0),
         _row("lumped_ratio", "chamber length over the open note's wavelength", p["lumped_ratio"], "ratio", built % "lumped_ratio", 3),
         _row("lumped_limit", "where the uncalibrated lumped law is trusted to about 2 %", acoustics.LUMPED_RATIO_LIMIT, "ratio",

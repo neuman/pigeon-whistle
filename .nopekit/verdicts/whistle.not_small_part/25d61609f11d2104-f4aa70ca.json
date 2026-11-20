@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.not_small_part",
+  "rho": "25d61609f11d21045708e0c43f201a0eddc1be810f321de71d7acfadaf699497",
+  "code": {
+    "digest": "0b7ee12fe2646b27a36baf72ee564e29bd189d6b5b369f9b0232ed4d1efe6d73",
+    "files": [
+      "gates/form.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "overall_height_mm"
+        ],
+        "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+        67.6998
+      ],
+      [
+        [
+          "overall_length_mm"
+        ],
+        "b7710a2141015ba76fbd003291460cb0ebdc8504afec84216472f2b224c86118",
+        117.7683
+      ],
+      [
+        [
+          "overall_width_mm"
+        ],
+        "b96c745a8ca28e64e042ce06890922cadda65c933d08fadee5c59fc0516c2543",
+        67.6777
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C19": "5253071973a6c8b879fe74cb1e84ab44469cba66a44c7e2086bbd8e624652d7a",
+      "acceptance:C19": "dbaff3fae9994e897bb03152745b75cc1acec81711971d5d87aaa8f87400ed77"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 67.7,
+    "limit": 31.7,
+    "units": "mm",
+    "comparator": ">",
+    "settles": "smallest overall dimension",
+    "detail": "117.8 x 67.7 x 67.7 mm overall: smallest 67.7 mm against the 31.7 mm cylinder; a size rule, not a toy-safety test",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "not-small-part"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "68b4b717266cc53592619c6a1ab8ade85fa1b39efe09cb40643e6ba3febbd93e"
+}

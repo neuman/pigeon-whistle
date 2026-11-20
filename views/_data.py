@@ -28,7 +28,7 @@ SENSITIVITY_RUNS = {
         ("height_plus", "window 0.5 mm higher", (26.3, 24.3), (14.2, 13.1)),
         ("desk", "rigid plane under the belly (desk or palm)", (-33.8, -34.8), (-18.2, -18.7)),
         ("pad_0", "fingertip pad flat on the window", (-678.0, -649.0), (-298.0, -289.0)),
-        ("pad_3", "fingertip pad 3 mm off the window", (-71.5, -70.7), (-37.7, -37.3)),
+        ("pad_3", "fingertip pad 3 mm off the design plane of the window (about 2 mm off the built flank)", (-71.5, -70.7), (-37.7, -37.3)),
     ),
     "pad": {"across_mm": 16.0, "thick_mm": 8.0,             # the rigid disc that stands for a fingertip
             "off_mm": 3.0},                                # its distance from the window in the run pad_3

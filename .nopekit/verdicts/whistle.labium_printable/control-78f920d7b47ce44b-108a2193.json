@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.labium_printable",
+  "rho": "78f920d7b47ce44bc706217833c7513d65e143ca3b74e77faa7ef22f1c6a77c7",
+  "static": "77d8c7e10366a6f90ba9bc9eced383b39fe7bd8a07f1c89db3471971d7faff28",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "aa315c17c890d6e32449764d7962372616c9addf2ef08c91ed55c3e41be06b82",
+      "files": [
+        "gates/printability.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:knife_edge",
+      "expect": "fail",
+      "note": "a 0.2 mm labium tip: under one line, so the slicer decides where the edge ends",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "extrusion_width_mm"
+        ],
+        "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+        0.45
+      ],
+      [
+        [
+          "labium_tip_mm"
+        ],
+        "127909532a5e24f347add2b67044be692cea62932cbdb08ebb1ef9f0d2a0cfbe",
+        0.2
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C17": "9df2af3a11710a6457a9ec77f0da93bdff2690797f9578b12eabafcdbc7bab6e",
+      "acceptance:C17": "003abc0c81b7dce1b6696ac87559a76945d13d2a0c82180edd26914207a8d1dd"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "extrusion_width_mm"
+          ],
+          "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+          0.45
+        ],
+        [
+          [
+            "labium_tip_mm"
+          ],
+          "8e29c97e40473267183acc8265cb574b1fb4dfcd9c281f368e487cf0a285a865",
+          0.5
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C17": "9df2af3a11710a6457a9ec77f0da93bdff2690797f9578b12eabafcdbc7bab6e",
+        "acceptance:C17": "003abc0c81b7dce1b6696ac87559a76945d13d2a0c82180edd26914207a8d1dd"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 0.5,
+    "limit": 0.45,
+    "units": "mm",
+    "detail": "labium tip flat 0.50 mm against a 0.45 mm line (limit 0.45 mm)",
+    "goalpost": [
+      {
+        "key": "C17",
+        "measured": 0.5,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.045000000000000005,
+            "outcome": "pass",
+            "measured": 0.5,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 0.225,
+            "outcome": "pass",
+            "measured": 0.5,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 0.9,
+            "outcome": "fail",
+            "measured": 0.5,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 4.5,
+            "outcome": "fail",
+            "measured": 0.5,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 39,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "labium_tip_mm"
+        ],
+        "before": 0.5,
+        "after": 0.384,
+        "outcome": "fail",
+        "measured": 0.38,
+        "limit": 0.45
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "extrusion_width_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:knife_edge (a 0.2 mm labium tip: under one line, so the slicer decides where the edge ends): labium tip flat 0.20 mm against a 0.45 mm line (limit 0.45 mm)",
+  "measured": 0.2,
+  "limit": 0.45,
+  "units": "mm",
+  "digest": "5c72cd2921c4e02a10e7bba3f907eb422d1cd266ea39dbc0a34f71a674560f2d"
+}

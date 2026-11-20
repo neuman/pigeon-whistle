@@ -336,7 +336,7 @@
         "commands": [],
         "text": ""
       },
-      "statement": "It prints on a 0.4 mm FDM printer belly-down with supports off",
+      "statement": "The print file meets the fdm-print pack's support-free rules for a 0.4 mm printer, belly-down",
       "token": "checked",
       "values": [
         {
@@ -750,7 +750,7 @@
           "basis": "model-only",
           "basis_word": "A model wrote the logic. It has no outside source.",
           "current": true,
-          "detail": "windway exit gap 1.40 mm in the print file (1.3 acoustic + 0.1 compensation; limit 1.2 mm)",
+          "detail": "windway exit gap 1.40 mm as drawn for the printer (1.3 acoustic + 0.1 compensation; limit 1.2 mm)",
           "evidence": [],
           "id": "whistle.windway_printable",
           "order": 35,
@@ -785,7 +785,7 @@
         "commands": [],
         "text": ""
       },
-      "statement": "The windway exit gap as printed is at least 1.2 mm",
+      "statement": "The windway exit gap as drawn for the printer is at least 1.2 mm",
       "token": "checked",
       "values": [
         {
@@ -2102,7 +2102,7 @@
           "basis": "model-only",
           "basis_word": "A model wrote the logic. It has no outside source.",
           "current": true,
-          "detail": "finger hole 7.25 mm in the print file (7.05 acoustic + 0.2 compensation; limit 8.0 mm)",
+          "detail": "finger hole 7.25 mm as drawn for the printer (7.05 acoustic + 0.2 compensation; limit 8.0 mm)",
           "evidence": [],
           "id": "whistle.hole_sealable",
           "order": 17,
@@ -3504,14 +3504,14 @@
     }
   ],
   "meta": {
-    "content_digest": "6ba125b058cc471817d6c933a978cecbde15115505e370c213b7feea29d9b8d1",
+    "content_digest": "18628b541ad2a8dd2add32c94599ac2959b8d5edbbf39439d46de10bc6b943dc",
     "name": "pigeon-whistle",
-    "records_digest": "5c162b07f42f9304a03696cf6a5964a95a8aac6313841efef6be60712792d1a2",
-    "resolution_digest": "47b5257aeae29499ea3b57c6ba7d61982761ef1b62c09aa8dcf8906dc63e1dae",
+    "records_digest": "f62da91e09fbb319fd9717973d0f3a463298b80baa16863a8f900c8d97afc9fe",
+    "resolution_digest": "ad025c00805cc6b36b15fd488aa2990ec18b809254cc1220d21d521c5abef6a4",
     "revision": "v0.1",
     "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency",
     "views": {
-      "airway": "8f0b48f0bd31928b0209efea75079c1867e9f73fe5348aa01a782276c09dbd19",
+      "airway": "c2cbbe2d9a0018809cb06ee1bb866b5e6936e21091ab96c9d57bad382e620390",
       "coo_chart": "8f7b033ccbe0472334ce9bf082620baf78453c59a5776650e0fd0847f88d74de",
       "coo_evidence": "9626df13d55f4cab3fb938e7c4b5e811bd0e66897bfdc2049e237198780b173b",
       "coo_summary": "74d4c950254372cf169a3d079ef06a30587e7c5291d6f52591673e752e6a2000",
@@ -3519,13 +3519,13 @@
       "grid_study": "f487b4ffaf8293c8e7c926e1e0c16bd63f1c95795c7a86421add5e47dad62616",
       "inside": "fc4609202496dc6766ae337c71387a6dae3cdf88284b2380cad15c5d1161974b",
       "notes": "9a9d750c19eb08a673362df8b1d5a2e56e68b808cb798c8296caef70c3edb36e",
-      "pitch_per_tenth": "c47ff509bd35574766c4e7bd29fa89f8f75ff2ff5819117a16524a46c954c392",
-      "playing": "88164c66da6ab25770d543dbe5f2e7042aac7e4e379f300b14d5b40dffeccc72",
+      "pitch_per_tenth": "38bccc67cf062d5ea9179ede60f592a86c2d2e395dadefda3c72540b52086543",
+      "playing": "c2057c4d5befb399eef9859bd4e62a625e79c38679464f565713df7c5bdeafe9",
       "section_jet": "6420adf410fb92d545bc4c9031e93b8e7c89afddcc0caec8e54046c01f19d023",
       "section_plan": "e8300b6a18f8defa54f0e834a72d55a118cf7ae043a22eb3fbd37bb06d2812a0",
       "section_side": "c0eae6847a89b4ace6bfd1971881d4b5f9a2770a40d0ae2dd0203fa3e0d4a47c",
-      "sensitivities": "b9c69ca6e29a1952e7041ae15f3ff7eae911aebe96399c65d1a0ddb85df47401",
-      "size_print": "c131c405c7d0616ed81e454d0006720f72e6e70ee12fd96336de8740bc712f8b",
+      "sensitivities": "8e5551aaf56ef1e0af38185e7a8614a0a4e99371a5e8304efb7578b22af74a6e",
+      "size_print": "e928eb24ddddffaf3200e5611c1fef71839cdd25b14352e4d18c3a6efaeda6c0",
       "trim": "d8c3c7b5f0b609d4f3f7014eb5232e232a75782ff3dba006bf5939227f0ed41c",
       "trim_chart": "ee64f134d71763747a8957290a605a8884a0af94c3dd258304578dd27f509c5b",
       "tuning_bands": "824eba9a4aa7a384a2163c62c4d8b84442104fd6a19ad38fa9417764cd92b021",
@@ -3712,6 +3712,62 @@
           "runs": [
             {
               "t": "The next steps belong to the person, in this order. Nothing is printed yet, and nothing is blown."
+            }
+          ],
+          "type": "p"
+        },
+        {
+          "runs": [
+            {
+              "t": "Wait for the next candidate before you print"
+            }
+          ],
+          "type": "h3"
+        },
+        {
+          "runs": [
+            {
+              "t": "An adversarial review read this candidate after it was built. It found no reason for the print to fail. It did find changes that are worth making before a long print:"
+            }
+          ],
+          "type": "p"
+        },
+        {
+          "items": [
+            [
+              {
+                "t": "The look. The eyes, the feet and the wings can read more as a pigeon, and the side view is weak."
+              }
+            ],
+            [
+              {
+                "t": "The pitch. The walls of the chamber take a little energy from the note, and the model leaves that out. The first print is then more likely flat than sharp."
+              }
+            ],
+            [
+              {
+                "t": "The print file. No evaluator reads the windway gap or the labium from the file itself, and the file name does not change when some construction constants change."
+              }
+            ],
+            [
+              {
+                "t": "The print package. "
+              },
+              {
+                "code": true,
+                "t": "PRINT.md"
+              },
+              {
+                "t": " does not give the top and bottom layers, the seam or the care of the bird. No small test print comes before the long one."
+              }
+            ]
+          ],
+          "type": "ul"
+        },
+        {
+          "runs": [
+            {
+              "t": "These changes are in work for the next candidate. Look at this candidate, and say what you think of the shape and of the two notes."
             }
           ],
           "type": "p"
@@ -5802,7 +5858,7 @@
               ],
               [
                 {
-                  "t": "The windway exit gap is "
+                  "t": "The windway exit gap is drawn "
                 },
                 {
                   "match": true,
@@ -5811,7 +5867,7 @@
                   "unit": "mm"
                 },
                 {
-                  "t": " in the file, and the limit is "
+                  "t": ", and the limit is "
                 },
                 {
                   "match": true,
@@ -5832,7 +5888,7 @@
               ],
               [
                 {
-                  "t": "The labium tip is a flat "
+                  "t": "The labium tip is drawn as a flat "
                 },
                 {
                   "match": true,
@@ -5857,7 +5913,7 @@
                   "t": "C17"
                 },
                 {
-                  "t": ")."
+                  "t": "). No evaluator reads these two sizes from the print file yet."
                 }
               ]
             ],
@@ -6183,16 +6239,7 @@
                 "t": "C10"
               },
               {
-                "t": "). Lips or a finger near the window lower the note. In the solve, a fingertip "
-              },
-              {
-                "match": true,
-                "num": "3",
-                "t": "3 mm",
-                "unit": "mm"
-              },
-              {
-                "t": " from the window lowers the closed note by "
+                "t": "). Lips or a finger near the window lower the note. In the solve, a fingertip held close to the window lowers the closed note by "
               },
               {
                 "match": true,
@@ -6249,7 +6296,7 @@
           {
             "runs": [
               {
-                "t": "A reviewer in the design panel read this shape as a pigeon from pictures. No evaluator measures cute. The person looks at the printed bird and judges it ("
+                "t": "A reviewer in the design panel read an earlier concept of this bird as a pigeon from the side. From the front it read as a penguin. The shape was changed after that. A later review found the side view of this shape weak: the tail lies on the bed as a low slab, the back steps down to it, and the bill does not stand out in profile. No evaluator measures cute. The person looks at the printed bird and judges it ("
               },
               {
                 "claim": "C23",
@@ -6292,7 +6339,7 @@
       "word": "gap"
     }
   ],
-  "self": "1afb9702aeada7c55b769426f6c6ba883ced7d6006bcda31f01208de8c143c12",
+  "self": "17270df6ff990b042300cb8668dab22428ef1f887b2128e9ab279dd65e19f020",
   "story": {
     "as_of": "ee075d6919967a95",
     "blocks": [

@@ -16,7 +16,7 @@ The bird sits on its belly and its tail. The print file tips only when it leans 
 
 ## At the mouth
 
-The tail is the mouthpiece. A rise in the top of the tail stops the lips 15 mm short of the window, and the limit is 12 mm (C10). Lips or a finger near the window lower the note. In the solve, a fingertip 3 mm from the window lowers the closed note by 71.1 cents. The fingers hold the bird forward of the window.
+The tail is the mouthpiece. A rise in the top of the tail stops the lips 15 mm short of the window, and the limit is 12 mm (C10). Lips or a finger near the window lower the note. In the solve, a fingertip held close to the window lowers the closed note by 71.1 cents. The fingers hold the bird forward of the window.
 
 The person has not recorded that the bird is blown through the tail (C27). The whole layout follows from that assumption.
 
@@ -24,4 +24,4 @@ The person has not recorded that the bird is blown through the tail (C27). The w
 
 The head is small and solid, 27 mm across, and it sits tucked on the chest. The bill is slim and points down. Each wing has two bars, the one pigeon marking that works in a single colour.
 
-A reviewer in the design panel read this shape as a pigeon from pictures. No evaluator measures cute. The person looks at the printed bird and judges it (C23).
+A reviewer in the design panel read an earlier concept of this bird as a pigeon from the side. From the front it read as a penguin. The shape was changed after that. A later review found the side view of this shape weak: the tail lies on the bed as a low slab, the back steps down to it, and the bill does not stand out in profile. No evaluator measures cute. The person looks at the printed bird and judges it (C23).

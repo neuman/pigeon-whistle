@@ -21,8 +21,8 @@ The print file is one closed solid with four openings: the windway, the window, 
 ## Walls and small features
 
 - The thinnest shell wall is the chamber floor, at 2.1 mm. The limit is 1.8 mm, which is four lines (C15).
-- The windway exit gap is 1.4 mm in the file, and the limit is 1.2 mm (C16).
-- The labium tip is a flat 0.5 mm wide, and the limit is 0.45 mm (C17).
+- The windway exit gap is drawn 1.4 mm, and the limit is 1.2 mm (C16).
+- The labium tip is drawn as a flat 0.5 mm wide, and the limit is 0.45 mm (C17). No evaluator reads these two sizes from the print file yet.
 
 A wall this thick can print airtight. Only a built part shows that it does.
 

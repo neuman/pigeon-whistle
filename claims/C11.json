@@ -1,5 +1,5 @@
 {
-  "statement": "It prints on a 0.4 mm FDM printer belly-down with supports off",
+  "statement": "The print file meets the fdm-print pack's support-free rules for a 0.4 mm printer, belly-down",
   "kind": "measurable",
   "rationale": "Requirement R3. This claim has no number of its own: the fdm-print pack's seven evaluators each judge against a limit the model publishes, with its reason beside it in model/pigeon.py: overhang past 45 degrees on at most 0.5 % of the surface, flat bridges of at most 5 mm, cantilevers of at most 2 mm, the part inside a 180 mm bed less the brim (the bed is assumption C32), a thinnest section of at least three lines, the one slender member loaded along its layers, and under 24 h and one spool by a rough estimate. They read face angles and flat ceilings off the print file (input fdm-whistle-printing-notes, section 7, records what they do). They do not slice. They cannot see a layer that starts in mid-air (C12), a leak (C13) or a windway that closes up (C16), and they cannot tell a reachable overhang from a trapped one. That it prints is C24.",
   "grounded_by": [

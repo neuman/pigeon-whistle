@@ -50,7 +50,7 @@
       "note": "Stand the printed whistle on a desk and look at it from the side, the front and above, at arm's length, then hold it. The authority says whether it reads as a chubby, cute city pigeon and not as another bird.",
       "owner": "",
       "physical_result": null,
-      "rationale": "R1 is a judgment about a look. The design panel read this shape as a pigeon from renders; no evaluator measures cute, and a render is not the printed thing in a hand.",
+      "rationale": "R1 is a judgment about a look. One reviewer in the design panel read an earlier concept of this bird as a pigeon from the side and as a penguin from the front, from renders. The shape was changed after that. A later review of the present shape found the side view weak: the tail lies on the bed as a low slab, the back steps down to it, and the bill does not stand out in profile. No evaluator measures cute, and a render is not the printed thing in a hand.",
       "reason": "awaits neuman: named in claims/C23.json, not recorded by them — neuman records it in their own shell: nopekit claim physical C23 assume --authority \"neuman\"",
       "requirements": [
         "R1",
@@ -1558,7 +1558,7 @@
       "resolves": [],
       "source": "",
       "standing": "",
-      "statement": "It prints on a 0.4 mm FDM printer belly-down with supports off",
+      "statement": "The print file meets the fdm-print pack's support-free rules for a 0.4 mm printer, belly-down",
       "status": "pass",
       "superseded": [],
       "tags": [
@@ -1911,7 +1911,7 @@
       "note": "The windway exit gap as drawn for the printer (the acoustic gap plus the slot compensation), read from the model.",
       "owner": "",
       "physical_result": null,
-      "rationale": "The printing notes: draw the gap 1.2 to 1.5 mm and never below about 1.0 mm, because a slot between two perimeter walls closes up by 0.1 to 0.3 mm and 1.0 mm is barely over two line widths; a printed whistle head with a 1.3 mm windway is the working example there (input fdm-whistle-printing-notes, section 2.1). 1.2 mm is the low end of that range, applied to the gap in the print file. That the printed slot is clear is C24.",
+      "rationale": "The printing notes: draw the gap 1.2 to 1.5 mm and never below about 1.0 mm, because a slot between two perimeter walls closes up by 0.1 to 0.3 mm and 1.0 mm is barely over two line widths; a printed whistle head with a 1.3 mm windway is the working example there (input fdm-whistle-printing-notes, section 2.1). 1.2 mm is the low end of that range, applied to the gap as drawn for the printer. That the printed slot is clear is C24.",
       "reason": "—",
       "requirements": [
         "R3"
@@ -1919,7 +1919,7 @@
       "resolves": [],
       "source": "",
       "standing": "",
-      "statement": "The windway exit gap as printed is at least 1.2 mm",
+      "statement": "The windway exit gap as drawn for the printer is at least 1.2 mm",
       "status": "pass",
       "superseded": [],
       "tags": [
@@ -3062,8 +3062,8 @@
       "fdm-print",
       "cad-solid"
     ],
-    "records_digest": "5c162b07f42f9304a03696cf6a5964a95a8aac6313841efef6be60712792d1a2",
-    "resolution_digest": "47b5257aeae29499ea3b57c6ba7d61982761ef1b62c09aa8dcf8906dc63e1dae",
+    "records_digest": "f62da91e09fbb319fd9717973d0f3a463298b80baa16863a8f900c8d97afc9fe",
+    "resolution_digest": "ad025c00805cc6b36b15fd488aa2990ec18b809254cc1220d21d521c5abef6a4",
     "revision": "v0.1",
     "spine_version": "0.1.0",
     "stale": false,
@@ -6857,7 +6857,7 @@
       "comparator": "",
       "cpu_s": 0.0,
       "detail": "",
-      "duration_s": 0.003985,
+      "duration_s": 0.002176,
       "error": "",
       "evidence": [],
       "evidence_assets": [],
@@ -6899,9 +6899,9 @@
         "cad"
       ],
       "comparator": "",
-      "cpu_s": 0.08,
+      "cpu_s": 0.23,
       "detail": "",
-      "duration_s": 0.078865,
+      "duration_s": 0.54756,
       "error": "",
       "evidence": [],
       "evidence_assets": [],
@@ -6944,9 +6944,9 @@
         "cad"
       ],
       "comparator": "",
-      "cpu_s": 0.08,
+      "cpu_s": 0.09,
       "detail": "",
-      "duration_s": 0.075551,
+      "duration_s": 0.090241,
       "error": "",
       "evidence": [],
       "evidence_assets": [],
@@ -7364,7 +7364,7 @@
       ],
       "comparator": "<=",
       "cpu_s": 0.0,
-      "detail": "finger hole 7.25 mm in the print file (7.05 acoustic + 0.2 compensation; limit 8.0 mm)",
+      "detail": "finger hole 7.25 mm as drawn for the printer (7.05 acoustic + 0.2 compensation; limit 8.0 mm)",
       "duration_s": 0.0,
       "error": "",
       "evidence": [],
@@ -7380,7 +7380,7 @@
       "order": 17,
       "pack": "",
       "passed": true,
-      "rho": "7080bc7d6798aa185fbb8900a5a1643c8c2ca791cdb9053574ce21bae4e50699",
+      "rho": "90dd08ae383432a5c2a6ef4f5593d0b28b036ea531bb02ee2414b560a280b58e",
       "settles": "finger hole diameter",
       "skip_reason": "",
       "skipped": false,
@@ -7418,7 +7418,7 @@
       "order": 19,
       "pack": "",
       "passed": true,
-      "rho": "94eadff7cf0cd43ad30dd0de0e32565eb2a70d3bcebb52b05ec96d0089acfc42",
+      "rho": "fce99af710fb1100c175e6b7c6d4ff1978534f70b68ec09f164012dff6da76b6",
       "settles": "lip stop to window distance",
       "skip_reason": "",
       "skipped": false,
@@ -7456,7 +7456,7 @@
       "order": 25,
       "pack": "",
       "passed": true,
-      "rho": "30c004a2d577996165ea1f9fe81843fa864cf05f9c4e7e5eaa40a6b25d30ea1f",
+      "rho": "ef797fd8ea37c429d880c56f8975c9b7c100a357e722936ac00441b44491eb0d",
       "settles": "overall length",
       "skip_reason": "",
       "skipped": false,
@@ -7494,7 +7494,7 @@
       "order": 24,
       "pack": "",
       "passed": true,
-      "rho": "89e7ac44c9c461fc92779ae8e696eb8af0b51b4749ad2521f9808b2d8886d69e",
+      "rho": "25d61609f11d21045708e0c43f201a0eddc1be810f321de71d7acfadaf699497",
       "settles": "smallest overall dimension",
       "skip_reason": "",
       "skipped": false,
@@ -7722,7 +7722,7 @@
       "order": 33,
       "pack": "",
       "passed": true,
-      "rho": "7d00008b90647ca87635138bae4d72936fe962d5c13482531655c482889394e7",
+      "rho": "c214e3142a1cf6c60cb8e043780e5f29e4574a7a5d380f89a3b9ef0f0d940397",
       "settles": "thinnest shell wall",
       "skip_reason": "",
       "skipped": false,
@@ -7744,7 +7744,7 @@
       ],
       "comparator": ">=",
       "cpu_s": 0.0,
-      "detail": "windway exit gap 1.40 mm in the print file (1.3 acoustic + 0.1 compensation; limit 1.2 mm)",
+      "detail": "windway exit gap 1.40 mm as drawn for the printer (1.3 acoustic + 0.1 compensation; limit 1.2 mm)",
       "duration_s": 0.0,
       "error": "",
       "evidence": [],
@@ -7760,7 +7760,7 @@
       "order": 35,
       "pack": "",
       "passed": true,
-      "rho": "e7a6832e4785dfbb233f68a2316db054b500c797f75f92025a39196c53c8cdcc",
+      "rho": "507303a0fd10f22e0be31cd563178ebbd6e1c468bf5961fdbd045ab31a6440f9",
       "settles": "windway exit gap",
       "skip_reason": "",
       "skipped": false,
@@ -7798,7 +7798,7 @@
       "order": 18,
       "pack": "",
       "passed": true,
-      "rho": "de6f50e97c2003f02310092cb93a6bd03887d4fb0e9ae7748484232ee3136658",
+      "rho": "b28ae5c2475edc64b80ea3b8e1ed2bb8a831c7b8cedeeaa918a4893b06f24e51",
       "settles": "labium tip width",
       "skip_reason": "",
       "skipped": false,
@@ -8705,7 +8705,7 @@
             "id": "window_depth",
             "in": "mm",
             "value": 4.01,
-            "what": "window: wall depth"
+            "what": "window: wall depth to the design plane of the flank (the built flank is about 1 mm further out)"
           },
           {
             "from": "build(): window_aperture_mm2",
@@ -9159,7 +9159,7 @@
             "id": "tail_width",
             "in": "mm",
             "value": 28.0,
-            "what": "tail width at its root"
+            "what": "tail width at its root, before the blend into the rump (the built root is about 2 mm wider)"
           },
           {
             "from": "arithmetic on Config: tail_tip_half_width_mm",
@@ -9789,7 +9789,7 @@
             "open_mean_pct": -15.59
           },
           {
-            "change": "fingertip pad 3 mm off the window",
+            "change": "fingertip pad 3 mm off the design plane of the window (about 2 mm off the built flank)",
             "closed_h04_cents": -70.7,
             "closed_h05_cents": -71.5,
             "closed_mean_cents": -71.1,
@@ -9939,7 +9939,7 @@
             "id": "pad_3_closed",
             "in": "cents",
             "value": -71.1,
-            "what": "fingertip 3 mm off the window: closed note"
+            "what": "fingertip close to the window (3 mm off the design plane, about 2 mm off the built flank): closed note"
           },
           {
             "from": "arithmetic",
@@ -9960,7 +9960,7 @@
             "id": "pad_3_open",
             "in": "cents",
             "value": -37.5,
-            "what": "fingertip 3 mm off the window: open note"
+            "what": "fingertip close to the window (3 mm off the design plane, about 2 mm off the built flank): open note"
           },
           {
             "from": "arithmetic",
@@ -10143,7 +10143,7 @@
             "id": "flow",
             "in": "L/min",
             "value": 9.0,
-            "what": "air flow"
+            "what": "air flow, upper estimate (no losses in the windway)"
           },
           {
             "from": "build(): strouhal_closed",
@@ -10206,7 +10206,7 @@
             "id": "radiated",
             "in": "%",
             "value": 5.7,
-            "what": "share of the jet's power radiated as sound, estimate"
+            "what": "share of the resonator's losses that leaves as sound (passive Q over radiation Q), an upper estimate for ranking chambers; not the share of the jet's power"
           },
           {
             "from": "Config: c_air_m_s",

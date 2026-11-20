@@ -35,7 +35,7 @@ def hole_sealable(ctx: GateContext) -> Verdict:
     return Verdict(
         gate="whistle.hole_sealable", passed=acc.holds(d), measured=d, limit=acc.limit,
         units="mm", comparator=acc.comparator.value,
-        detail=f"finger hole {d:.2f} mm in the print file ({float(ctx.params['hole_d_mm']):g} acoustic + "
+        detail=f"finger hole {d:.2f} mm as drawn for the printer ({float(ctx.params['hole_d_mm']):g} acoustic + "
                f"{float(ctx.params['hole_comp_mm']):g} compensation; limit {acc.limit} mm)",
     )
 

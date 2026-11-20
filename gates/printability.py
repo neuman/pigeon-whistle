@@ -64,7 +64,7 @@ def windway_printable(ctx: GateContext) -> Verdict:
     return Verdict(
         gate="whistle.windway_printable", passed=acc.holds(gap), measured=gap, limit=acc.limit,
         units="mm", comparator=acc.comparator.value,
-        detail=f"windway exit gap {gap:.2f} mm in the print file ({float(ctx.params['windway_gap_exit_mm']):g} "
+        detail=f"windway exit gap {gap:.2f} mm as drawn for the printer ({float(ctx.params['windway_gap_exit_mm']):g} "
                f"acoustic + {float(ctx.params['windway_gap_comp_mm']):g} compensation; limit {acc.limit} mm)",
     )
 

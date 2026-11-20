@@ -1,0 +1,223 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.palm_size",
+  "rho": "0813b6752e87f08e967b31daf7970e4d6350c54f546708d187bc32bfc7fb1073",
+  "static": "fffb1eb51424094d5037a0067d97e5477f963a96ce1d7b2657795abfc7ede485",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "70a4a6c4fe905361bd72a1db93feee03694eba6ce5a1f8004a02db1fbe33fd5b",
+      "files": [
+        "gates/form.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:long_body",
+      "expect": "fail",
+      "note": "the body 6.5 mm longer in half-length: the breast moves forward and the bird is 121.9 mm long",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "overall_height_mm"
+        ],
+        "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+        67.6998
+      ],
+      [
+        [
+          "overall_length_mm"
+        ],
+        "11fdc1ad9b47feff30af3ea5c69e060ecf73f539a27b15669440f041766495b0",
+        121.8702
+      ],
+      [
+        [
+          "overall_width_mm"
+        ],
+        "d3da05ef3bf9712114b38a96911017ed59ae39c813aa323baa41445382d32755",
+        69.3304
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C18": "ff6d709a52e79fca2e3ea8fc0ec680d61b5744791242e084f268982b805f4dd3",
+      "acceptance:C18": "a2ab61da2bcb832cbfbf933734a69573295480aba73d6f5e725c505cbc864390"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "overall_height_mm"
+          ],
+          "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+          67.6998
+        ],
+        [
+          [
+            "overall_length_mm"
+          ],
+          "b7710a2141015ba76fbd003291460cb0ebdc8504afec84216472f2b224c86118",
+          117.7683
+        ],
+        [
+          [
+            "overall_width_mm"
+          ],
+          "b96c745a8ca28e64e042ce06890922cadda65c933d08fadee5c59fc0516c2543",
+          67.6777
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C18": "ff6d709a52e79fca2e3ea8fc0ec680d61b5744791242e084f268982b805f4dd3",
+        "acceptance:C18": "a2ab61da2bcb832cbfbf933734a69573295480aba73d6f5e725c505cbc864390"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 117.8,
+    "limit": 100.0,
+    "units": "mm",
+    "detail": "117.8 mm long, 67.7 wide, 67.7 high (length band 100 to 120 mm)",
+    "goalpost": [
+      {
+        "key": "C18",
+        "measured": 117.8,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 10.0,
+            "outcome": "pass",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 50.0,
+            "outcome": "pass",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 200.0,
+            "outcome": "fail",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 1000.0,
+            "outcome": "fail",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit_hi",
+            "limit": 12.0,
+            "outcome": "fail",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit_hi",
+            "limit": 60.0,
+            "outcome": "fail",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit_hi",
+            "limit": 240.0,
+            "outcome": "pass",
+            "measured": 117.8,
+            "units": "mm"
+          },
+          {
+            "end": "limit_hi",
+            "limit": 1200.0,
+            "outcome": "pass",
+            "measured": 117.8,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 57,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "overall_length_mm"
+        ],
+        "before": 117.7683,
+        "after": 85.0,
+        "outcome": "fail",
+        "measured": 85.0,
+        "limit": 100.0
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "overall_height_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "overall_width_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:long_body (the body 6.5 mm longer in half-length: the breast moves forward and the bird is 121.9 mm long): 121.9 mm long, 69.3 wide, 67.7 high (length band 100 to 120 mm)",
+  "measured": 121.9,
+  "limit": 100.0,
+  "units": "mm",
+  "digest": "d0add45b0c5f5786351ad8b17b9971ffac2a174d176155de2dba954c1eebec8c"
+}

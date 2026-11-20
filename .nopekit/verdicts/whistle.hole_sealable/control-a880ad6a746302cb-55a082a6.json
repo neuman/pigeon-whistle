@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.hole_sealable",
+  "rho": "a880ad6a746302cb6d07a9138a6b69c5f85f6e694d7402bf7cf402f78363494e",
+  "static": "a75f9ecff6ba20f0b9ee1059565274ae6ab57b10b7ebbf571205207bb12e4078",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "b583f504ddbab603cbe7076cb89e94c24d90e06df210a8db4ce09e9d8094871b",
+      "files": [
+        "gates/form.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:child_cannot_seal",
+      "expect": "fail",
+      "note": "the 8.2 mm finger hole the 145 cm^3 concept needed: 8.4 mm across as printed",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "hole_cad_d_mm"
+        ],
+        "b607fbcce17d056deb6d23d87ca8ef5d9d07862e34e12c107df1ebbe76496d17",
+        8.4
+      ],
+      [
+        [
+          "hole_comp_mm"
+        ],
+        "127909532a5e24f347add2b67044be692cea62932cbdb08ebb1ef9f0d2a0cfbe",
+        0.2
+      ],
+      [
+        [
+          "hole_d_mm"
+        ],
+        "d5d4f532a0b15d68a8a55003a8d3d75d584f2ae39f7fefa53e32aea9cc06e576",
+        8.2
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C8": "85fe2ee5e7ae61442b9a26a32a30c130adc85ae1d8d4ebbbad8219629e4c8d6f",
+      "acceptance:C8": "2b314e1fd408d7276db3021a78f25e69fef1b11272e9202fc05c5da47d7087f6"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "hole_cad_d_mm"
+          ],
+          "d53f9c0fd8319a746edcc584601ded5638eb79b5749d46c524711752095ca5d2",
+          7.25
+        ],
+        [
+          [
+            "hole_comp_mm"
+          ],
+          "127909532a5e24f347add2b67044be692cea62932cbdb08ebb1ef9f0d2a0cfbe",
+          0.2
+        ],
+        [
+          [
+            "hole_d_mm"
+          ],
+          "3318eb5599e7c0ffadddd05c3e0a0b86d46032be79315c97bbb843ae50b3c705",
+          7.05
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C8": "85fe2ee5e7ae61442b9a26a32a30c130adc85ae1d8d4ebbbad8219629e4c8d6f",
+        "acceptance:C8": "2b314e1fd408d7276db3021a78f25e69fef1b11272e9202fc05c5da47d7087f6"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 7.25,
+    "limit": 8.0,
+    "units": "mm",
+    "detail": "finger hole 7.25 mm as drawn for the printer (7.05 acoustic + 0.2 compensation; limit 8.0 mm)",
+    "goalpost": [
+      {
+        "key": "C8",
+        "measured": 7.25,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.8,
+            "outcome": "fail",
+            "measured": 7.25,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 4.0,
+            "outcome": "fail",
+            "measured": 7.25,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 16.0,
+            "outcome": "pass",
+            "measured": 7.25,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 80.0,
+            "outcome": "pass",
+            "measured": 7.25,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 56,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "hole_cad_d_mm"
+        ],
+        "before": 7.25,
+        "after": 9.2,
+        "outcome": "fail",
+        "measured": 9.2,
+        "limit": 8.0
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "hole_comp_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "hole_d_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:child_cannot_seal (the 8.2 mm finger hole the 145 cm^3 concept needed: 8.4 mm across as printed): finger hole 8.40 mm as drawn for the printer (8.2 acoustic + 0.2 compensation; limit 8.0 mm)",
+  "measured": 8.4,
+  "limit": 8.0,
+  "units": "mm",
+  "digest": "1f225330e13e306fbea7589d17990a08116cbfb52f2b799eaf30abefc840e48c"
+}

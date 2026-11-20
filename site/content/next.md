@@ -4,6 +4,17 @@ as_of: 433fa2140dffcd62
 
 The next steps belong to the person, in this order. Nothing is printed yet, and nothing is blown.
 
+## Wait for the next candidate before you print
+
+An adversarial review read this candidate after it was built. It found no reason for the print to fail. It did find changes that are worth making before a long print:
+
+- The look. The eyes, the feet and the wings can read more as a pigeon, and the side view is weak.
+- The pitch. The walls of the chamber take a little energy from the note, and the model leaves that out. The first print is then more likely flat than sharp.
+- The print file. No evaluator reads the windway gap or the labium from the file itself, and the file name does not change when some construction constants change.
+- The print package. `PRINT.md` does not give the top and bottom layers, the seam or the care of the bird. No small test print comes before the long one.
+
+These changes are in work for the next candidate. Look at this candidate, and say what you think of the shape and of the two notes.
+
 ## Record what only you can record
 
 Type these commands in your own shell. An agent cannot record them for you.

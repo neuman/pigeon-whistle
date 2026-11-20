@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.windway_printable",
+  "rho": "6cce82263f0bcef462a1c382ecd74728351060d7ad887cf43af901706e416eef",
+  "static": "64ce435fb2ddb82617b92a969b98ac7b3131e9cb69d40698cb9d95aead3d3524",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "8031f0574e971a8e85c3255aea93050dfb3b01c45eaefd3ef5f6e1030cda2f36",
+      "files": [
+        "gates/printability.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:pinched_windway",
+      "expect": "fail",
+      "note": "the windway exit gap 0.9 mm, 1.0 mm as drawn for the printer: two perimeter walls that close up by 0.1 to 0.3 mm",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "windway_exit_gap_cad_mm"
+        ],
+        "59a62a0c0dcb65be580d30c47169c84f4b74ae5ec925a86a2c7a3fde111a4515",
+        1.0
+      ],
+      [
+        [
+          "windway_gap_comp_mm"
+        ],
+        "9212a53b25e6a71b66e427835e76682e360f738fc43c0a71bc1e3976e5593ad4",
+        0.1
+      ],
+      [
+        [
+          "windway_gap_exit_mm"
+        ],
+        "fcea16856af59cbc2eed6afefaac47fe24ad9618eae4faaceaf03fe3f7b0ed2b",
+        0.9
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C16": "ad0cefc1a035e476fec6372eb79d73c8576794c7a9e78af4e53063c4b4116203",
+      "acceptance:C16": "6ea08e50022eeb0f2ab9928eacc09d7a4c5444e4ea5309a0cdebf31bb3b036a1"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "windway_exit_gap_cad_mm"
+          ],
+          "cbd8fd810325cda8aa98c99a2291f49e206f38ecd05c9d5d02c0ef95290b7d68",
+          1.4
+        ],
+        [
+          [
+            "windway_gap_comp_mm"
+          ],
+          "9212a53b25e6a71b66e427835e76682e360f738fc43c0a71bc1e3976e5593ad4",
+          0.1
+        ],
+        [
+          [
+            "windway_gap_exit_mm"
+          ],
+          "93a0a35e427f101bfa6d83dbf58fe4b1925db259d266fe138b67611104564b44",
+          1.3
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C16": "ad0cefc1a035e476fec6372eb79d73c8576794c7a9e78af4e53063c4b4116203",
+        "acceptance:C16": "6ea08e50022eeb0f2ab9928eacc09d7a4c5444e4ea5309a0cdebf31bb3b036a1"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 1.4,
+    "limit": 1.2,
+    "units": "mm",
+    "detail": "windway exit gap 1.40 mm as drawn for the printer (1.3 acoustic + 0.1 compensation; limit 1.2 mm)",
+    "goalpost": [
+      {
+        "key": "C16",
+        "measured": 1.4,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.12,
+            "outcome": "pass",
+            "measured": 1.4,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 0.6,
+            "outcome": "pass",
+            "measured": 1.4,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 2.4,
+            "outcome": "fail",
+            "measured": 1.4,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 12.0,
+            "outcome": "fail",
+            "measured": 1.4,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 57,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "windway_exit_gap_cad_mm"
+        ],
+        "before": 1.4,
+        "after": 1.02,
+        "outcome": "fail",
+        "measured": 1.02,
+        "limit": 1.2
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "windway_gap_comp_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "windway_gap_exit_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:pinched_windway (the windway exit gap 0.9 mm, 1.0 mm as drawn for the printer: two perimeter walls that close up by 0.1 to 0.3 mm): windway exit gap 1.00 mm as drawn for the printer (0.9 acoustic + 0.1 compensation; limit 1.2 mm)",
+  "measured": 1.0,
+  "limit": 1.2,
+  "units": "mm",
+  "digest": "da8f6b2382f3f5d2563b0994e2dfd0bb09d2d9eba9ccf47ef7edd53486dc3d6e"
+}

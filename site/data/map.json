@@ -4398,8 +4398,8 @@
   ],
   "meta": {
     "name": "pigeon-whistle",
-    "records_digest": "5c162b07f42f9304a03696cf6a5964a95a8aac6313841efef6be60712792d1a2",
-    "resolution_digest": "47b5257aeae29499ea3b57c6ba7d61982761ef1b62c09aa8dcf8906dc63e1dae"
+    "records_digest": "f62da91e09fbb319fd9717973d0f3a463298b80baa16863a8f900c8d97afc9fe",
+    "resolution_digest": "ad025c00805cc6b36b15fd488aa2990ec18b809254cc1220d21d521c5abef6a4"
   },
   "nodes": [
     {
@@ -6574,7 +6574,7 @@
       "order": 16,
       "row": 0,
       "severity": 8,
-      "title": "It prints on a 0.4 mm FDM printer belly-down with supports off",
+      "title": "The print file meets the fdm-print pack's support-free rules for a 0.4 mm printer, belly-down",
       "token": "checked",
       "value_text": "",
       "word": "checked"
@@ -6669,7 +6669,7 @@
       "order": 21,
       "row": 5,
       "severity": 8,
-      "title": "The windway exit gap as printed is at least 1.2 mm",
+      "title": "The windway exit gap as drawn for the printer is at least 1.2 mm",
       "token": "checked",
       "value_text": "1.4 mm against a limit of 1.2 mm, 17% inside the limit",
       "word": "checked"
@@ -6866,7 +6866,7 @@
     }
   ],
   "schema": 2,
-  "self": "c32dc4762e4cb045d43e35c61e688cb3bb3e2a27f2625569ea3c0eb92b14de46",
+  "self": "43ada952814b17b2f63e0ad83c0438a62bd7f12a6c17066fae30034db60dd34d",
   "trace": {
     "amber": "current",
     "key": "68012afe3d21",

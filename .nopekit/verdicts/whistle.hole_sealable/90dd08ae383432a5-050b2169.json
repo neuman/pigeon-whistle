@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.hole_sealable",
+  "rho": "90dd08ae383432a5c2a6ef4f5593d0b28b036ea531bb02ee2414b560a280b58e",
+  "code": {
+    "digest": "b583f504ddbab603cbe7076cb89e94c24d90e06df210a8db4ce09e9d8094871b",
+    "files": [
+      "gates/form.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "hole_cad_d_mm"
+        ],
+        "d53f9c0fd8319a746edcc584601ded5638eb79b5749d46c524711752095ca5d2",
+        7.25
+      ],
+      [
+        [
+          "hole_comp_mm"
+        ],
+        "127909532a5e24f347add2b67044be692cea62932cbdb08ebb1ef9f0d2a0cfbe",
+        0.2
+      ],
+      [
+        [
+          "hole_d_mm"
+        ],
+        "3318eb5599e7c0ffadddd05c3e0a0b86d46032be79315c97bbb843ae50b3c705",
+        7.05
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C8": "85fe2ee5e7ae61442b9a26a32a30c130adc85ae1d8d4ebbbad8219629e4c8d6f",
+      "acceptance:C8": "2b314e1fd408d7276db3021a78f25e69fef1b11272e9202fc05c5da47d7087f6"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 7.25,
+    "limit": 8.0,
+    "units": "mm",
+    "comparator": "<=",
+    "settles": "finger hole diameter",
+    "detail": "finger hole 7.25 mm as drawn for the printer (7.05 acoustic + 0.2 compensation; limit 8.0 mm)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "hole-sealable"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "ff653da37f0623a9f2ded2682e00344cea97107f6f4f6c36f4a2a457da586ba8"
+}

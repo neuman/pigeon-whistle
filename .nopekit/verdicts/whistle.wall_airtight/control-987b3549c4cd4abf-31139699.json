@@ -1,0 +1,215 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.wall_airtight",
+  "rho": "987b3549c4cd4abf32017b6d369fbc0d44240039b9b0082e25cc151c2b38e53c",
+  "static": "d7eeafc77e1ee64f01c74bdf89fdcd579990216fb0089c654aba794a9d9f1fcc",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "1681c9ac20984d9c2b829f1b262b4096268dd01b160c7aa4a3f23fca5956ea16",
+      "files": [
+        "gates/printability.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:three_perimeters",
+      "expect": "fail",
+      "note": "a shell of three perimeters, 1.35 mm: enough for the pack's wall rule, not for the water tests the limit comes from",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "extrusion_width_mm"
+        ],
+        "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+        0.45
+      ],
+      [
+        [
+          "floor_mm"
+        ],
+        "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+        2.1
+      ],
+      [
+        [
+          "shell_wall_min_mm"
+        ],
+        "9429d38606b78eabed67d445afacaa628ae24d29782f855a297178a2be1b5f55",
+        1.35
+      ],
+      [
+        [
+          "shell_wall_mm"
+        ],
+        "9429d38606b78eabed67d445afacaa628ae24d29782f855a297178a2be1b5f55",
+        1.35
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C15": "5f4ebdff38f4e0ea156a81cca0b975975440319e4c30ee7b063eb860e883eb12",
+      "acceptance:C15": "70544b29a8d3491f15398a04c96d37bf1b0a2be3a0dac70328df8a5a2414c8c6"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "extrusion_width_mm"
+          ],
+          "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+          0.45
+        ],
+        [
+          [
+            "floor_mm"
+          ],
+          "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+          2.1
+        ],
+        [
+          [
+            "shell_wall_min_mm"
+          ],
+          "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+          2.1
+        ],
+        [
+          [
+            "shell_wall_mm"
+          ],
+          "364541a391a77a66955903662fbd16197621b582aaeda3b5dc713bfdd1b6c870",
+          2.2
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C15": "5f4ebdff38f4e0ea156a81cca0b975975440319e4c30ee7b063eb860e883eb12",
+        "acceptance:C15": "70544b29a8d3491f15398a04c96d37bf1b0a2be3a0dac70328df8a5a2414c8c6"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 2.1,
+    "limit": 1.8,
+    "units": "mm",
+    "detail": "thinnest shell section as designed 2.10 mm = 4.7 lines of 0.45 mm (wall 2.2, floor 2.1; limit 1.8 mm)",
+    "goalpost": [
+      {
+        "key": "C15",
+        "measured": 2.1,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.18000000000000002,
+            "outcome": "pass",
+            "measured": 2.1,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 0.9,
+            "outcome": "pass",
+            "measured": 2.1,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 3.6,
+            "outcome": "fail",
+            "measured": 2.1,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 18.0,
+            "outcome": "fail",
+            "measured": 2.1,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 75,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "shell_wall_min_mm"
+        ],
+        "before": 2.1,
+        "after": 1.53,
+        "outcome": "fail",
+        "measured": 1.53,
+        "limit": 1.8
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "extrusion_width_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "floor_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "shell_wall_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:three_perimeters (a shell of three perimeters, 1.35 mm: enough for the pack's wall rule, not for the water tests the limit comes from): thinnest shell section as designed 1.35 mm = 3.0 lines of 0.45 mm (wall 1.35, floor 2.1; limit 1.8 mm)",
+  "measured": 1.35,
+  "limit": 1.8,
+  "units": "mm",
+  "digest": "d5233c9a6b3dbc5df8f807533c314c1965341cbcd0957451e41f909771981b57"
+}
