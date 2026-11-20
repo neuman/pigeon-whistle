@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "gate": "cad.bounding",
+  "rho": "e1cdbc115031d7ac3b4eebd3a1d6b9900101acd0e7abbd15ec20306b10fea435",
+  "code": {
+    "digest": "75befe758130056a33a75dd6eaa38c0e6df7e6b5d1df8401c76616d03ba526f2",
+    "files": [
+      "<pack:cad-solid>/cad_solid_parts.py",
+      "<pack:cad-solid>/gates/solid.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "assembly_com_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "assembly_com_target_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "assembly_com_tol_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "assembly_volume_limit_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "assembly_volume_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.assembly_com_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.assembly_com_target_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.assembly_com_tol_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.assembly_volume_limit_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.assembly_volume_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.com_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.com_target_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.com_tol_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.volume_limit_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad-solid.volume_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.assembly_bbox_limit_mm"
+        ],
+        "ebb5b8a74ba92437e3bb93391940aa5b29bb90c8fdd3daec9499d0f44d88f39c"
+      ],
+      [
+        [
+          "cad.assembly_bbox_mm"
+        ],
+        "f7c57099cbaccfbb3cfebb1354d36e2425e721b609b787a0cdbde3018c66db91"
+      ],
+      [
+        [
+          "cad.assembly_com_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.assembly_com_target_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.assembly_com_tol_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.assembly_volume_limit_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.assembly_volume_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.com_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.com_target_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.com_tol_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.volume_limit_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "cad.volume_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "com_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "com_target_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "com_tol_mm"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "volume_limit_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ],
+      [
+        [
+          "volume_mm3"
+        ],
+        "f90507c9e202c31d8d48c448437daae103814dd74a4ef526b3fc2d1d1b998fcb"
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {},
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {
+    "numpy": "2.0.0",
+    "trimesh": "5.1.1"
+  },
+  "verdict": {
+    "passed": true,
+    "measured": 0.998,
+    "limit": 1.0,
+    "units": "utilisation",
+    "comparator": "<=",
+    "settles": "bounding box",
+    "detail": "bbox 117.77x67.68x67.70 vs 118.00x68.00x68.00 mm (worst X 117.77/118.00 = 100%); vol not checked (assembly_volume_mm3/volume_mm3 or assembly_volume_limit_mm3/volume_limit_mm3 absent); com not checked (assembly_com_mm/assembly_com_target_mm/assembly_com_tol_mm absent)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "geometry",
+      "envelope",
+      "packaging",
+      "mechanical",
+      "cad"
+    ],
+    "tier": 0,
+    "pack": "cad-solid"
+  },
+  "digest": "ef604fc2581ac6f219733d00fa1565ff72a48ff52a4f99cb1475c4ae6589a949"
+}

@@ -1,0 +1,157 @@
+{
+ "bbox_max_mm": [
+  117.767,
+  33.838,
+  67.699
+ ],
+ "bbox_min_mm": [
+  -0.0,
+  -33.838,
+  0.0
+ ],
+ "bbox_mm": [
+  117.767,
+  67.676,
+  67.699
+ ],
+ "bed_patch_extent_mm": [
+  113.2,
+  50.3
+ ],
+ "bed_patch_mm2": 3834.6,
+ "ceiling_regions": [
+  {
+   "at": [
+    22.3,
+    9.2,
+    9.3
+   ],
+   "class": "voicing",
+   "extent_xy": [
+    30.1,
+    5.01
+   ],
+   "mm2": 62.043,
+   "z": 9.3
+  },
+  {
+   "at": [
+    34.5,
+    11.0,
+    10.9
+   ],
+   "class": "voicing",
+   "extent_xy": [
+    4.37,
+    1.84
+   ],
+   "mm2": 6.118,
+   "z": 10.91
+  }
+ ],
+ "ceiling_regions_n": 2,
+ "center_of_mass_mm": [
+  69.78,
+  -0.19,
+  29.51
+ ],
+ "chamber_ceiling_mm2": 0.0,
+ "chamber_fill_solid_mm3": 118741.5,
+ "chamber_pieces": 1,
+ "chamber_volume_mm3": 118711.5,
+ "closed_shell_surfaces": 2,
+ "com_to_patch_edge_mm": 23.66,
+ "floor_mm": 2.1,
+ "genus": 3,
+ "genus_expected": 3,
+ "geometry_hash": "e93208370219",
+ "layers": {
+  "bridges": 2,
+  "far_area_mm2": 42.18,
+  "hanging": 0,
+  "hanging_list": [],
+  "island_list": [],
+  "islands": 0,
+  "layer_height_mm": 0.12,
+  "layers": 564,
+  "line_width_mm": 0.45,
+  "max_bridge_span_mm": 4.22,
+  "raster_mm": 0.1,
+  "volume_from_layers_mm3": 91111.9,
+  "worst_bridges": [
+   {
+    "at": [
+     33.4,
+     11.5
+    ],
+    "mm2": 5.18,
+    "reach": 2.11,
+    "span": 4.22,
+    "z": 10.98
+   },
+   {
+    "at": [
+     -0.0,
+     7.6
+    ],
+    "mm2": 37.0,
+    "reach": 1.4,
+    "span": 2.8,
+    "z": 9.42
+   }
+  ]
+ },
+ "mesh_file": "print/pigeon-whistle-e93208370219.stl",
+ "overhang": {
+  "chamber": {
+   "area_mm2": 13106.6,
+   "ceiling_mm2": 0.0,
+   "frac_of_total": 7.567009850110774e-06,
+   "past_mm2": 0.263,
+   "steepest_non_ceiling_deg": 63.97
+  },
+  "frac": 1.1909735787907459e-05,
+  "past_mm2": 0.414,
+  "skin": {
+   "area_mm2": 20516.7,
+   "ceiling_mm2": 0.0,
+   "frac_of_total": 2.088378774145528e-06,
+   "past_mm2": 0.073,
+   "steepest_non_ceiling_deg": 50.12
+  },
+  "total_area_mm2": 34769.3,
+  "voicing": {
+   "area_mm2": 1145.9,
+   "ceiling_mm2": 68.16,
+   "frac_of_total": 2.2543471636511556e-06,
+   "past_mm2": 0.078,
+   "steepest_non_ceiling_deg": 48.69
+  },
+  "worst_deg": 63.97
+ },
+ "plastic_volume_mm3": 91200.2,
+ "shell_wall_min_above_floor_mm": 2.15,
+ "shell_wall_min_at": [
+  31.2,
+  -5.3,
+  2.1
+ ],
+ "shell_wall_min_mm": 2.1,
+ "shell_wall_p01_mm": 2.1,
+ "solid_pieces": 1,
+ "stl_bytes": 3734584,
+ "stl_precheck": {
+  "dropped_faces": 0,
+  "extra_welds": 0,
+  "is_volume": true,
+  "nonmanifold_edges": 0,
+  "open_edges": 0
+ },
+ "surface_area_mm2": 34769.3,
+ "tipping_angle_deg": 38.7,
+ "triangles": 74690,
+ "voxel_mm": 0.35,
+ "watertight": true,
+ "winding_consistent": true,
+ "window_aperture_mm2": 52.947
+}

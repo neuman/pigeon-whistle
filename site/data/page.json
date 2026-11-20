@@ -8,12 +8,344 @@
   },
   "generated": "nopekit site build wrote this file from the records, the results in .nopekit/verdicts/ and site/content/. It is not a source. Change those, then build again.",
   "intro": null,
-  "losers": [],
+  "losers": [
+    {
+      "lost": [
+        {
+          "reason": "92.4 cm^3 chamber: the quietest and breathiest of the three concepts (radiated share of losses 4.7 %)",
+          "value_text": "34.5 x 32.3 x 31.3 mm body (character-first)"
+        },
+        {
+          "reason": "cost a 117 x 67 mm body, an 8.2 mm finger hole and a 21 h print",
+          "value_text": "145 cm^3 chamber (acoustics-first)"
+        }
+      ],
+      "name": "body_radius_x_mm",
+      "rationale": "Body half-length. With the other two radii, and the rump lobe, it sets the chamber at 118.8 cm^3.",
+      "value_text": "37.5 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "head / body width 0.44 read as a chick or sparrow",
+          "value_text": "14.0 mm on a visible neck (print-first)"
+        }
+      ],
+      "name": "head_radius_mm",
+      "rationale": "Small solid head: head diameter / body width = 0.40, the ratio the character judge read as pigeon.",
+      "value_text": "13.5 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "read as a parrot hook, and the tip started in mid-air for 2.55 mm (21 layers)",
+          "value_text": "49 deg down, base radius 4.3 mm"
+        }
+      ],
+      "name": "beak_pitch_deg",
+      "rationale": "Bill points this far below horizontal, its tip resting 1.2 mm deep in the crop.",
+      "value_text": "35 deg"
+    },
+    {
+      "lost": [
+        {
+          "reason": "looked frog-like",
+          "value_text": "raised eye bumps 1.2 mm proud"
+        }
+      ],
+      "name": "eye_depth_mm",
+      "rationale": "Eye dimple depth: a cone this shallow has every face steeper than 45 deg.",
+      "value_text": "1.1 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "wings stood proud of the chest as raised shoulders: a penguin from the front",
+          "value_text": "31.5 mm with -17 deg pitch"
+        }
+      ],
+      "name": "wing_center_z_mm",
+      "rationale": "Wing centre height: low on the flank so the front view has no raised shoulders.",
+      "value_text": "28 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "showed as a fringe under the chest in the top view",
+          "value_text": "six toe nubs"
+        }
+      ],
+      "name": "foot_length_mm",
+      "rationale": "Two low oval foot pads under the chest.",
+      "value_text": "14 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "inlet rim 0.2 mm at x = 0.2 mm: a feather edge where teeth and lips land",
+          "value_text": "11.8 mm with a 3 mm edge radius"
+        }
+      ],
+      "name": "tail_top_z_mm",
+      "rationale": "Tail top: 4.7 mm over the windway, 3.5 mm of roof rim left at the inlet after the edge radius.",
+      "value_text": "14 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "at y = +-9 mm the tail top stayed under 14 mm until x = 22 mm: lips slid on to the window flank",
+          "value_text": "a stop on the centre line only"
+        }
+      ],
+      "name": "lip_stop_x_mm",
+      "rationale": "A full-width rise in the tail top stops the lips here, 15 mm short of the window.",
+      "value_text": "15 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "left 261 mm^2 of skin in the 43-45 deg bin: fdm.overhang failed at 0.71-0.82 % at every resolution",
+          "value_text": "43.5 deg trim"
+        },
+        {
+          "reason": "hung a cone under the beak tip that did not reach the chest: an island",
+          "value_text": "33 deg bottom fill"
+        }
+      ],
+      "name": "self_support_deg",
+      "rationale": "Bottom-up trim of the skin: nothing leans out more than this from vertical (limit 45).",
+      "value_text": "40 deg"
+    },
+    {
+      "lost": [
+        {
+          "reason": "failed fdm.overhang at every resolution tried (no margin against a strict > 45 deg test)",
+          "value_text": "43.5 deg"
+        },
+        {
+          "reason": "4384 mm^2 of roof within 2 deg of the limit",
+          "value_text": "43 deg"
+        },
+        {
+          "reason": "flat strips are bridges inside the chamber: 10-12 mm spans measured",
+          "value_text": "a flat cap under the ridge"
+        }
+      ],
+      "name": "roof_angle_deg",
+      "rationale": "Every chamber roof plane leans this far from vertical: 3 deg inside the 45 deg limit.",
+      "value_text": "42 deg"
+    },
+    {
+      "lost": [
+        {
+          "reason": "once the window was lowered to 6.3 mm the eave stood 3.0 mm above the lintel for nothing: a rump crest of 27.9 mm against the 22-27 mm asked for",
+          "value_text": "25.5 mm (the first build, over an 8 mm high window)"
+        },
+        {
+          "reason": "the lobe roof's eave comes out below the lintel: a hanging edge along the top of the window (measured on the first build: 1.1 mm below at 23.2 mm under the taller window)",
+          "value_text": "22.4 mm or less"
+        }
+      ],
+      "name": "lobe_ridge_z_mm",
+      "rationale": "Ridge of the rump lobe. Its eave on the window wall then sits 0.76 mm ABOVE the lintel, so the roof lands on a wall, and the rump crest above it is 25.65 mm.",
+      "value_text": "23.25 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "window conductance 4.93 mm on the 121 cm^3 chamber: the note solved at 352 Hz with the vent PLUGGED, above the 340 Hz target before any vent is opened",
+          "value_text": "22 mm, the whole rump (385 mm^2 beside the jet)"
+        },
+        {
+          "reason": "lowered the window conductance 10 %, but is under the 250 mm^2 / 4.5 x floor set for the lobe: a throat again",
+          "value_text": "10 mm (184 mm^2 = 3.3 x the window)"
+        }
+      ],
+      "name": "lobe_width_mm",
+      "rationale": "Width of the rump lobe, from the window's inner plane to its far wall (the rest of the rump, on the bird's right, is solid). The lobe section beside the jet is then 253 mm^2 = 5.7 x the window: the narrowest the design allows (>= 250 mm^2 and >= 4.5 x), taken because the window's own conductance was 16 % too high for 340 Hz and a throat lowers it without narrowing the jet.",
+      "value_text": "15 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "twice the length in which a string or seam can sit, about 30 Pa more pressure drop",
+          "value_text": "43.5 mm skewed slot"
+        },
+        {
+          "reason": "put the window 7.4 mm from the lip stop",
+          "value_text": "22 mm"
+        }
+      ],
+      "name": "windway_length_mm",
+      "rationale": "Windway from the tail tip to its exit at x = 30.",
+      "value_text": "30 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "with a 263 mm^2 lobe and a 4 mm wall the vent-plugged note still solved about 25 cents ABOVE 340 Hz (h = 0.4 mm, extrapolated); it has to be 60-140 cents below for the vent to trim both ways",
+          "value_text": "8.0 mm (a 7 x 8 = 56 mm^2 window)"
+        },
+        {
+          "reason": "vent-plugged note about 41 cents under 340 Hz (h = 0.4 mm, extrapolated): short of the 60 cents wanted",
+          "value_text": "7.0 mm"
+        }
+      ],
+      "name": "windway_height_mm",
+      "rationale": "Slot height (Z) = jet width = window height. Solved: with the 7.0 mm cut-up it makes the 44 mm^2 window whose conductance (4.08 mm) leaves the vent-plugged note 90 cents under 340 Hz.",
+      "value_text": "6.3 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "2 mm more wall lowered the window conductance only 5 % (the passage flares on the ramp and lintel sides); 16 % was needed",
+          "value_text": "5.5 mm"
+        },
+        {
+          "reason": "independent solve read 317 Hz and 331 Hz against the designers' 340 Hz: the throat junction was not in their models",
+          "value_text": "a window opening into a throat (L_eff 15.8-17 mm)"
+        },
+        {
+          "reason": "under the gripping thumb: -64 cents with a pad resting over it",
+          "value_text": "a 21 x 17 mm flank scoop"
+        }
+      ],
+      "name": "window_wall_mm",
+      "rationale": "Wall depth at the window, mid cut-up (the deep end of the 3-4 mm allowed). The window opens straight from the flank into the lobe.",
+      "value_text": "4 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "the largest flat ceiling of the three concepts, directly at the jet top",
+          "value_text": "a 7-12.6 mm flat bridge over the jet"
+        },
+        {
+          "reason": "with the ramp receding at 25 deg the outermost strand of a 1.5 mm deep strip would be 5.0 mm",
+          "value_text": "4.5 mm"
+        }
+      ],
+      "name": "lintel_flat_mm",
+      "rationale": "Flat bridge over the window at the labium; with the ramp receding the outermost of its three strands is 4.2 mm. The rest of the window top is 43 deg haunches.",
+      "value_text": "4 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "what a 145 cm^3 chamber needed: marginal for a child's fingertip (7-8 mm limit)",
+          "value_text": "8.2 mm"
+        }
+      ],
+      "name": "hole_d_mm",
+      "rationale": "Finger hole diameter. Solved: the open note is 470 Hz in the potential-flow solve (the hole adds 4.11 mm of conductance). Must stay <= 7.5 mm to seal under a child's fingertip.",
+      "value_text": "7.05 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "8 % less conductance at the same diameter (solved at 6.6 and 7.0 mm): 470 Hz would need an estimated 7.5-7.6 mm, at or over the 7.5 mm a child's fingertip seals",
+          "value_text": "a plain bore through the gable (no undercut)"
+        },
+        {
+          "reason": "2.5 % less hole conductance than 2.5 mm for no gain: the roof is 2.05 mm on the ridge line either way",
+          "value_text": "3.0 mm"
+        }
+      ],
+      "name": "hole_chimney_mm",
+      "rationale": "Cylindrical length of the finger hole below the dimple floor; below it the bore opens downward at roof_angle_deg (an undercut tone hole, printable like the roof). A plain bore through the 42 deg gable is 2.05 mm long on the ridge line and 5.5 mm at the sides.",
+      "value_text": "2.5 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "left 1.73 mm of roof on the uphill side of the hole (measured on the 0.35 mm mesh)",
+          "value_text": "the same dimple sunk vertically"
+        }
+      ],
+      "name": "dimple_depth_mm",
+      "rationale": "Finger dimple depth: found by feel, 9 mm across.",
+      "value_text": "0.8 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "closed note 340.8 Hz in the solve (+0.23 %); 2.1 mm centres it (340.1 Hz)",
+          "value_text": "2.15 mm"
+        },
+        {
+          "reason": "one-sided trim: no clean way down if the print lands sharp",
+          "value_text": "a blind pilot to drill out"
+        },
+        {
+          "reason": "likely to print shut",
+          "value_text": "1.5 mm horizontal vent"
+        }
+      ],
+      "name": "vent_d_mm",
+      "rationale": "Tuning vent diameter, printed OPEN. Solved: with the vent open the closed note is 340 Hz (vent conductance 0.446 mm). Plug it to lower the closed note 90 cents, ream it to raise it.",
+      "value_text": "2.1 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "the body's back rises there: chimney 3.99 mm at x = 39, against the 3 mm limit",
+          "value_text": "39 mm (the spec asked for 42-48)"
+        }
+      ],
+      "name": "vent_x_mm",
+      "rationale": "Vent on the rump crown, a vertical bore through the lobe ridge: behind the gripping fingers and 20 mm in front of the lips, with a 2.8 mm chimney.",
+      "value_text": "35.5 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "coarser steps on the windway and labium; 0.16 is the stated fallback",
+          "value_text": "0.2 mm"
+        }
+      ],
+      "name": "layer_height_mm",
+      "rationale": "Fine layers for a smooth airway (R3: \"high quality\"); 0.16 is allowed.",
+      "value_text": "0.12 mm"
+    },
+    {
+      "lost": [
+        {
+          "reason": "107 g and a 21 h print for the same shell",
+          "value_text": "solid"
+        }
+      ],
+      "name": "infill_fraction",
+      "rationale": "Sparse infill in the thick roof wedges, head and tail block (15-20 %).",
+      "value_text": "0.18 fraction"
+    },
+    {
+      "lost": [
+        {
+          "reason": "strings across the windway",
+          "value_text": "PETG, 1.27"
+        }
+      ],
+      "name": "filament_density_g_cm3",
+      "rationale": "PLA first.",
+      "value_text": "1.24 g/cm^3"
+    },
+    {
+      "lost": [
+        {
+          "reason": "an independent re-measurement of the coo's low note; the person chose 340 -> 470, and a print that lands sharp is still inside the measured band",
+          "value_text": "380 Hz"
+        }
+      ],
+      "name": "target_closed_hz",
+      "rationale": "Design centre, hole closed: the loudest part of the coo (R2).",
+      "value_text": "340 Hz"
+    }
+  ],
   "meta": {
     "content_digest": "a0cf57e0649a56551c5debcb6bd0134c4730709b624e0ac92d05fb31a5bdedd5",
     "name": "pigeon-whistle",
-    "records_digest": "a1e1f24ed70d12920bcdabdfbbeaf359c3572b2e21c1e5faebe76ec5915670c8",
-    "resolution_digest": "583812d938ef7553935ff12fd0a517e970404d3026f54e9c21f5b29dea7a03fa",
+    "records_digest": "369493ebe307066d658287b5f0d5b48dc2981222499d6efcbbae3af7611ef5e2",
+    "resolution_digest": "48fda9c4aa678ca6256e0e0d0624481e8715cb765a1bb18161de54b8a2605146",
     "revision": "v0.1",
     "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency",
     "views": {}
@@ -104,7 +436,7 @@
   ],
   "schema": 1,
   "sections": [],
-  "self": "17dfbe42f505bd097c85ffde7c47e6a980c3d59ff7c7c38a8630e1d8003a3da5",
+  "self": "5ceaef8713623b95ac969d7fe0f765307eb080dbfac960f7e7f7a69583044ca1",
   "story": null,
   "verdict": {
     "headline": "v0.1 has no claims, so nothing is evaluated.",

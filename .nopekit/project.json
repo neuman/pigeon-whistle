@@ -4,7 +4,7 @@
   "summary": "A 3D-printable whistle shaped like a pigeon that sounds at a pigeon call frequency",
   "created": "2026-11-19T19:44:30Z",
   "revision": "v0.1",
-  "model_entry": "",
+  "model_entry": "model/pigeon.py",
   "packs": [
     "fdm-print",
     "cad-solid"
