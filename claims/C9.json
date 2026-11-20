@@ -1,0 +1,27 @@
+{
+  "statement": "The window opens straight into the chamber: the chamber section beside the jet is at least 4.5 times the window area",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "lobe to window area ratio",
+    "comparator": ">=",
+    "limit": 4.5,
+    "units": "ratio"
+  },
+  "rationale": "The two panel concepts whose window opened into a neck were the quiet, breathy ones: their window paths were 3.7 and 4.3 equal-area radii long, outside every recipe in the acoustics notes (the panel's acoustics review; input vessel-flute-acoustics-notes, section 6, on why low notes in small chambers are breathy). The design spec then asked for at least 250 mm^2 of chamber beside the jet, 4.5 times the window it had; 4.5 is that ratio kept as the limit. It is a design-panel rule with no outside source, and no model here predicts loudness or breathiness (C26 measures the level).",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "tags": [
+    "no-throat"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The area of the rump lobe on the plane across the jet at mid cut-up, integrated by the model, over the window area (cut-up times window height).",
+    "evaluators": [
+      "whistle.no_throat"
+    ]
+  },
+  "requirements": [
+    "R2"
+  ]
+}

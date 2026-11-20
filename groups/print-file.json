@@ -1,0 +1,13 @@
+{
+  "kind": "station",
+  "title": "Print file",
+  "line": "The mesh the printer gets; its name carries the hash of the geometry it was cut from.",
+  "members": [
+    "fdm.mesh_path",
+    "geometry_hash",
+    "cad.meshes",
+    "fdm.build_axis",
+    "fdm.load_axis"
+  ],
+  "order": 8
+}

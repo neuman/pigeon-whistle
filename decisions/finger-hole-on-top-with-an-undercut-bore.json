@@ -1,0 +1,37 @@
+{
+  "title": "Finger hole on top, with an undercut bore",
+  "when": "2026-11-20T03:09:07Z",
+  "summary": "The one finger hole is a vertical bore through the ridge of the back on the centre line, 7.05 mm across (7.25 mm as drawn for print): straight for 2.5 mm, then opening downward at the roof angle. It sits in a dimple 0.8 mm deep, and either hand finds it by feel.",
+  "rejected": [
+    {
+      "value": "a plain bore through the gable roof",
+      "why": "8 % less conductance at the same diameter (solved at 6.6 and 7.0 mm): 470 Hz then needs an estimated 7.5 to 7.6 mm, at or over the 7.5 mm the design spec set for a child's fingertip",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when the undercut prints with a ragged inner rim: a plain 7.6 mm bore is 7.8 mm as drawn, still inside the 8 mm of C8"
+      }
+    },
+    {
+      "value": "a hole on the right flank of the back, 23 mm down-slope from the ridge (the print-first concept)",
+      "why": "a dead flat seat that seals well, but one-handed: the right index finger lands on it and the left does not",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when a flat seat matters more than either hand, with a mirrored file for left hands"
+      }
+    }
+  ],
+  "params_changed": [
+    "hole_d_mm",
+    "hole_chimney_mm",
+    "hole_x_mm",
+    "dimple_depth_mm"
+  ],
+  "claims_changed": [
+    "C2",
+    "C8",
+    "C25"
+  ],
+  "evidence": [
+    "model/pigeon.py"
+  ]
+}

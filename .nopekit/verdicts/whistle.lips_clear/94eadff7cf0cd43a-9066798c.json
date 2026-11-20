@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "gate": "whistle.lips_clear",
+  "rho": "94eadff7cf0cd43ad30dd0de0e32565eb2a70d3bcebb52b05ec96d0089acfc42",
+  "code": {
+    "digest": "ea27758108fc67060565b62d29d5e7ca76878f9f920081fe0d9be6209b3c99e6",
+    "files": [
+      "gates/form.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "lip_stop_x_mm"
+        ],
+        "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+        15.0
+      ],
+      [
+        [
+          "lip_to_window_mm"
+        ],
+        "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+        15.0
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C10": "8571bd3fc52b01724f70adde97c41189c6044e370eadd4ec65570a17aac04be2",
+      "acceptance:C10": "37c15690a5fc9d189514fabdb6c4c4d140d2793f24ebf309455257f6db97e98f"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 15.0,
+    "limit": 12.0,
+    "units": "mm",
+    "comparator": ">=",
+    "settles": "lip stop to window distance",
+    "detail": "lip stop at x = 15 mm, window from x = 30 mm: 15.0 mm between them (limit 12.0 mm)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "lips-clear"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "996a4779a6730a019a6b68f848ff8427aa27554b4b7827ba9dfcb8e41ace8911"
+}

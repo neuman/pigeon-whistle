@@ -1,0 +1,13 @@
+{
+  "kind": "zone",
+  "title": "Finger hole",
+  "line": "One hole on top of the back, in a shallow dimple.",
+  "members": [
+    "hole_d_mm",
+    "hole_x_mm",
+    "hole_chimney_mm",
+    "dimple_radius_mm",
+    "dimple_depth_mm"
+  ],
+  "order": 9
+}

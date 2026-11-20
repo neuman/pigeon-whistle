@@ -1,0 +1,15 @@
+{
+  "kind": "zone",
+  "title": "Body",
+  "line": "The round body and breast; with the rump lobe they set the size of the chamber.",
+  "members": [
+    "body_center_x_mm",
+    "body_center_z_mm",
+    "body_radius_x_mm",
+    "body_radius_y_mm",
+    "body_radius_z_mm",
+    "chest_lead_mm",
+    "self_support_deg"
+  ],
+  "order": 2
+}

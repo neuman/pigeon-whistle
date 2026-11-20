@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "gate": "whistle.wall_as_meshed",
+  "rho": "7d9f4ee6c8ad880617edab2077d5ff1def224ac4f7e9057ca864d15ff164dc6f",
+  "code": {
+    "digest": "2d1305497b2261378e859fe5d5829b172b5cbd096d69e391a11a899cf1d11fa5",
+    "files": [
+      "gates/_shared.py",
+      "gates/print_file.py",
+      "model/acoustics.py",
+      "model/geom.py",
+      "model/islands.py",
+      "model/pigeon.py",
+      "model/solve.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "fcdb5d2a5522a7a928922349fa8f8146c2269df293ef03ed5426bd6bedaee8b0",
+        "print/pigeon-whistle-e93208370219.stl"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ]
+    ],
+    "files": {
+      "print/pigeon-whistle-e93208370219.json": "54618814a604d4ff62ee59a02182cc060e3c65b6ff1081c0bbaae2c082589da0",
+      "print/pigeon-whistle-e93208370219.stl": "5a5941e2318470d6e450c1c6127a33fd41dd086550773a14c18da68d6331be25"
+    },
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C15": "5f4ebdff38f4e0ea156a81cca0b975975440319e4c30ee7b063eb860e883eb12",
+      "acceptance:C15": "70544b29a8d3491f15398a04c96d37bf1b0a2be3a0dac70328df8a5a2414c8c6"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {
+    "manifold3d": "unknown",
+    "numpy": "2.0.0",
+    "scipy": "1.13.1",
+    "skimage": "unknown",
+    "trimesh": "5.1.1"
+  },
+  "verdict": {
+    "passed": true,
+    "measured": 2.1,
+    "limit": 1.8,
+    "units": "mm",
+    "comparator": ">=",
+    "settles": "thinnest shell wall",
+    "detail": "pigeon-whistle-e93208370219.stl: thinnest shell wall 2.10 mm as measured by model/mesh.py and recorded beside the file (limit 1.8 mm); read, not re-measured",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "wall-airtight"
+    ],
+    "tier": 1,
+    "pack": ""
+  },
+  "digest": "78f2cfe1820d899d939c3cdac351bdef6460d0930a9db81b6a55e232e3aa7400"
+}

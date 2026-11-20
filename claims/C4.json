@@ -1,0 +1,28 @@
+{
+  "statement": "Trimming the vent moves the closed note at least 50 cents each way: plugging it lowers the note, reaming it to 3.5 mm raises it",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "smaller trim reach",
+    "comparator": ">=",
+    "limit": 50.0,
+    "units": "cents"
+  },
+  "rationale": "A first print of a mouth-blown vessel flute is expected within about +-10 % of the model, 165 cents (input vessel-flute-acoustics-notes, sections 0 and 3). The recordings tolerate +-8 %, 133 cents (input coo-pitch-analysis). The trim has to cover the difference, about 32 cents, with margin; 50 cents each way is the lead's number. A worst-case first print, 15 to 20 % off, is NOT covered by the vent and means a reprint with a corrected window. The upward figure is the closed form's and is low: the solve gives about 11 cents more.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes",
+    "coo-pitch-analysis"
+  ],
+  "tags": [
+    "trim-reach"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The closed note with the vent plugged, as printed, and reamed to the largest diameter that was solved, by the same closed form as C1; the smaller of the two shifts is held to the limit.",
+    "evaluators": [
+      "whistle.trim_reach"
+    ]
+  },
+  "requirements": [
+    "R2"
+  ]
+}

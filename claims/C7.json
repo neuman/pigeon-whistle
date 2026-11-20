@@ -1,0 +1,27 @@
+{
+  "statement": "The chamber is acoustically compact: its longest dimension is at most one eighth of the wavelength at the open note",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "chamber length over wavelength",
+    "comparator": "<=",
+    "limit": 0.125,
+    "units": "wavelengths"
+  },
+  "rationale": "Both pitch models treat the chamber air as one spring, which holds only while the chamber is short beside the wavelength. model/acoustics.py sets LUMPED_RATIO_LIMIT = 0.10 as where the UNCALIBRATED lumped law is good to about 2 %; that is a judgement from input vessel-flute-acoustics-notes, section 5, not a published limit. This design sits at 0.111, PAST 0.10. It is allowed to because the potential-flow solve carries the first-order non-compact term and the closed form is held to the solve by C3. 0.125 is the lead's limit for that arrangement: it keeps the first lengthwise mode of the chamber (c / 2L) at least four times above the open note. Neither model carries higher chamber modes.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "tags": [
+    "compact"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The chamber's longest inside dimension times the closed form's open note, over the speed of sound. This is the validity guard of every evaluator whose number is a frequency: when it fails they are not run.",
+    "evaluators": [
+      "whistle.compact"
+    ]
+  },
+  "requirements": [
+    "R2"
+  ]
+}

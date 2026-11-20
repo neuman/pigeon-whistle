@@ -1,0 +1,27 @@
+{
+  "statement": "The print file is one closed solid with the four openings of the design and no other: windway, window, finger hole and vent",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "mesh topology defects",
+    "comparator": "<=",
+    "limit": 0.0,
+    "units": "count"
+  },
+  "rationale": "A slicer needs one closed solid, and a whistle needs a chamber that leaks nowhere: a maker's guide in the printing notes puts it as any micro-leak bleeding the pressure and killing the note (input fdm-whistle-printing-notes, section 1). Zero defects is the only limit that means that. The count holds the surface's genus to 3, which says HOW MANY openings there are, not which; C14 holds the file to the model. This is a statement about the file. Whether printed walls are airtight is C15 and C24.",
+  "grounded_by": [
+    "fdm-whistle-printing-notes"
+  ],
+  "tags": [
+    "mesh-closed"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The print file's triangles: open edges, edges shared by more than two faces, welds or zero-area faces it would need, surface pieces beyond one, a signed volume that is not positive, and the distance of its genus from 3. The sum is held to zero.",
+    "evaluators": [
+      "whistle.mesh_closed"
+    ]
+  },
+  "requirements": [
+    "R3"
+  ]
+}

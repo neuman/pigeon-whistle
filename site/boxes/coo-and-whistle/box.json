@@ -1,0 +1,11 @@
+{
+ "schema": 1,
+ "kind": "custom",
+ "title": "A real coo beside the whistle's two notes",
+ "caption": "Measured: a feral pigeon in Paris (recording by Marie-Lan Tay Pamart, CC BY-SA 4.0, xeno-canto XC539061). Modelled: the two lines, and a synthesised sound. No whistle is printed yet, so no whistle is heard here.",
+ "src": "index.html",
+ "thumbnail": "thumb.png",
+ "view": "both",
+ "section": "story",
+ "aspect": "16/9"
+}

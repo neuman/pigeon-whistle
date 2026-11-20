@@ -1,0 +1,22 @@
+{
+  "kind": "board",
+  "title": "Sounds like a pigeon",
+  "line": "Two notes where the coo is loudest, 340 Hz rising to 470 Hz, loud enough to cross a room.",
+  "members": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C9",
+    "C21",
+    "C22",
+    "C26",
+    "C29",
+    "C30",
+    "C31"
+  ],
+  "order": 1
+}

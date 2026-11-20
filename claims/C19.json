@@ -1,0 +1,27 @@
+{
+  "statement": "The whole whistle is too big to fit inside the small-parts cylinder: its smallest overall dimension is more than 31.7 mm",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "smallest overall dimension",
+    "comparator": ">",
+    "limit": 31.7,
+    "units": "mm"
+  },
+  "rationale": "The small-parts cylinder of the toy standards is 31.7 mm across and 25.4 to 57.1 mm deep (EN 71-1 clause 8.2, ASTM F963, 16 CFR 1501; input fdm-whistle-printing-notes, section 8.2). A toy, or a piece that comes off it, is a small part if it fits wholly inside. This claim is a size rule only: no overall dimension is as small as the cylinder is wide. The whistle is one piece with nothing to come off (C13 holds the file to one piece). The mouthpiece alone does enter the cylinder's mouth, as any whistle's does. This is NOT a toy-safety assessment: the standards also test soaking, torque, tension and drop, and none of that is modelled or tested here.",
+  "grounded_by": [
+    "fdm-whistle-printing-notes"
+  ],
+  "tags": [
+    "not-small-part"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The smallest of the model's overall length, width and height.",
+    "evaluators": [
+      "whistle.not_small_part"
+    ]
+  },
+  "requirements": [
+    "R6"
+  ]
+}

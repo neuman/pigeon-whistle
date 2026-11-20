@@ -1,0 +1,43 @@
+{
+  "title": "A gable roof at 42 degrees inside the chamber",
+  "when": "2026-11-20T03:09:17Z",
+  "summary": "Every roof plane of the chamber leans 42 degrees from vertical and the planes meet in a ridge: no flat ceiling and no support inside, with 3 degrees of margin to the 45 degree overhang limit.",
+  "rejected": [
+    {
+      "value": "a round dome",
+      "why": "on the printing notes' scratch body a dome puts 6.4 % of the surface past 45 degrees (worst 79.9), against the 0.5 % the overhang evaluator allows; a support inside a closed chamber cannot be taken out",
+      "type": "infeasible",
+      "returns_if": {
+        "text": "when the bird is printed as two halves or with supports that dissolve: assumption C28 rules both out"
+      },
+      "input": "fdm-whistle-printing-notes"
+    },
+    {
+      "value": "flat strips under the ridge (the acoustics-first concept)",
+      "why": "four flat patches of about 10 x 5 mm, bridges of 10.5 to 12 mm inside the chamber, where a loose strand cannot be reached; they bought 6.5 cm^3 of chamber (144.9 against 138.4 cm^3)",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when the body cannot give the chamber volume and bridges of 10 mm or more are accepted inside: the model's bridge limit is 5 mm"
+      }
+    },
+    {
+      "value": "roof planes at 43 to 43.5 degrees",
+      "why": "no margin: the concept drawn at 43.5 degrees failed the overhang evaluator at every mesh resolution tried (0.71 to 0.82 % of the surface past 45 degrees against 0.5 % allowed), and the one at 43 degrees had 4384 mm^2 of roof within 2 degrees of the limit",
+      "type": "infeasible",
+      "returns_if": {
+        "text": "when a printed roof coupon justifies an overhang limit above 45 degrees"
+      }
+    }
+  ],
+  "params_changed": [
+    "roof_angle_deg",
+    "self_support_deg"
+  ],
+  "claims_changed": [
+    "C11",
+    "C12"
+  ],
+  "evidence": [
+    "inputs/references/fdm-whistle-printing-notes.md"
+  ]
+}

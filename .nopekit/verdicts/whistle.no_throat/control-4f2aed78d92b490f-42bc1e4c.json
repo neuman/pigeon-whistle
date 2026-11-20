@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.no_throat",
+  "rho": "4f2aed78d92b490f222f760e91bfcd0bf50c5510eae0b0501d9feebd5db3b6bf",
+  "static": "54ff83febb1902c28ba979fb2cc189090ecaaeb75446d52fca3fae0759c30b12",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "07ff90cb1b8e6fc76b7cfbc17dbd175e6d40f1c2e4918aa2531ee264c08382c4",
+      "files": [
+        "gates/acoustics.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:throat",
+      "expect": "fail",
+      "note": "the rump lobe 10 mm wide, not 15: the section beside the jet falls to 3.7 times the window",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "lobe_area_mm2"
+        ],
+        "4baa7eb705ee908308ecd67a2ca013ce3d275ac0a10d83416ba4962ae2add0d0",
+        162.08
+      ],
+      [
+        [
+          "lobe_to_window_ratio"
+        ],
+        "1341aecb43239d04d56f65172d45e63d32cc78c98c4730bd96993fff11a89e85",
+        3.6753
+      ],
+      [
+        [
+          "window_area_mm2"
+        ],
+        "506396be7510d945d730e9a2fdfb638cf6ff9103216e4bf23664ddca5d7656c6",
+        44.1
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C9": "f4a4d604590d6134d918f3bfb2b28599bba8eea80b80582019337427c3e7ec1a",
+      "acceptance:C9": "23b3889e1f13b12ea28012976e11fc8fa9ed0d1830a20e5130f4c71bd9f3fb26"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "lobe_area_mm2"
+          ],
+          "9975e0abd51644e42dde91adbe39de5796456d80dae993689ccc5a7a661e7545",
+          252.51
+        ],
+        [
+          [
+            "lobe_to_window_ratio"
+          ],
+          "264a6d874e04b014abeeecabc98a2b0b780d2879f3a3a41d2a5069135aec34dc",
+          5.7259
+        ],
+        [
+          [
+            "window_area_mm2"
+          ],
+          "506396be7510d945d730e9a2fdfb638cf6ff9103216e4bf23664ddca5d7656c6",
+          44.1
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C9": "f4a4d604590d6134d918f3bfb2b28599bba8eea80b80582019337427c3e7ec1a",
+        "acceptance:C9": "23b3889e1f13b12ea28012976e11fc8fa9ed0d1830a20e5130f4c71bd9f3fb26"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 5.73,
+    "limit": 4.5,
+    "units": "ratio",
+    "detail": "lobe section 253 mm^2 beside the jet is 5.73 x the 44.1 mm^2 window (limit 4.5)",
+    "goalpost": [
+      {
+        "key": "C9",
+        "measured": 5.73,
+        "units": "ratio",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.45,
+            "outcome": "pass",
+            "measured": 5.73,
+            "units": "ratio"
+          },
+          {
+            "end": "limit",
+            "limit": 2.25,
+            "outcome": "pass",
+            "measured": 5.73,
+            "units": "ratio"
+          },
+          {
+            "end": "limit",
+            "limit": 9.0,
+            "outcome": "fail",
+            "measured": 5.73,
+            "units": "ratio"
+          },
+          {
+            "end": "limit",
+            "limit": 45.0,
+            "outcome": "fail",
+            "measured": 5.73,
+            "units": "ratio"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 57,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "lobe_to_window_ratio"
+        ],
+        "before": 5.7259,
+        "after": 3.82,
+        "outcome": "fail",
+        "measured": 3.82,
+        "limit": 4.5
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "lobe_area_mm2"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "window_area_mm2"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:throat (the rump lobe 10 mm wide, not 15: the section beside the jet falls to 3.7 times the window): lobe section 162 mm^2 beside the jet is 3.68 x the 44.1 mm^2 window (limit 4.5)",
+  "measured": 3.68,
+  "limit": 4.5,
+  "units": "ratio",
+  "digest": "3b577c6491541c3bb5a4ab040d62eb6a2389da4babcfe624070b3160785a6f59"
+}

@@ -1,0 +1,19 @@
+{
+  "statement": "Rocking a fingertip over the hole glides the note between the two pitches without the tone breaking",
+  "kind": "physical",
+  "rationale": "R5 asks for the rolling coo-roo-coo. The acoustics notes expect a smooth glide from partial covering, by arithmetic (input vessel-flute-acoustics-notes, section 4); whether the tone holds while a finger moves is a property of the jet and of a hand.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "mechanism": {
+    "by": "measurement",
+    "how": "Hold it as it is played: the tail in the mouth up to the lip stop, the fingers forward of the window, and the whistle in the hand, not resting on a desk (a surface under the belly lowers the note by about 2 %). Blow a steady breath and rock the index fingertip slowly off the hole and back, several times. It passes when the note slides up and back between the closed and the open note with no break into hiss, squeal or silence. A short sound clip is the evidence."
+  },
+  "expected_latency": {
+    "value": 1,
+    "units": "day"
+  },
+  "requirements": [
+    "R5"
+  ]
+}

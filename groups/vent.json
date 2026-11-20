@@ -1,0 +1,11 @@
+{
+  "kind": "zone",
+  "title": "Tuning vent",
+  "line": "A small hole on the crown of the rump, printed open: plug it or ream it to trim the low note.",
+  "members": [
+    "vent_d_mm",
+    "vent_x_mm",
+    "vent_ream_max_mm"
+  ],
+  "order": 10
+}

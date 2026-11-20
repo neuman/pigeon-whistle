@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.trim_reach",
+  "rho": "ffeb8c8c86867fc542e3f72bfe3529ed35f8675d0e300481ae50f8fc0c20ff9e",
+  "code": {
+    "digest": "ca5b094ff56f8d472c009fbf855ecdf9b315192bbbfd4a3ca6e0bb48ead6f09c",
+    "files": [
+      "gates/acoustics.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "tune_down_reach_cents"
+        ],
+        "c74d6bb72f7e612af22d8dad3c1595df863f000aa653294fe41b93c672605c56",
+        89.7034
+      ],
+      [
+        [
+          "tune_up_reach_cents"
+        ],
+        "9b4d4cd4109047b825c78511c3424ef85b9410b574b31c4e61ad8098a5f2fb3a",
+        77.5788
+      ],
+      [
+        [
+          "vent_ream_max_mm"
+        ],
+        "48e704842b6f902577817ecd07b1677c7feffc8cc756cd173bcfa12456197def",
+        3.5
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C4": "5acddfbf4b116b9f472fd6749f9915be7d1ddd1aa0a0f6545ca4bf655e6579f0",
+      "acceptance:C4": "ea1577635ecfc184ba2f54e15468484013ba144e6bb102d6fc8084f274e775ac"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 77.6,
+    "limit": 50.0,
+    "units": "cents",
+    "comparator": ">=",
+    "settles": "smaller trim reach",
+    "detail": "vent plugged: 89.7 cents down; reamed to 3.5 mm: 77.6 cents up (limit 50.0 each way); a first print further off than this needs a reprint",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "trim-reach"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "a2f8d91f369e6d89d7548d3a93388806441a452ef7c8e5ae064d2b3b6d7b1488"
+}

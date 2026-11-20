@@ -1,0 +1,33 @@
+{
+  "statement": "With the finger hole open, the modelled note is within 10 cents of 470 Hz",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "open pitch error",
+    "comparator": "<=",
+    "limit": 10.0,
+    "units": "cents"
+  },
+  "rationale": "470 Hz is the top of the coo's rise as the person chose it (R2), and the one finger hole makes it (R5); the recordings support 470 Hz (input coo-pitch-analysis: in one Paris recording a third of the loudest-partial energy lies within 25 Hz of it). 10 cents is the same centring tolerance for the model as in C1, for the same reasons. The interval a hole makes is the best-conditioned part of the model, +-1 to 3 % in ratio on published instruments (input vessel-flute-acoustics-notes, section 3). A played note is C22's question.",
+  "grounded_by": [
+    "coo-pitch-analysis",
+    "vessel-flute-acoustics-notes",
+    "coo-xc539061-paris-feral-pigeon",
+    "coo-xc541143-paris-feral-pigeon",
+    "coo-sangli-blue-rock-pigeon"
+  ],
+  "tags": [
+    "pitch-open"
+  ],
+  "mechanism": {
+    "by": "solver",
+    "how": "The passive resonance of the designed geometry with the finger hole and the vent open, found twice as for C1: the closed form in the model and the potential-flow solve. Both must land within the limit, and both are run only while the chamber is short beside the wavelength (C7).",
+    "evaluators": [
+      "whistle.pitch_open",
+      "whistle.pitch_open_solved"
+    ]
+  },
+  "requirements": [
+    "R2",
+    "R5"
+  ]
+}

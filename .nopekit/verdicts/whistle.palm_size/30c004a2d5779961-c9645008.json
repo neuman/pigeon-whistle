@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.palm_size",
+  "rho": "30c004a2d577996165ea1f9fe81843fa864cf05f9c4e7e5eaa40a6b25d30ea1f",
+  "code": {
+    "digest": "4bc9fe3bc27cde5c8ce5966dbeeaf8eb29fa64c15daa65ea656c36fca2634bb6",
+    "files": [
+      "gates/form.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "overall_height_mm"
+        ],
+        "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+        67.6998
+      ],
+      [
+        [
+          "overall_length_mm"
+        ],
+        "b7710a2141015ba76fbd003291460cb0ebdc8504afec84216472f2b224c86118",
+        117.7683
+      ],
+      [
+        [
+          "overall_width_mm"
+        ],
+        "b96c745a8ca28e64e042ce06890922cadda65c933d08fadee5c59fc0516c2543",
+        67.6777
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C18": "ff6d709a52e79fca2e3ea8fc0ec680d61b5744791242e084f268982b805f4dd3",
+      "acceptance:C18": "a2ab61da2bcb832cbfbf933734a69573295480aba73d6f5e725c505cbc864390"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 117.8,
+    "limit": 100.0,
+    "units": "mm",
+    "comparator": "between",
+    "settles": "overall length",
+    "detail": "117.8 mm long, 67.7 wide, 67.7 high (length band 100 to 120 mm)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "palm-size"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "19c38206e89c7de68726f5c3bf27fa0da5c2b719ed2b803772bee5ade2a816f1"
+}

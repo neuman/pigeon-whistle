@@ -3,5 +3,116 @@
   "kind": "reference",
   "description": "Research notes with sources: Helmholtz vessel-flute model, end corrections, published validation instruments, voicing rules, error band",
   "sha256": "a0aba38647cc7e3f6beacbb39222a3e5dd058ba33396f773d87bd392a8fd8e26",
-  "added": "2026-11-19T21:02:59Z"
+  "added": "2026-11-19T21:02:59Z",
+  "extractions": [
+    {
+      "what": "Pitch law of a vessel flute: f = c / (2 pi) x sqrt(sum of G / V), with G = A / (t + k r) for each opening and r the equal-area radius; the conductances of the openings add (section 1.1: UNSW, Okada 2019, Csoka 2018). Exact corollary: f_open^2 - f_closed^2 = (c / 2 pi)^2 x G_hole / V, so the interval a finger hole makes does not depend on the window model. Textbook end factors k: 1.46 to 1.70 for a hole through a wall (sections 1.2 and 4).",
+      "grounds": [
+        "C1",
+        "C2"
+      ],
+      "note": "Only the law is sourced. The model's three end factors (k_window, k_hole, k_vent) are calibrated on its own potential-flow solve and are not grounded by this input; k_vent 4.69 is far outside the textbook range."
+    },
+    {
+      "what": "Speed of sound to use: 346 m/s. A warmed, played wind instrument settles near 25.5 C (Fuks; oboe 25.6 C by Meyer, flute 26.8 C by Coltman); 346.1 m/s at 25 C; the humidity and the carbon dioxide of the breath roughly cancel. A cold first toot at 20 C is 13 cents flat, long warm play up to 17 cents sharp (section 1.3).",
+      "grounds": [
+        "c_air_m_s",
+        "C30"
+      ],
+      "note": "Not measured on this whistle or this player: assumption C30."
+    },
+    {
+      "what": "Blowing pressure: with a 7 mm cut-up both notes speak at one pressure from about 100 to 650 Pa, and the best common point is 150 to 250 Pa (340 Hz is at its best near 130 Pa, 470 Hz near 250 Pa). These are computed from the Strouhal band, not measured; no blowing pressure of an ocarina in Pa was found (sections 1.4 and 2.3).",
+      "grounds": [
+        "blow_pressure_pa",
+        "C31"
+      ],
+      "confidence": "inferred",
+      "note": "Not measured on a player: assumption C31."
+    },
+    {
+      "what": "Jet band: a recorder head feeds its note while the Strouhal number f W / U lies between 0.07 and about 0.27 (Price; W the cut-up, U the jet speed); efficiency peaks at 0.14 to 0.18 (McKinnon's re-analysis of Verge) (section 2.2).",
+      "grounds": [
+        "C5",
+        "C6"
+      ],
+      "note": "Measured on recorders, not on vessel flutes."
+    },
+    {
+      "what": "Voicing start values for 340 and 470 Hz, from published instruments and maker rules: cut-up 7 to 7.5 mm; windway exit 1.2 to 1.5 mm with the inlet about twice that; windway 20 to 35 mm long or more; 45 degree chamfers of 0.5 to 0.7 mm on both exit lips; labium edge on the windway mid-plane, 0 to 0.1 mm toward the outside; ramp 15 to 30 degrees; edge 0.5 mm or less (sections 0, 2.1 and 2.3).",
+      "grounds": [
+        "cutup_mm",
+        "windway_gap_exit_mm",
+        "windway_gap_inlet_mm",
+        "windway_length_mm",
+        "windway_exit_chamfer_mm",
+        "labium_offset_mm",
+        "labium_ramp_deg",
+        "labium_tip_mm"
+      ],
+      "note": "Sources are a 12-hole alto ocarina (Csoka), a soprano ocarina (Okada), a tenor and an alto recorder (Price and others) and one experimental organ pipe (Fletcher); none is a one-hole vessel flute at 340 Hz."
+    },
+    {
+      "what": "Window size: the notes ask for a window as wide as the windway, 7 to 8 mm, and prefer 49 to 60 mm^2. Their derived minimum is a cut-up of 6 mm and a width of 6 mm, about 36 mm^2; they found no published rule (sections 2.3 and 6).",
+      "grounds": [
+        "windway_height_mm"
+      ],
+      "confidence": "inferred",
+      "note": "The design's window is 7.0 x 6.3 mm = 44.1 mm^2: above the derived minimum, below the preferred range. The window decision records what lost."
+    },
+    {
+      "what": "Error band of the uncalibrated closed form on real mouth-blown ocarinas: about 10 % in frequency typical (170 cents), 15 to 20 % worst case, and the sign is not the same from one published instrument to the next (a thick-walled alto reads 17 % low to 3 % high by the choice of end factor; a long soprano 34 % high). The interval is much better: 1 to 3 % in ratio. After one calibration print, about 3 % (sections 0 and 3).",
+      "grounds": [
+        "C4",
+        "C21",
+        "C22",
+        "C1",
+        "C2"
+      ],
+      "confidence": "inferred",
+      "note": "The notes' own synthesis of two measured instruments and several bottles; the source of the 10 % a first print may miss by."
+    },
+    {
+      "what": "Chamber size for 340 Hz: 100 cm^3 or more is recommended and 125 to 150 cm^3 is comfortable; below about 80 cm^3 the window needs a deep neck and the whistle is quiet and breathy. By the notes' loss estimate 4.9 % of the oscillation loss is radiated at 100 cm^3, 6.4 % at 125 and 7.7 % at 150 (sections 0, 6 and 7).",
+      "grounds": [
+        "C9"
+      ],
+      "confidence": "inferred",
+      "note": "Computed in the notes, with no measured loudness of any ocarina behind it."
+    },
+    {
+      "what": "Finger hole: sized from the interval law, about 6.5 mm for 340 to 470 Hz in a 125 cm^3 chamber with a 2.5 mm wall. 0.2 mm of diameter is 14 to 20 cents on the open note. Real ocarina finger holes run 2.7 to 9.8 mm (Csoka's ABS alto). No fingertip measurements were found; 7 to 8 mm for a child is the notes' judgement. Partial covering by arithmetic: a quarter of the hole open gives about 40 % of the rise (section 4).",
+      "grounds": [
+        "hole_d_mm",
+        "C8",
+        "C25"
+      ]
+    },
+    {
+      "what": "Compactness: the wavelength is 1018 mm at 340 Hz and 736 mm at 470 Hz, so an 80 to 90 mm chamber is not negligible. First-order correction by the notes' own derivation: a window at the end of the chamber lowers the closed note 68 to 85 cents and the open note 125 to 155 cents; at mid-length 17 to 22 and 33 to 42 cents. The first lengthwise mode of an 85 mm chamber is near 2 kHz (section 5).",
+      "grounds": [
+        "C7"
+      ],
+      "confidence": "inferred",
+      "note": "No published limit for the ratio of chamber length to wavelength; the model's 0.10 and the claim's 0.125 are judgements."
+    },
+    {
+      "what": "A window shaded by lips or face (end factor 2.3 for 1.7) lowers the closed note 146 to 193 cents and the open note 74 to 96 cents in the notes' three worked sets (section 7).",
+      "grounds": [
+        "lip_stop_x_mm",
+        "C10"
+      ],
+      "confidence": "inferred",
+      "note": "Arithmetic on the closed form, not a measurement."
+    },
+    {
+      "what": "A small hole that stays open raises the closed note about twice as much as the open note: a 2 mm vent raises the closed note 98 to 159 cents in the worked sets. The notes advise to design the closed note flat and drill a vent to raise it, because lowering a note is hard (section 7).",
+      "grounds": [
+        "vent_d_mm",
+        "C4"
+      ],
+      "confidence": "inferred",
+      "note": "The design goes one step further and prints the vent open, so that it can be plugged as well as reamed."
+    }
+  ]
 }

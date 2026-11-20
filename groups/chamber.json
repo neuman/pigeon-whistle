@@ -1,0 +1,13 @@
+{
+  "kind": "zone",
+  "title": "Chamber",
+  "line": "The shell wall and floor, the gable roof, and the lobe that runs back into the rump.",
+  "members": [
+    "shell_wall_mm",
+    "floor_mm",
+    "roof_angle_deg",
+    "lobe_ridge_z_mm",
+    "lobe_width_mm"
+  ],
+  "order": 6
+}

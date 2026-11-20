@@ -1,0 +1,30 @@
+{
+  "statement": "It is heard across a room and is not too loud for a toy: between 60 and 90 dB(A) at 50 cm",
+  "kind": "physical",
+  "acceptance": {
+    "quantity": "sound level at 50 cm",
+    "comparator": "between",
+    "limit": 60.0,
+    "limit_hi": 90.0,
+    "units": "dB(A)"
+  },
+  "rationale": "90 dB(A) at 50 cm is the EN 71-1:2014 limit for wind toys such as whistles (clause 4.20.2.10, exposure category 3; input fdm-whistle-printing-notes, section 8.3). The same clause holds wind toys that imitate musical instruments to 85 dB(A), and the printing notes advise checking against 85; the lead took 90, so a reading between 85 and 90 passes this claim and must be said out loud. 60 dB(A) is the lead's reading of heard across a room (assumption C29), about speech at arm's length, with no outside source. No model here predicts the level. A phone app is good to +-3 dB at best, so a reading within 3 dB of either end settles nothing, and this is not a conformity test.",
+  "grounded_by": [
+    "fdm-whistle-printing-notes"
+  ],
+  "mechanism": {
+    "by": "measurement",
+    "how": "In a quiet room, a sound-level app on a phone 50 cm from the whistle's window, A-weighted, slow response. Blow the closed note with the gentle, steady breath of C21 and note the level. Then blow as hard as the note stays clean and note the highest level. Record the gentle-breath level as the measured value, unless the hard-blown level is over 90 dB(A): then record that one. Give both readings and the name of the app in the detail."
+  },
+  "expected_latency": {
+    "value": 1,
+    "units": "day"
+  },
+  "resolves": [
+    "C29"
+  ],
+  "requirements": [
+    "R2",
+    "R6"
+  ]
+}

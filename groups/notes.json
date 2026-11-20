@@ -1,0 +1,13 @@
+{
+  "kind": "station",
+  "title": "The two notes",
+  "line": "The closed form's note with the finger hole closed and open, and how far each is from its target.",
+  "members": [
+    "f_closed_hz",
+    "f_open_hz",
+    "closed_error_cents",
+    "open_error_cents",
+    "interval_ratio"
+  ],
+  "order": 1
+}

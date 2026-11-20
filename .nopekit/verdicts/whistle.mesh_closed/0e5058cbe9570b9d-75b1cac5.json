@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "gate": "whistle.mesh_closed",
+  "rho": "0e5058cbe9570b9d6366c3fe36bacdbceb33d114a7b98c2240cf9d0b229df13e",
+  "code": {
+    "digest": "247089932011a44e1aa3d1dde086f5ba2b354a260840fc23af346b0ca73f766d",
+    "files": [
+      "gates/_shared.py",
+      "gates/print_file.py",
+      "model/acoustics.py",
+      "model/geom.py",
+      "model/islands.py",
+      "model/pigeon.py",
+      "model/solve.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "fcdb5d2a5522a7a928922349fa8f8146c2269df293ef03ed5426bd6bedaee8b0",
+        "print/pigeon-whistle-e93208370219.stl"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ]
+    ],
+    "files": {
+      "print/pigeon-whistle-e93208370219.stl": "5a5941e2318470d6e450c1c6127a33fd41dd086550773a14c18da68d6331be25"
+    },
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C13": "d4ef55fb9e0baf4f66c6e0bb8ac6f07421ac7b169eea7ac5e003e500bcb47a67",
+      "acceptance:C13": "75a026108157d8d343eb41ff86ffe1e6f1abf456df40f1195a6212ebe5572404"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {
+    "manifold3d": "unknown",
+    "numpy": "2.0.0",
+    "scipy": "1.13.1",
+    "skimage": "unknown",
+    "trimesh": "5.1.1"
+  },
+  "verdict": {
+    "passed": true,
+    "measured": 0.0,
+    "limit": 0.0,
+    "units": "count",
+    "comparator": "<=",
+    "settles": "mesh topology defects",
+    "detail": "pigeon-whistle-e93208370219.stl: 74690 triangles, 0 open and 0 non-manifold edges, 0 repairs needed, 1 piece(s), genus 3 (expected 3), encloses 91200 mm^3",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "mesh-closed"
+    ],
+    "tier": 1,
+    "pack": ""
+  },
+  "digest": "34a097dcd30d29d4fc9d5fb3e7a3b2fce2d935b3ddaf553a215352f0d2bb0dce"
+}

@@ -1,0 +1,24 @@
+{
+  "statement": "The closed form and the potential-flow solve give the same note within 1 % in all four states: finger hole closed or open, vent open or plugged",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "closed form to solve disagreement",
+    "comparator": "<=",
+    "limit": 1.0,
+    "units": "%"
+  },
+  "rationale": "The closed form's three end factors were calibrated against the solve of this one geometry (k_window, k_hole, k_vent in model/pigeon.py; k_vent is far outside any textbook range). They do not transfer: a 10 % change of the window height without recalibration moves the closed form about 1.2 % from the solve. 1 % (17 cents) is the lead's limit: 2.5 times the 0.4 % one grid of the solve may be off by, and small enough to catch that. It holds two models to each other (METHOD rule 6); it is no evidence about a printed whistle.",
+  "tags": [
+    "forms-agree"
+  ],
+  "mechanism": {
+    "by": "solver",
+    "how": "The four notes the closed form publishes are compared with the potential-flow solve of the same geometry on a 0.6 mm grid taken to zero grid size; the largest disagreement of the four is held to the limit.",
+    "evaluators": [
+      "whistle.forms_agree"
+    ]
+  },
+  "requirements": [
+    "R2"
+  ]
+}

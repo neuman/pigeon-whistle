@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "gate": "whistle.mesh_agrees",
+  "rho": "af7f4872c8591ced256d709ae1dc214fea3cd4bd8528e69863c245b439525eaa",
+  "code": {
+    "digest": "111ee795bb4295b16181bd6c3a6eef76f3a54336bb2f177bced3eef0a8dd4867",
+    "files": [
+      "gates/_shared.py",
+      "gates/print_file.py",
+      "model/acoustics.py",
+      "model/geom.py",
+      "model/islands.py",
+      "model/pigeon.py",
+      "model/solve.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "chamber_volume_mm3"
+        ],
+        "8e9b5d84ef8c2cc56cec415ecb9377ba14046500b34d749812c944e1cb3b43a7",
+        118775.1812
+      ],
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "fcdb5d2a5522a7a928922349fa8f8146c2269df293ef03ed5426bd6bedaee8b0",
+        "print/pigeon-whistle-e93208370219.stl"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ],
+      [
+        [
+          "overall_height_mm"
+        ],
+        "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+        67.6998
+      ],
+      [
+        [
+          "overall_length_mm"
+        ],
+        "b7710a2141015ba76fbd003291460cb0ebdc8504afec84216472f2b224c86118",
+        117.7683
+      ],
+      [
+        [
+          "overall_width_mm"
+        ],
+        "b96c745a8ca28e64e042ce06890922cadda65c933d08fadee5c59fc0516c2543",
+        67.6777
+      ]
+    ],
+    "files": {
+      "print/pigeon-whistle-e93208370219.json": "54618814a604d4ff62ee59a02182cc060e3c65b6ff1081c0bbaae2c082589da0",
+      "print/pigeon-whistle-e93208370219.stl": "5a5941e2318470d6e450c1c6127a33fd41dd086550773a14c18da68d6331be25"
+    },
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C14": "5ea6dd5a157ab1f8c9e23daaef238e7e06896461b5050a3e037f6d0e8346e1d0",
+      "acceptance:C14": "49664e60d167845bc6c455fa76b4b114be1950f87197a7c2dfa753eb9d3374b5"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {
+    "manifold3d": "unknown",
+    "numpy": "2.0.0",
+    "scipy": "1.13.1",
+    "skimage": "unknown",
+    "trimesh": "5.1.1"
+  },
+  "verdict": {
+    "passed": true,
+    "measured": 0.054,
+    "limit": 0.5,
+    "units": "%",
+    "comparator": "<=",
+    "settles": "mesh to model disagreement",
+    "detail": "pigeon-whistle-e93208370219.stl: chamber 118712 mm^3 as measured by model/mesh.py vs 118775 in the model (-0.054 %); 117.77 x 67.68 x 67.70 mm vs 117.77 x 67.68 x 67.70; worst chamber -0.054 % (limit 0.5 %)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "mesh-agrees"
+    ],
+    "tier": 1,
+    "pack": ""
+  },
+  "digest": "5753fb714871f57193c5a95406b4d8c45a7fdc70944d4a066b8595a8ba9cb14f"
+}

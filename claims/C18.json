@@ -1,0 +1,25 @@
+{
+  "statement": "It is palm size: between 100 and 120 mm long",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "overall length",
+    "comparator": "between",
+    "limit": 100.0,
+    "limit_hi": 120.0,
+    "units": "mm"
+  },
+  "rationale": "The person's words: palm size, about 10-12 cm (R4). Length is the dimension they named.",
+  "tags": [
+    "palm-size"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The overall length from the tail tip to the breast, read from the model.",
+    "evaluators": [
+      "whistle.palm_size"
+    ]
+  },
+  "requirements": [
+    "R4"
+  ]
+}

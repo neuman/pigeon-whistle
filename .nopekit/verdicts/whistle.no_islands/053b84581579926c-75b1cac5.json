@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "gate": "whistle.no_islands",
+  "rho": "053b84581579926cf16b66ccf919d293b9d03e6ca67b8dfb61c3fe0f2ca830c4",
+  "code": {
+    "digest": "0b42961eab1cb49a1ab22baa5bbbcb71d6321a6e92fa4bf8f0ad0182fb6fdcc4",
+    "files": [
+      "gates/_shared.py",
+      "gates/print_file.py",
+      "model/acoustics.py",
+      "model/geom.py",
+      "model/islands.py",
+      "model/pigeon.py",
+      "model/solve.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "extrusion_width_mm"
+        ],
+        "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+        0.45
+      ],
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "fcdb5d2a5522a7a928922349fa8f8146c2269df293ef03ed5426bd6bedaee8b0",
+        "print/pigeon-whistle-e93208370219.stl"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ],
+      [
+        [
+          "layer_height_mm"
+        ],
+        "58b5b27c8cdc80de8eb95feaa5dc14929b8d1ff17f8b67ae718e2e71325a0a2d",
+        0.12
+      ]
+    ],
+    "files": {
+      "print/pigeon-whistle-e93208370219.stl": "5a5941e2318470d6e450c1c6127a33fd41dd086550773a14c18da68d6331be25"
+    },
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C12": "ea5bb7ac451b09322c211b7da402583a56676370a6bf892e2dd91fd3ea8c18f5",
+      "acceptance:C12": "5825e7739367f604684ddde1ae94866a05bf2f6017b230406c63366eed063c45"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {
+    "manifold3d": "unknown",
+    "numpy": "2.0.0",
+    "scipy": "1.13.1",
+    "skimage": "unknown",
+    "trimesh": "5.1.1"
+  },
+  "verdict": {
+    "passed": true,
+    "measured": 0.0,
+    "limit": 0.0,
+    "units": "count",
+    "comparator": "<=",
+    "settles": "unsupported starts",
+    "detail": "pigeon-whistle-e93208370219.stl: 0 islands and 0 hanging edges in 564 layers of 0.12 mm (0.45 mm line); 2 bridges, longest 4.22 mm; a raster check, not a slice",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "no-islands"
+    ],
+    "tier": 1,
+    "pack": ""
+  },
+  "digest": "9bde6cc6f0d75220e59f2b0b29c30f14c9ad0817bf057ec2b0a4de2129e19584"
+}

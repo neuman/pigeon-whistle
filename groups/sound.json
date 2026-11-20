@@ -1,0 +1,12 @@
+{
+  "kind": "zone",
+  "title": "Sound targets and air",
+  "line": "The two notes the person chose, and the air and breath the model assumes.",
+  "members": [
+    "target_closed_hz",
+    "target_open_hz",
+    "c_air_m_s",
+    "blow_pressure_pa"
+  ],
+  "order": 1
+}

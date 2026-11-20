@@ -3,5 +3,108 @@
   "kind": "reference",
   "description": "Research notes with sources: support-free one-piece FDM whistles, print orientation study, windway and labium numbers, toy safety limits",
   "sha256": "9a2a8c3635a528443df84c73b539f496bab7d007820ea4acc1fad93d16d8a45e",
-  "added": "2026-11-19T21:02:59Z"
+  "added": "2026-11-19T21:02:59Z",
+  "extractions": [
+    {
+      "what": "Orientation: print belly-down with the tail on the bed and turn the voicing on its side, so that the windway is a vertical slot and the labium a vertical blade. Every voicing surface is then a perimeter wall and the windway gap, cut-up and labium offset are all dimensions in the layer plane. On the notes' simplified bird the bed patch is 2082 mm^2 belly-down against 198 mm^2 standing on the tail, and belly-down is the only one of three poses whose shell passes the pack's overhang measure at 45 degrees (sections 0 and 6).",
+      "grounds": [
+        "C11",
+        "overhang_limit_deg"
+      ],
+      "confidence": "inferred",
+      "note": "Computed on a simplified shell without the voicing; no source compared windway orientations on one model with measurements."
+    },
+    {
+      "what": "Windway gap: draw 1.2 to 1.5 mm and never below about 1.0 mm. A slot between two perimeter walls closes by 0.1 to 0.3 mm in all, so add 0.10 to 0.15 mm to the drawn gap. A printed whistle head with a 1.3 mm windway works (section 2.1).",
+      "grounds": [
+        "windway_gap_exit_mm",
+        "windway_gap_comp_mm",
+        "C16"
+      ]
+    },
+    {
+      "what": "Labium tip: model an explicit flat of 0.45 to 0.50 mm, one line wide, never a knife. A slicer drops what is thinner than its minimum feature, so a knife prints cut short and the cut-up grows: 1.0 mm on a 25 degree wedge at a 0.45 mm minimum feature (section 2.1).",
+      "grounds": [
+        "labium_tip_mm",
+        "C17"
+      ],
+      "confidence": "inferred",
+      "note": "The growth is the notes' arithmetic. Whether a blunt 0.45 mm edge voices as well as a sharper one is untested there."
+    },
+    {
+      "what": "Elephant foot: the bottom 0.2 to 0.4 mm of a part bulges 0.1 to 0.3 mm, so the windway floor and the window's lower edge go 2.5 mm or more above the bed (section 2.1).",
+      "grounds": [
+        "windway_floor_z_mm"
+      ]
+    },
+    {
+      "what": "Chamber roof: the design rule is 45 degrees from vertical. On the notes' scratch body a round dome puts 6.4 % of the surface past 45 degrees (worst 79.9) and fails; a ridge tent at 43.5 degrees passes at 0.10 %. Each roof that keeps more than 90 % of the dome's volume needs a flat bridged strip 10 to 28 mm wide (section 2.3).",
+      "grounds": [
+        "roof_angle_deg",
+        "overhang_limit_deg",
+        "self_support_deg",
+        "C11"
+      ],
+      "confidence": "inferred",
+      "note": "The 42 degrees of this design comes from the design panel, which found 43.5 degrees left no margin. The roof decision records what lost."
+    },
+    {
+      "what": "Bridges: sag is always present unless a bridge is under 5 mm (Hubs), so the top of the window stays under 5 mm or is chamfered at 43 degrees or less; the windway top is a 1.2 to 1.5 mm bridge and is negligible (sections 2.1 and 2.4).",
+      "grounds": [
+        "max_bridge_mm",
+        "lintel_flat_mm"
+      ]
+    },
+    {
+      "what": "Airtight walls: Prusa's water tests on printed cylinders find four perimeters the minimum for PLA and PETG. The notes recommend a shell of 2.0 to 2.2 mm made of 5 perimeters with no sparse infill inside the wall; five lines of 0.45 mm at 0.12 mm layers are 2.15 mm (sections 2.5 and 3).",
+      "grounds": [
+        "perimeters",
+        "shell_wall_mm",
+        "extrusion_width_mm",
+        "C15"
+      ]
+    },
+    {
+      "what": "Sparse infill beside the airway is a leak path if any perimeter is porous: use solid infill in the thick parts, or 5 perimeters or more with solid top and bottom. Reported leaks in printed whistles are tied to infill under 20 % (sections 1 and 3).",
+      "grounds": [
+        "infill_fraction",
+        "perimeters"
+      ],
+      "confidence": "inferred",
+      "note": "The notes' own reasoning plus two maker reports; the design takes the second option, 5 perimeters with 18 % infill."
+    },
+    {
+      "what": "Layers and material: 0.12 mm layers (0.10 to 0.16), and PLA for the first print, because PETG strings and a string across a 1.2 mm windway or the window is a voicing fault (sections 4 and 9).",
+      "grounds": [
+        "layer_height_mm"
+      ]
+    },
+    {
+      "what": "Holes with a vertical axis print 0.1 to 0.4 mm small (the fdm-print pack's geometry rules; one user reports 0.23 mm) and one user reports them oversize on another machine: measure, do not assume the sign. Put the finger hole through a sloped part of the roof on a vertical axis (sections 2.4 and 5.1).",
+      "grounds": [
+        "hole_comp_mm"
+      ]
+    },
+    {
+      "what": "A closed chamber that leaks does not sound: one maker's guide says any micro-leak bleeds the pressure and kills the note (section 1, a shop blog with no measurements). Supports inside the chamber cannot be removed, so supports are off and the geometry must pass on its own (section 4).",
+      "grounds": [
+        "C13",
+        "C11"
+      ]
+    },
+    {
+      "what": "Small parts: the test cylinder of the toy standards is 31.7 mm across and 25.4 to 57.1 mm deep (EN 71-1 clause 8.2, ASTM F963, 16 CFR 1501) (section 8.2).",
+      "grounds": [
+        "C19"
+      ],
+      "note": "A size rule only. The standards also test soaking, torque, tension and drop; none of that is checked here."
+    },
+    {
+      "what": "Sound limit: EN 71-1:2014 clause 4.20.2.10 holds wind toys to an A-weighted level at 50 cm of 85 dB when they imitate a musical instrument and 90 dB for whistles, with a C-weighted peak of 110 dB. The notes advise checking against 85 dB(A). No measured or expected level for this kind of whistle was found (section 8.3).",
+      "grounds": [
+        "C26"
+      ],
+      "note": "C26 keeps 90 dB(A); a reading between 85 and 90 has to be said out loud."
+    }
+  ]
 }

@@ -1,0 +1,24 @@
+{
+  "statement": "No layer starts in mid-air: zero islands and zero hanging edges at the configured layer height",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "unsupported starts",
+    "comparator": "<=",
+    "limit": 0.0,
+    "units": "count"
+  },
+  "rationale": "Supports are off (R3) and nothing inside the chamber can be reached, so one piece of one layer printed on air is a failed print or loose plastic in the airway. Zero is the only limit that means that. The fdm-print pack judges face angles and cannot see this fault: in the design panel a beak tip started in mid-air for 21 layers on a concept the pack passed. The count comes from a raster of every layer of the print file, not from a slicer.",
+  "tags": [
+    "no-islands"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The print file rastered layer by layer at the configured layer height: a piece of a layer that touches nothing in the layer below is an island; new material more than one line width out that is not held at both ends is a hanging edge. Both are counted. Material held at both ends is a bridge and is allowed here.",
+    "evaluators": [
+      "whistle.no_islands"
+    ]
+  },
+  "requirements": [
+    "R3"
+  ]
+}

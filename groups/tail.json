@@ -1,0 +1,13 @@
+{
+  "kind": "zone",
+  "title": "Tail and mouthpiece",
+  "line": "The tail lies on the bed and goes in the mouth as far as the lip stop.",
+  "members": [
+    "tail_half_width_mm",
+    "tail_tip_half_width_mm",
+    "tail_top_z_mm",
+    "lip_stop_x_mm",
+    "lip_stop_rise_mm"
+  ],
+  "order": 5
+}

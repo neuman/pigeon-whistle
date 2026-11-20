@@ -1,0 +1,40 @@
+{
+  "title": "Match the loudest part of the coo",
+  "when": "2026-11-20T03:10:06Z",
+  "summary": "The two notes sit where the coo is loudest, as the person asked in the interview (R2): 340 Hz with the finger hole closed, rising to 470 Hz with it open, 5.6 semitones.",
+  "rejected": [
+    {
+      "value": "the deep fundamental of the coo, about 170 Hz rising to 250 Hz",
+      "why": "the person asked for the loudest part, not the deepest (R2); at half the frequency the same window needs four times the chamber, about 475 cm^3, which is no palm-size bird (R4), or a neck about 30 mm deep by the pitch law, and the acoustics notes already place 340 Hz at the small-chamber limit",
+      "type": "infeasible",
+      "returns_if": {
+        "text": "when the bird may be about four times the volume, which is not palm size (R4)"
+      },
+      "input": "coo-pitch-analysis"
+    },
+    {
+      "value": "a low note of 380 Hz",
+      "why": "the independent re-measurement of the recordings reads the low end of the loudest partial at 380 Hz (quartiles 363 to 413), and only 3 %, 11.5 % and 13 % of the loudest-partial energy lies within 25 Hz of 340 Hz; the person chose 340 rising to 470 in the interview. 380 to 470 is 3.7 semitones, at the low edge of the rises measured (3.7 to 5.1 semitones), and 340 to 470 is 5.6, above them",
+      "type": "preferred_against",
+      "by": "neuman",
+      "returns_if": {
+        "text": "when neuman hears a printed whistle beside the recordings and wants the low note higher: reaming the vent to 3.5 mm reaches about 358 Hz in the model, and 380 Hz needs a reprint with a larger window"
+      },
+      "input": "coo-pitch-analysis"
+    }
+  ],
+  "params_changed": [
+    "target_closed_hz",
+    "target_open_hz"
+  ],
+  "claims_changed": [
+    "C1",
+    "C2",
+    "C21",
+    "C22"
+  ],
+  "evidence": [
+    "inputs/measurements/coo-pitch-analysis.md"
+  ],
+  "body": "How strong the evidence is: the analysis supports 470 Hz (a third of the loudest-partial energy of one Paris recording lies within 25 Hz of it) and reads the low note nearer 380 Hz than 340 Hz. It rests on two effective birds: one identified pigeon in Paris, 40 usable notes over two recordings, and four notes from Sangli. The two recordings of the same bird disagree on which partial is loudest. The analysis justifies no tolerance tighter than 8 % on either note, and that is the band of C21 and C22. Nothing has been printed or blown: a first print can miss by about 10 % either way, and a miss to the sharp side moves toward what the re-measurement reads."
+}

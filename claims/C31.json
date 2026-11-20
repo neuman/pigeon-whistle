@@ -1,0 +1,16 @@
+{
+  "statement": "The player blows at about 200 Pa",
+  "kind": "assumption",
+  "rationale": "The jet numbers of C5 and C6 are worked out at one pressure. 200 Pa lies between the pressures at which each note is at its best with a 7 mm cut-up (about 130 Pa for 340 Hz, 250 Pa for 470 Hz) and well inside the 90 to 680 Pa over which both stay in the playable band (input vessel-flute-acoustics-notes, sections 2.2 and 2.3). The notes found no measured ocarina blowing pressure, and nobody has measured this player. It is blow_pressure_pa in the model.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "owner": "neuman",
+  "mechanism": {
+    "by": "none",
+    "how": "A water manometer teed into the mouth showing that a comfortable breath that sounds both notes is outside 90 to 680 Pa (9 to 69 mm of water) fails this; outside 150 to 250 Pa it is worth moving the model's value."
+  },
+  "requirements": [
+    "R2"
+  ]
+}

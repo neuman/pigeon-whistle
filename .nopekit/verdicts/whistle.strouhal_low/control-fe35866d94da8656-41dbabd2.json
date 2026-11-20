@@ -1,0 +1,239 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.strouhal_low",
+  "rho": "fe35866d94da865649c080b7d9558a36f7fada875d9f71ac7032c04d717aced0",
+  "static": "4d60bfbf5119169cb2d4428ef20ef1743da9c0901ef4853dd5dcf9bb599406f5",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "2f26642a3d0fb444ac0b2495c15222c69b545c5e9e7b17dcea23ea42cc8cafd6",
+      "files": [
+        "gates/acoustics.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:hard_blow",
+      "expect": "fail",
+      "note": "blown at 800 Pa: jet speed doubles and the closed note's Strouhal number halves to 0.065",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "blow_pressure_pa"
+        ],
+        "fb3b8783523a5441acdaad53a530ff24e0c9f421b3362e6cbac407f693b31718",
+        800.0
+      ],
+      [
+        [
+          "cutup_mm"
+        ],
+        "c59945d5b10fe896f3bcdd0e9ee6a87e8a4927bb2a7965e4ac96d221cec21cc5",
+        7.0
+      ],
+      [
+        [
+          "jet_speed_m_s"
+        ],
+        "e4a954b352f3085e34c222679a6cc98b6f32fb90b0b0109fa073b88f4db50467",
+        36.823
+      ],
+      [
+        [
+          "strouhal_closed"
+        ],
+        "c1c808c7f4154557b7b6d93e07fdcdddc37a79007e70370e077ac9a560702f22",
+        0.0647
+      ],
+      [
+        [
+          "strouhal_open"
+        ],
+        "de2a5008a5bf429e161e7cd82297cf8c65366098513838e6127800913c647802",
+        0.0893
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C5": "de31835830375986f3d8d30d9d9db1a0ad5502947150eb0fe770907353643a25",
+      "acceptance:C5": "4fafa823cf5775b96ff0dd3203b2e38908b20651a546b4c051951bddee81a950"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "blow_pressure_pa"
+          ],
+          "b04c347c9927317b212342cd4222915664e2cb72612da8395de807e69f427ec0",
+          200.0
+        ],
+        [
+          [
+            "cutup_mm"
+          ],
+          "c59945d5b10fe896f3bcdd0e9ee6a87e8a4927bb2a7965e4ac96d221cec21cc5",
+          7.0
+        ],
+        [
+          [
+            "jet_speed_m_s"
+          ],
+          "d80740d390de89f7ed8b85288eb1067e6d5ba036213ca80cd7aec2ef1de06003",
+          18.4115
+        ],
+        [
+          [
+            "strouhal_closed"
+          ],
+          "375325120dafd1fd01f0dd9b02d8e8412ac10e79fb16863431d524992a9eef3f",
+          0.1293
+        ],
+        [
+          [
+            "strouhal_open"
+          ],
+          "8d578f1c64514a497b2314f41ff2595554a9669ab183995d0b145bc684f39824",
+          0.1786
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C5": "de31835830375986f3d8d30d9d9db1a0ad5502947150eb0fe770907353643a25",
+        "acceptance:C5": "4fafa823cf5775b96ff0dd3203b2e38908b20651a546b4c051951bddee81a950"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 0.1293,
+    "limit": 0.07,
+    "units": "St",
+    "detail": "lowest Strouhal number 0.129 (closed note 0.129, open note 0.179) at 200 Pa, jet 18.4 m/s over a 7 mm cut-up (limit 0.07)",
+    "goalpost": [
+      {
+        "key": "C5",
+        "measured": 0.1293,
+        "units": "St",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.007000000000000001,
+            "outcome": "pass",
+            "measured": 0.1293,
+            "units": "St"
+          },
+          {
+            "end": "limit",
+            "limit": 0.035,
+            "outcome": "pass",
+            "measured": 0.1293,
+            "units": "St"
+          },
+          {
+            "end": "limit",
+            "limit": 0.14,
+            "outcome": "fail",
+            "measured": 0.1293,
+            "units": "St"
+          },
+          {
+            "end": "limit",
+            "limit": 0.7000000000000001,
+            "outcome": "fail",
+            "measured": 0.1293,
+            "units": "St"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 104,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "strouhal_closed"
+        ],
+        "before": 0.1293,
+        "after": 0.0595,
+        "outcome": "fail",
+        "measured": 0.0595,
+        "limit": 0.07
+      },
+      {
+        "key": [
+          "strouhal_open"
+        ],
+        "before": 0.1786,
+        "after": 0.0595,
+        "outcome": "fail",
+        "measured": 0.0595,
+        "limit": 0.07
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "blow_pressure_pa"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "cutup_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "jet_speed_m_s"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:hard_blow (blown at 800 Pa: jet speed doubles and the closed note's Strouhal number halves to 0.065): lowest Strouhal number 0.065 (closed note 0.065, open note 0.089) at 800 Pa, jet 36.8 m/s over a 7 mm cut-up (limit 0.07)",
+  "measured": 0.0647,
+  "limit": 0.07,
+  "units": "St",
+  "digest": "a4519e010c00f8eba27f663dd5365b35b1b16a8fab73ec107d5ce50e221b7888"
+}

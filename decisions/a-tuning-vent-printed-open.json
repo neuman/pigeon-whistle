@@ -1,0 +1,46 @@
+{
+  "title": "A tuning vent printed open",
+  "when": "2026-11-20T03:09:32Z",
+  "summary": "A 2.1 mm vent on the crown of the rump is part of the whistle as printed. Plug it with wax and the closed note falls 90 cents; ream it to 3.5 mm and the note rises 89 cents in the solve (78 cents by the closed form). One print can be trimmed down or up.",
+  "rejected": [
+    {
+      "value": "a blind pilot, drilled out after printing",
+      "why": "a one-sided trim: it can only raise the note, and published instruments miss the closed form in both directions, so a first print can land sharp as well as flat",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when measured prints of this whistle land flat every time"
+      },
+      "input": "vessel-flute-acoustics-notes"
+    },
+    {
+      "value": "no vent",
+      "why": "the closed note then rests on the window alone, the part the model predicts worst (10 % typical on published instruments); the trims left are filing the labium back and pouring wax into the chamber, and neither is undone",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when one measured print has fixed the window's end factor and the next print lands inside the 8 % band untrimmed"
+      },
+      "input": "vessel-flute-acoustics-notes"
+    },
+    {
+      "value": "a 1.5 mm horizontal vent in the chest skirt (the character-first concept)",
+      "why": "a finger can cover it there (about 146 cents flat in the panel's review) and a 1.5 mm horizontal hole may print shut",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when the crown of the rump is needed for something else; the vent then goes back to a place the hand does not reach"
+      }
+    }
+  ],
+  "params_changed": [
+    "vent_d_mm",
+    "vent_x_mm",
+    "vent_ream_max_mm"
+  ],
+  "claims_changed": [
+    "C4",
+    "C21"
+  ],
+  "evidence": [
+    "model/solve.py"
+  ],
+  "body": "What the vent does not cover: a first print can miss by about 10 %, 165 cents, and the vent reaches 89 or 90 cents each way. It brings a miss of up to about 5 % back to 340 Hz, and a miss of up to about 13 % back inside the 8 % band. A miss of 15 to 20 % means a reprint with a corrected window."
+}

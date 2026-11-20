@@ -1,0 +1,961 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.pitch_open_solved",
+  "rho": "a199fefd16229f7c9108f7275d6c1a21b5f30c7d560a4cb094715be14411e34a",
+  "static": "42fc5e04f6efd5704562298d5c35445a3ffd2c04da1b80b8979713b03e253b60",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "efbf8a60978f3f02c45b3938a04d61023449c8a21ed55e07f0a97a66f087f1a1",
+      "files": [
+        "gates/_shared.py",
+        "gates/acoustics_solved.py",
+        "model/acoustics.py",
+        "model/geom.py",
+        "model/islands.py",
+        "model/pigeon.py",
+        "model/solve.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:first_build_hole",
+      "expect": "fail",
+      "note": "the finger hole at 6.6 mm, as first built: the solved open note falls to 461.5 Hz, 32 cents flat",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "beak_base_radius_mm"
+        ],
+        "768591245eec555652f9d2463fc399bc480ab55447c2f5294d211ebeb5bce025",
+        3.2
+      ],
+      [
+        [
+          "beak_length_mm"
+        ],
+        "b380af89cce683a9058e38d1693d66eb3f78aa2d146b1cd90f094bf8394b43cf",
+        7.5
+      ],
+      [
+        [
+          "beak_pitch_deg"
+        ],
+        "10e8131000054fd6b7de7f511693dadb1ab21da68de5963418eff77c59ba5b49",
+        35.0
+      ],
+      [
+        [
+          "beak_tip_radius_mm"
+        ],
+        "72ce0b9c73a6d14804293c8827888463e41e1e21b15f361636a0523390288163",
+        1.5
+      ],
+      [
+        [
+          "body_center_x_mm"
+        ],
+        "b6339a6b4f5ed00e86786e828796401686611bb6505685b77c67ec8129e8d7fc",
+        77.5
+      ],
+      [
+        [
+          "body_center_z_mm"
+        ],
+        "d0e35b9266aca01c047a1e495b17bb81d3d1a9cd99f5d2c005ade53c5a8b2f71",
+        24.0
+      ],
+      [
+        [
+          "body_radius_x_mm"
+        ],
+        "34bcde77be8b4ec89fd60da4dcee0225f6a6118cf107dda2dc54e518260a6e9d",
+        37.5
+      ],
+      [
+        [
+          "body_radius_y_mm"
+        ],
+        "eacc1cb4fae43a55689d8f79813cce45685e932fddb34c2518f330a94ed27883",
+        33.4
+      ],
+      [
+        [
+          "body_radius_z_mm"
+        ],
+        "10e8131000054fd6b7de7f511693dadb1ab21da68de5963418eff77c59ba5b49",
+        35.0
+      ],
+      [
+        [
+          "c_air_m_s"
+        ],
+        "a3549ae207069e52388a926dfa1fc7987b4416639e97e806a11afcb9b0e030e1",
+        346.0
+      ],
+      [
+        [
+          "chest_lead_mm"
+        ],
+        "f27dd318ce7c57eaf9cd177a87bb15fc74728e964c8c2a81c7dc1f89182f0db3",
+        16.5
+      ],
+      [
+        [
+          "cutup_mm"
+        ],
+        "c59945d5b10fe896f3bcdd0e9ee6a87e8a4927bb2a7965e4ac96d221cec21cc5",
+        7.0
+      ],
+      [
+        [
+          "dimple_depth_mm"
+        ],
+        "a5231fc3f1e87f288c669dc5a3340880d0e86b9afc6e39a88fba1af6c97fbf3a",
+        0.8
+      ],
+      [
+        [
+          "dimple_radius_mm"
+        ],
+        "a219aecd821c3cce357cb2dc57977cf49353c4b4abb2778302e12d28c3aa0639",
+        13.0
+      ],
+      [
+        [
+          "eye_azimuth_deg"
+        ],
+        "7ae59764cdd56eb12717ffee8239ba7dfb122a448f5350832f78481f3d9e3451",
+        62.0
+      ],
+      [
+        [
+          "eye_depth_mm"
+        ],
+        "ebf86a6b5654af00b1991b56b7f8bd6a6652ea9ae96c28eedaed5bb0481411ee",
+        1.1
+      ],
+      [
+        [
+          "eye_elevation_deg"
+        ],
+        "63a00c2db98c6b827a5a2b383df84683e5247f920a1b26fe28bbb7746d40bd20",
+        18.0
+      ],
+      [
+        [
+          "eye_radius_mm"
+        ],
+        "c596bc7c65879c16313fb54e64847c05c5d7f0d5db5291b99b7f555c120e10e2",
+        2.0
+      ],
+      [
+        [
+          "floor_mm"
+        ],
+        "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+        2.1
+      ],
+      [
+        [
+          "foot_height_mm"
+        ],
+        "48e704842b6f902577817ecd07b1677c7feffc8cc756cd173bcfa12456197def",
+        3.5
+      ],
+      [
+        [
+          "foot_length_mm"
+        ],
+        "708af044090e5dbe86cae60a00529396a4ad653c462a69c2dd736ce8cc9a9cd4",
+        14.0
+      ],
+      [
+        [
+          "foot_width_mm"
+        ],
+        "792353c033491aaef9c10528bf8bdc7fb434a530c927733d27476d00b9ed73b1",
+        9.0
+      ],
+      [
+        [
+          "head_center_x_mm"
+        ],
+        "6185c5c721249df5376aae72ed9c9c9e2f2c27684bc940266711be270efdb7e4",
+        96.0
+      ],
+      [
+        [
+          "head_center_z_mm"
+        ],
+        "9247e45b0bf71794417bdd6c3079354336545bafee82d8731900dd6dfe9e4dd8",
+        54.2
+      ],
+      [
+        [
+          "head_radius_mm"
+        ],
+        "823b022c816cdbfa966962db9a6a188f0691695b25c4dd030c9a84c75ad178ab",
+        13.5
+      ],
+      [
+        [
+          "hole_chimney_mm"
+        ],
+        "2034a44889655f1ed1c1c26dff15e350610e006a093e39a0ab8e421505845012",
+        2.5
+      ],
+      [
+        [
+          "hole_comp_mm"
+        ],
+        "127909532a5e24f347add2b67044be692cea62932cbdb08ebb1ef9f0d2a0cfbe",
+        0.2
+      ],
+      [
+        [
+          "hole_d_mm"
+        ],
+        "7e6910253603175e3fff13fb6ad9cea4326922f6e251fd99d56e56cde691e1d7",
+        6.6
+      ],
+      [
+        [
+          "hole_x_mm"
+        ],
+        "b2933aec17fcdc27b42586ad4b74b478e75450c8af6ac20ae6d2c8378b9e8662",
+        70.0
+      ],
+      [
+        [
+          "labium_offset_mm"
+        ],
+        "0edcd43ac12d842a88b022ad46d89aeadd588721fcebbf01319e932ed1df330e",
+        0.05
+      ],
+      [
+        [
+          "labium_ramp_deg"
+        ],
+        "20ff0340ca64f3e6d6490970d6a47c7a765b5b6dcf23a117bcc98c456d64de2a",
+        25.0
+      ],
+      [
+        [
+          "labium_tip_mm"
+        ],
+        "8e29c97e40473267183acc8265cb574b1fb4dfcd9c281f368e487cf0a285a865",
+        0.5
+      ],
+      [
+        [
+          "lintel_flat_mm"
+        ],
+        "b18e7328d2f581ab2b436bebd60c4b24ad4132bff4f2d1449e7a34f3c4b8b707",
+        4.0
+      ],
+      [
+        [
+          "lip_stop_rise_mm"
+        ],
+        "55da3374d16bff02ddd713a81a8663b51507102a3f0dec673f2946d98d64be93",
+        3.0
+      ],
+      [
+        [
+          "lip_stop_x_mm"
+        ],
+        "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+        15.0
+      ],
+      [
+        [
+          "lobe_ridge_z_mm"
+        ],
+        "8801dbd22725dccb56e5361d426fffe5476487384a431e7aa8dd551b8ac99717",
+        23.25
+      ],
+      [
+        [
+          "lobe_width_mm"
+        ],
+        "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+        15.0
+      ],
+      [
+        [
+          "roof_angle_deg"
+        ],
+        "7d0c5abdb137f2559a8590c1e263f2cd5740bb5751e26f4c9e7257da2464c629",
+        42.0
+      ],
+      [
+        [
+          "self_support_deg"
+        ],
+        "aa469652a020f31e40e981c91c5c9fbfbfddae78dfbfbeeabe8b64fe945036ab",
+        40.0
+      ],
+      [
+        [
+          "shell_wall_mm"
+        ],
+        "364541a391a77a66955903662fbd16197621b582aaeda3b5dc713bfdd1b6c870",
+        2.2
+      ],
+      [
+        [
+          "tail_half_width_mm"
+        ],
+        "708af044090e5dbe86cae60a00529396a4ad653c462a69c2dd736ce8cc9a9cd4",
+        14.0
+      ],
+      [
+        [
+          "tail_tip_half_width_mm"
+        ],
+        "c11e42f5039542bdf63cf8341d519de58560cfe949fbc97f4556b16105dd45f2",
+        12.3
+      ],
+      [
+        [
+          "tail_top_z_mm"
+        ],
+        "708af044090e5dbe86cae60a00529396a4ad653c462a69c2dd736ce8cc9a9cd4",
+        14.0
+      ],
+      [
+        [
+          "target_open_hz"
+        ],
+        "a52e6917c3a4ea3922ec05fe842ba4c4563382bc9c576bf0f27581681a5846f1",
+        470.0
+      ],
+      [
+        [
+          "vent_d_mm"
+        ],
+        "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+        2.1
+      ],
+      [
+        [
+          "vent_x_mm"
+        ],
+        "87e5a2476d9ecd94165d567d8147b93e417bc410e14a3440069df0059c98c68a",
+        35.5
+      ],
+      [
+        [
+          "window_wall_mm"
+        ],
+        "b18e7328d2f581ab2b436bebd60c4b24ad4132bff4f2d1449e7a34f3c4b8b707",
+        4.0
+      ],
+      [
+        [
+          "windway_exit_chamfer_mm"
+        ],
+        "89c8afba9957ebca489dca6236a81d12af0951b29bcd96806737338deda27531",
+        0.6
+      ],
+      [
+        [
+          "windway_floor_z_mm"
+        ],
+        "55da3374d16bff02ddd713a81a8663b51507102a3f0dec673f2946d98d64be93",
+        3.0
+      ],
+      [
+        [
+          "windway_gap_exit_mm"
+        ],
+        "93a0a35e427f101bfa6d83dbf58fe4b1925db259d266fe138b67611104564b44",
+        1.3
+      ],
+      [
+        [
+          "windway_gap_inlet_mm"
+        ],
+        "cfb4bed8cf899c7e75e334a3fbfe328a9b41c6928ed8c704fa5b4b3003a15731",
+        2.6
+      ],
+      [
+        [
+          "windway_height_mm"
+        ],
+        "f4244e8434d0efa86f64f01fc4ae91cb0041d79dc2d86d3fca9e80a5795c2f26",
+        6.3
+      ],
+      [
+        [
+          "windway_length_mm"
+        ],
+        "3d654dca2bf8e623024ab053b3736a76d0b08ccb25bfec37922cf05ebc30cdfe",
+        30.0
+      ],
+      [
+        [
+          "windway_skew_deg"
+        ],
+        "8fc222e687e9795d50343dba65f58cf224bcefee09ffb3ff1b1fd5da4570d8a2",
+        4.5
+      ],
+      [
+        [
+          "wing_bar_length_mm"
+        ],
+        "63a00c2db98c6b827a5a2b383df84683e5247f920a1b26fe28bbb7746d40bd20",
+        18.0
+      ],
+      [
+        [
+          "wing_bar_proud_mm"
+        ],
+        "89c8afba9957ebca489dca6236a81d12af0951b29bcd96806737338deda27531",
+        0.6
+      ],
+      [
+        [
+          "wing_bar_width_mm"
+        ],
+        "2034a44889655f1ed1c1c26dff15e350610e006a093e39a0ab8e421505845012",
+        2.5
+      ],
+      [
+        [
+          "wing_center_z_mm"
+        ],
+        "1e6ecdef533d55e0f47165c1acf7ad61b116fcaa6e9913dde03e2bdd3291bcfc",
+        28.0
+      ],
+      [
+        [
+          "wing_pitch_deg"
+        ],
+        "a2d18e68423977b671773f5e271357d63babaa3d5216cf3c058e2e4758df5f83",
+        -8.0
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C2": "12e564b65a8d1690fded53ce505581d2e374b3e3e8443b5ff1eeb31e65e1bcc0",
+      "acceptance:C2": "34648850704117fb4d0f63df95227c0041972bae74e9ffbf0cf505de2121b3e9"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "beak_base_radius_mm"
+          ],
+          "768591245eec555652f9d2463fc399bc480ab55447c2f5294d211ebeb5bce025",
+          3.2
+        ],
+        [
+          [
+            "beak_length_mm"
+          ],
+          "b380af89cce683a9058e38d1693d66eb3f78aa2d146b1cd90f094bf8394b43cf",
+          7.5
+        ],
+        [
+          [
+            "beak_pitch_deg"
+          ],
+          "10e8131000054fd6b7de7f511693dadb1ab21da68de5963418eff77c59ba5b49",
+          35.0
+        ],
+        [
+          [
+            "beak_tip_radius_mm"
+          ],
+          "72ce0b9c73a6d14804293c8827888463e41e1e21b15f361636a0523390288163",
+          1.5
+        ],
+        [
+          [
+            "body_center_x_mm"
+          ],
+          "b6339a6b4f5ed00e86786e828796401686611bb6505685b77c67ec8129e8d7fc",
+          77.5
+        ],
+        [
+          [
+            "body_center_z_mm"
+          ],
+          "d0e35b9266aca01c047a1e495b17bb81d3d1a9cd99f5d2c005ade53c5a8b2f71",
+          24.0
+        ],
+        [
+          [
+            "body_radius_x_mm"
+          ],
+          "34bcde77be8b4ec89fd60da4dcee0225f6a6118cf107dda2dc54e518260a6e9d",
+          37.5
+        ],
+        [
+          [
+            "body_radius_y_mm"
+          ],
+          "eacc1cb4fae43a55689d8f79813cce45685e932fddb34c2518f330a94ed27883",
+          33.4
+        ],
+        [
+          [
+            "body_radius_z_mm"
+          ],
+          "10e8131000054fd6b7de7f511693dadb1ab21da68de5963418eff77c59ba5b49",
+          35.0
+        ],
+        [
+          [
+            "c_air_m_s"
+          ],
+          "a3549ae207069e52388a926dfa1fc7987b4416639e97e806a11afcb9b0e030e1",
+          346.0
+        ],
+        [
+          [
+            "chest_lead_mm"
+          ],
+          "f27dd318ce7c57eaf9cd177a87bb15fc74728e964c8c2a81c7dc1f89182f0db3",
+          16.5
+        ],
+        [
+          [
+            "cutup_mm"
+          ],
+          "c59945d5b10fe896f3bcdd0e9ee6a87e8a4927bb2a7965e4ac96d221cec21cc5",
+          7.0
+        ],
+        [
+          [
+            "dimple_depth_mm"
+          ],
+          "a5231fc3f1e87f288c669dc5a3340880d0e86b9afc6e39a88fba1af6c97fbf3a",
+          0.8
+        ],
+        [
+          [
+            "dimple_radius_mm"
+          ],
+          "a219aecd821c3cce357cb2dc57977cf49353c4b4abb2778302e12d28c3aa0639",
+          13.0
+        ],
+        [
+          [
+            "eye_azimuth_deg"
+          ],
+          "7ae59764cdd56eb12717ffee8239ba7dfb122a448f5350832f78481f3d9e3451",
+          62.0
+        ],
+        [
+          [
+            "eye_depth_mm"
+          ],
+          "ebf86a6b5654af00b1991b56b7f8bd6a6652ea9ae96c28eedaed5bb0481411ee",
+          1.1
+        ],
+        [
+          [
+            "eye_elevation_deg"
+          ],
+          "63a00c2db98c6b827a5a2b383df84683e5247f920a1b26fe28bbb7746d40bd20",
+          18.0
+        ],
+        [
+          [
+            "eye_radius_mm"
+          ],
+          "c596bc7c65879c16313fb54e64847c05c5d7f0d5db5291b99b7f555c120e10e2",
+          2.0
+        ],
+        [
+          [
+            "floor_mm"
+          ],
+          "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+          2.1
+        ],
+        [
+          [
+            "foot_height_mm"
+          ],
+          "48e704842b6f902577817ecd07b1677c7feffc8cc756cd173bcfa12456197def",
+          3.5
+        ],
+        [
+          [
+            "foot_length_mm"
+          ],
+          "708af044090e5dbe86cae60a00529396a4ad653c462a69c2dd736ce8cc9a9cd4",
+          14.0
+        ],
+        [
+          [
+            "foot_width_mm"
+          ],
+          "792353c033491aaef9c10528bf8bdc7fb434a530c927733d27476d00b9ed73b1",
+          9.0
+        ],
+        [
+          [
+            "head_center_x_mm"
+          ],
+          "6185c5c721249df5376aae72ed9c9c9e2f2c27684bc940266711be270efdb7e4",
+          96.0
+        ],
+        [
+          [
+            "head_center_z_mm"
+          ],
+          "9247e45b0bf71794417bdd6c3079354336545bafee82d8731900dd6dfe9e4dd8",
+          54.2
+        ],
+        [
+          [
+            "head_radius_mm"
+          ],
+          "823b022c816cdbfa966962db9a6a188f0691695b25c4dd030c9a84c75ad178ab",
+          13.5
+        ],
+        [
+          [
+            "hole_chimney_mm"
+          ],
+          "2034a44889655f1ed1c1c26dff15e350610e006a093e39a0ab8e421505845012",
+          2.5
+        ],
+        [
+          [
+            "hole_comp_mm"
+          ],
+          "127909532a5e24f347add2b67044be692cea62932cbdb08ebb1ef9f0d2a0cfbe",
+          0.2
+        ],
+        [
+          [
+            "hole_d_mm"
+          ],
+          "3318eb5599e7c0ffadddd05c3e0a0b86d46032be79315c97bbb843ae50b3c705",
+          7.05
+        ],
+        [
+          [
+            "hole_x_mm"
+          ],
+          "b2933aec17fcdc27b42586ad4b74b478e75450c8af6ac20ae6d2c8378b9e8662",
+          70.0
+        ],
+        [
+          [
+            "labium_offset_mm"
+          ],
+          "0edcd43ac12d842a88b022ad46d89aeadd588721fcebbf01319e932ed1df330e",
+          0.05
+        ],
+        [
+          [
+            "labium_ramp_deg"
+          ],
+          "20ff0340ca64f3e6d6490970d6a47c7a765b5b6dcf23a117bcc98c456d64de2a",
+          25.0
+        ],
+        [
+          [
+            "labium_tip_mm"
+          ],
+          "8e29c97e40473267183acc8265cb574b1fb4dfcd9c281f368e487cf0a285a865",
+          0.5
+        ],
+        [
+          [
+            "lintel_flat_mm"
+          ],
+          "b18e7328d2f581ab2b436bebd60c4b24ad4132bff4f2d1449e7a34f3c4b8b707",
+          4.0
+        ],
+        [
+          [
+            "lip_stop_rise_mm"
+          ],
+          "55da3374d16bff02ddd713a81a8663b51507102a3f0dec673f2946d98d64be93",
+          3.0
+        ],
+        [
+          [
+            "lip_stop_x_mm"
+          ],
+          "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+          15.0
+        ],
+        [
+          [
+            "lobe_ridge_z_mm"
+          ],
+          "8801dbd22725dccb56e5361d426fffe5476487384a431e7aa8dd551b8ac99717",
+          23.25
+        ],
+        [
+          [
+            "lobe_width_mm"
+          ],
+          "b34f99646d287db0e67fa4f3d5b7715260045d9c6226d860a653be73642ea84f",
+          15.0
+        ],
+        [
+          [
+            "roof_angle_deg"
+          ],
+          "7d0c5abdb137f2559a8590c1e263f2cd5740bb5751e26f4c9e7257da2464c629",
+          42.0
+        ],
+        [
+          [
+            "self_support_deg"
+          ],
+          "aa469652a020f31e40e981c91c5c9fbfbfddae78dfbfbeeabe8b64fe945036ab",
+          40.0
+        ],
+        [
+          [
+            "shell_wall_mm"
+          ],
+          "364541a391a77a66955903662fbd16197621b582aaeda3b5dc713bfdd1b6c870",
+          2.2
+        ],
+        [
+          [
+            "tail_half_width_mm"
+          ],
+          "708af044090e5dbe86cae60a00529396a4ad653c462a69c2dd736ce8cc9a9cd4",
+          14.0
+        ],
+        [
+          [
+            "tail_tip_half_width_mm"
+          ],
+          "c11e42f5039542bdf63cf8341d519de58560cfe949fbc97f4556b16105dd45f2",
+          12.3
+        ],
+        [
+          [
+            "tail_top_z_mm"
+          ],
+          "708af044090e5dbe86cae60a00529396a4ad653c462a69c2dd736ce8cc9a9cd4",
+          14.0
+        ],
+        [
+          [
+            "target_open_hz"
+          ],
+          "a52e6917c3a4ea3922ec05fe842ba4c4563382bc9c576bf0f27581681a5846f1",
+          470.0
+        ],
+        [
+          [
+            "vent_d_mm"
+          ],
+          "8481028989efc7fe7396b48d31decc8b4808e44f3db97553dcfea7bdaa55a6e6",
+          2.1
+        ],
+        [
+          [
+            "vent_x_mm"
+          ],
+          "87e5a2476d9ecd94165d567d8147b93e417bc410e14a3440069df0059c98c68a",
+          35.5
+        ],
+        [
+          [
+            "window_wall_mm"
+          ],
+          "b18e7328d2f581ab2b436bebd60c4b24ad4132bff4f2d1449e7a34f3c4b8b707",
+          4.0
+        ],
+        [
+          [
+            "windway_exit_chamfer_mm"
+          ],
+          "89c8afba9957ebca489dca6236a81d12af0951b29bcd96806737338deda27531",
+          0.6
+        ],
+        [
+          [
+            "windway_floor_z_mm"
+          ],
+          "55da3374d16bff02ddd713a81a8663b51507102a3f0dec673f2946d98d64be93",
+          3.0
+        ],
+        [
+          [
+            "windway_gap_exit_mm"
+          ],
+          "93a0a35e427f101bfa6d83dbf58fe4b1925db259d266fe138b67611104564b44",
+          1.3
+        ],
+        [
+          [
+            "windway_gap_inlet_mm"
+          ],
+          "cfb4bed8cf899c7e75e334a3fbfe328a9b41c6928ed8c704fa5b4b3003a15731",
+          2.6
+        ],
+        [
+          [
+            "windway_height_mm"
+          ],
+          "f4244e8434d0efa86f64f01fc4ae91cb0041d79dc2d86d3fca9e80a5795c2f26",
+          6.3
+        ],
+        [
+          [
+            "windway_length_mm"
+          ],
+          "3d654dca2bf8e623024ab053b3736a76d0b08ccb25bfec37922cf05ebc30cdfe",
+          30.0
+        ],
+        [
+          [
+            "windway_skew_deg"
+          ],
+          "8fc222e687e9795d50343dba65f58cf224bcefee09ffb3ff1b1fd5da4570d8a2",
+          4.5
+        ],
+        [
+          [
+            "wing_bar_length_mm"
+          ],
+          "63a00c2db98c6b827a5a2b383df84683e5247f920a1b26fe28bbb7746d40bd20",
+          18.0
+        ],
+        [
+          [
+            "wing_bar_proud_mm"
+          ],
+          "89c8afba9957ebca489dca6236a81d12af0951b29bcd96806737338deda27531",
+          0.6
+        ],
+        [
+          [
+            "wing_bar_width_mm"
+          ],
+          "2034a44889655f1ed1c1c26dff15e350610e006a093e39a0ab8e421505845012",
+          2.5
+        ],
+        [
+          [
+            "wing_center_z_mm"
+          ],
+          "1e6ecdef533d55e0f47165c1acf7ad61b116fcaa6e9913dde03e2bdd3291bcfc",
+          28.0
+        ],
+        [
+          [
+            "wing_pitch_deg"
+          ],
+          "a2d18e68423977b671773f5e271357d63babaa3d5216cf3c058e2e4758df5f83",
+          -8.0
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C2": "12e564b65a8d1690fded53ce505581d2e374b3e3e8443b5ff1eeb31e65e1bcc0",
+        "acceptance:C2": "34648850704117fb4d0f63df95227c0041972bae74e9ffbf0cf505de2121b3e9"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 2.98,
+    "limit": 10.0,
+    "units": "cents",
+    "detail": "solve: 470.81 Hz with the hole open, +2.98 cents from 470 Hz (limit 10.0 cents); one 0.6 mm grid taken to h = 0, good to 0.4 % = 7 cents; passive resonance, not a played note",
+    "goalpost": [
+      {
+        "key": "C2",
+        "measured": 2.98,
+        "units": "cents",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 1.0,
+            "outcome": "fail",
+            "measured": 2.98,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 5.0,
+            "outcome": "pass",
+            "measured": 2.98,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 20.0,
+            "outcome": "pass",
+            "measured": 2.98,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 100.0,
+            "outcome": "pass",
+            "measured": 2.98,
+            "units": "cents"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 0,
+    "boundary": "tier:1",
+    "results": [],
+    "inconclusive": [],
+    "not_mutated": []
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:first_build_hole (the finger hole at 6.6 mm, as first built: the solved open note falls to 461.5 Hz, 32 cents flat): solve: 461.54 Hz with the hole open, -31.46 cents from 470 Hz (limit 10.0 cents); one 0.6 mm grid taken to h = 0, good to 0.4 % = 7 cents; passive resonance, not a played note",
+  "measured": 31.46,
+  "limit": 10.0,
+  "units": "cents",
+  "digest": "acc13206a1b8d79051c5b959dde21ba998e1c7a2dcc7283b7edae017c0448ee4"
+}

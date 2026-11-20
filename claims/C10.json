@@ -1,0 +1,28 @@
+{
+  "statement": "The lips stop at least 12 mm short of the window",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "lip stop to window distance",
+    "comparator": ">=",
+    "limit": 12.0,
+    "units": "mm"
+  },
+  "rationale": "A window shaded by lips or face flattens the closed note by 146 to 193 cents in the acoustics notes' worked sets (input vessel-flute-acoustics-notes, section 7, the shaded-window row). In the design panel the concept whose lip stop was 7.4 mm from the window put the corner of the mouth on it; the character judge asked for 12 to 15 mm. 12 mm is the low end of that. It is a length in the model: where a real mouth stops is seen on a printed whistle.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "tags": [
+    "lips-clear"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The distance along the tail from the lip stop to the windway exit, where the window starts, read from the model.",
+    "evaluators": [
+      "whistle.lips_clear"
+    ]
+  },
+  "requirements": [
+    "R2",
+    "R6"
+  ]
+}

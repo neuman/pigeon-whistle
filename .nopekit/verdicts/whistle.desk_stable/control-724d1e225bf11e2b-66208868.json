@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.desk_stable",
+  "rho": "724d1e225bf11e2b6df0737ab90a70626cc76fc59436c62f88e1b1f5c70c78f5",
+  "static": "95d9ade8a8ff5a04d06c93bb7405fe6d5266da985d8e37c908348d871d9ed840",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "6f79923188cbceb568583b4a85418cf69b562933e9cfe3085ae688851943cfad",
+      "files": [
+        "gates/_shared.py",
+        "gates/print_file.py",
+        "model/acoustics.py",
+        "model/geom.py",
+        "model/islands.py",
+        "model/pigeon.py",
+        "model/solve.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:narrow_foot",
+      "expect": "fail",
+      "note": "the same solid standing on a 27.7 mm wide strip: the support under the centre of mass shrinks to 13.8 mm each side and it tips at 19.3 degrees",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "2e67a0d4e83f8e4264375404a674c29981304d286048697efb707a84074c05ee"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C20": "f98ecde18cfce78798b951d98146538c441131cabc8688d8d03e8a2b07d052d3",
+      "acceptance:C20": "fe6542b298849c01c57ace49b66d782bc6ca3b9de94d3be272d95f626d4cd950"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "fdm.mesh_path"
+          ],
+          "1c3d204c99a39a4224f91d292825908c1862f2506a7528c5c3ad4090b2e9d280",
+          "<out>/selftest/known-good/pigeon-whistle-e93208370219.stl"
+        ],
+        [
+          [
+            "geometry_hash"
+          ],
+          "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+          "e93208370219"
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C20": "f98ecde18cfce78798b951d98146538c441131cabc8688d8d03e8a2b07d052d3",
+        "acceptance:C20": "fe6542b298849c01c57ace49b66d782bc6ca3b9de94d3be272d95f626d4cd950"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 43.3,
+    "limit": 30.0,
+    "units": "deg",
+    "detail": "pigeon-whistle-e93208370219.stl: centre of mass 35.9 mm up, 33.8 mm inside the nearest edge of a 7970 mm^2 footprint (the hull of the bed patch): tips past 43.3 deg (limit 30.0); one density assumed, sparse infill not modelled",
+    "goalpost": [
+      {
+        "key": "C20",
+        "measured": 43.3,
+        "units": "deg",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 3.0,
+            "outcome": "pass",
+            "measured": 43.3,
+            "units": "deg"
+          },
+          {
+            "end": "limit",
+            "limit": 15.0,
+            "outcome": "pass",
+            "measured": 43.3,
+            "units": "deg"
+          },
+          {
+            "end": "limit",
+            "limit": 60.0,
+            "outcome": "fail",
+            "measured": 43.3,
+            "units": "deg"
+          },
+          {
+            "end": "limit",
+            "limit": 300.0,
+            "outcome": "fail",
+            "measured": 43.3,
+            "units": "deg"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 0,
+    "boundary": "tier:1",
+    "results": [],
+    "inconclusive": [],
+    "not_mutated": []
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:narrow_foot (the same solid standing on a 27.7 mm wide strip: the support under the centre of mass shrinks to 13.8 mm each side and it tips at 19.3 degrees): pigeon-whistle-e93208370219.stl: centre of mass 39.6 mm up, 13.8 mm inside the nearest edge of a 3260 mm^2 footprint (the hull of the bed patch): tips past 19.3 deg (limit 30.0); one density assumed, sparse infill not modelled",
+  "measured": 19.3,
+  "limit": 30.0,
+  "units": "deg",
+  "digest": "0ac3c3890b3654b66558af31cd32fc5839f43fc6c62ee6e2ee2910ae25a20b4f"
+}

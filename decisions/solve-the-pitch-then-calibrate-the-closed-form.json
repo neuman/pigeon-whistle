@@ -1,0 +1,43 @@
+{
+  "title": "Solve the pitch, then calibrate the closed form",
+  "when": "2026-11-20T03:09:06Z",
+  "summary": "The two notes come from a potential-flow solve of the drawn geometry, taken to zero grid size over seven grids; the closed form in the model carries three end factors calibrated on that solve and is held to it within 1 % in all four states (C3).",
+  "rejected": [
+    {
+      "value": "the textbook closed form alone, with end factors from the books",
+      "why": "in the design panel the two concepts whose pitch models were not checked against an independent solve read 7 % and 3 % flat of one (317 Hz and 331 Hz against a designed 340 Hz): one closed form left out the junction between window and throat, the other designer's solver read 5 to 6 % high in conductance on its own test case; the published instruments in the acoustics notes put an uncalibrated window at 10 % typical, and the vent here needs an end factor of 4.69 where the books give 1.46 to 1.70",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when one printed whistle has been measured and the window's end factor is backed out of that measurement: the acoustics notes expect about 3 % from the closed form then"
+      },
+      "input": "vessel-flute-acoustics-notes"
+    },
+    {
+      "value": "one grid of the solve, read as it is",
+      "why": "every single grid reads flat of the limit, by 3.0 % at 0.8 mm, 2.3 % at 0.6 mm and 0.8 % at 0.25 mm on the closed note: the convergence is first order at the sharp labium edge, so a design centred on one grid is off by 14 to 52 cents",
+      "type": "infeasible",
+      "returns_if": {
+        "claim": "C1",
+        "quantity": "limit",
+        "comparator": ">=",
+        "value": 52.0
+      }
+    }
+  ],
+  "params_changed": [
+    "k_window",
+    "k_hole",
+    "k_vent"
+  ],
+  "claims_changed": [
+    "C1",
+    "C2",
+    "C3",
+    "C7"
+  ],
+  "evidence": [
+    "model/solve.py",
+    "model/acoustics.py"
+  ],
+  "body": "What this does not buy: both models give the passive resonance of the geometry as drawn. The limit of the grid study carries about 0.3 % in frequency, and one 0.6 mm grid taken to zero about 0.4 %. The jet, viscous loss, the lips, the temperature and the print are outside both models. The three end factors belong to this geometry and do not transfer: the reamed-vent reach by the closed form is 11 cents short of the solve."
+}

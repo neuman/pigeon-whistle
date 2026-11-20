@@ -1,0 +1,24 @@
+{
+  "statement": "The print file is the model: its chamber volume and its overall size match the model within 0.5 %, and it was built from the current geometry",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "mesh to model disagreement",
+    "comparator": "<=",
+    "limit": 0.5,
+    "units": "%"
+  },
+  "rationale": "The notes come from the model and the printer gets the file, so the two must be one object (METHOD rule 6). Pitch goes as the chamber volume to the power -1/2: 0.5 % of volume is 0.25 % of frequency, about 4 cents, inside the 10 cents of C1 and C2. 0.5 % is the lead's limit. The model's chamber volume is a coarse lattice integral of the same field the file was cut from, so this catches a frame, unit or staleness error between the two, not an error they share. The file's name carries the geometry hash: after any change to the solid there is no file under the current name until model/mesh.py has run, and the evaluator reports that as a failure.",
+  "tags": [
+    "mesh-agrees"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The chamber void that model/mesh.py measured on the print file (recorded beside it, and held to the file by its geometry hash, triangle and byte counts and plastic volume) and the file's own length, width and height, each against the number the model publishes; the largest relative disagreement is held to the limit.",
+    "evaluators": [
+      "whistle.mesh_agrees"
+    ]
+  },
+  "requirements": [
+    "R3"
+  ]
+}

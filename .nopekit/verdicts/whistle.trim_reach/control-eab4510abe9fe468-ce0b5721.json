@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.trim_reach",
+  "rho": "eab4510abe9fe46841a2bb023401178c4a5dd3dd79cbfdb3d7743f22ea04e57f",
+  "static": "efc412f5b264f15eea4ee82778e43de26bb4cd93cff864ccf3c51a7006a655c7",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "ca5b094ff56f8d472c009fbf855ecdf9b315192bbbfd4a3ca6e0bb48ead6f09c",
+      "files": [
+        "gates/acoustics.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:short_ream",
+      "expect": "fail",
+      "note": "the vent reamed no further than 2.5 mm: the upward reach falls to 22 cents, the downward reach is untouched",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "tune_down_reach_cents"
+        ],
+        "c74d6bb72f7e612af22d8dad3c1595df863f000aa653294fe41b93c672605c56",
+        89.7034
+      ],
+      [
+        [
+          "tune_up_reach_cents"
+        ],
+        "246126d9d246dffcfa9401047a1ddf20708c3848b954cb5a772ea83c3a3716fb",
+        22.2514
+      ],
+      [
+        [
+          "vent_ream_max_mm"
+        ],
+        "2034a44889655f1ed1c1c26dff15e350610e006a093e39a0ab8e421505845012",
+        2.5
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C4": "5acddfbf4b116b9f472fd6749f9915be7d1ddd1aa0a0f6545ca4bf655e6579f0",
+      "acceptance:C4": "ea1577635ecfc184ba2f54e15468484013ba144e6bb102d6fc8084f274e775ac"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "tune_down_reach_cents"
+          ],
+          "c74d6bb72f7e612af22d8dad3c1595df863f000aa653294fe41b93c672605c56",
+          89.7034
+        ],
+        [
+          [
+            "tune_up_reach_cents"
+          ],
+          "9b4d4cd4109047b825c78511c3424ef85b9410b574b31c4e61ad8098a5f2fb3a",
+          77.5788
+        ],
+        [
+          [
+            "vent_ream_max_mm"
+          ],
+          "48e704842b6f902577817ecd07b1677c7feffc8cc756cd173bcfa12456197def",
+          3.5
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C4": "5acddfbf4b116b9f472fd6749f9915be7d1ddd1aa0a0f6545ca4bf655e6579f0",
+        "acceptance:C4": "ea1577635ecfc184ba2f54e15468484013ba144e6bb102d6fc8084f274e775ac"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 77.6,
+    "limit": 50.0,
+    "units": "cents",
+    "detail": "vent plugged: 89.7 cents down; reamed to 3.5 mm: 77.6 cents up (limit 50.0 each way); a first print further off than this needs a reprint",
+    "goalpost": [
+      {
+        "key": "C4",
+        "measured": 77.6,
+        "units": "cents",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 5.0,
+            "outcome": "pass",
+            "measured": 77.6,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 25.0,
+            "outcome": "pass",
+            "measured": 77.6,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 100.0,
+            "outcome": "fail",
+            "measured": 77.6,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 500.0,
+            "outcome": "fail",
+            "measured": 77.6,
+            "units": "cents"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 66,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "tune_up_reach_cents"
+        ],
+        "before": 77.5788,
+        "after": 42.5,
+        "outcome": "fail",
+        "measured": 42.5,
+        "limit": 50.0
+      },
+      {
+        "key": [
+          "tune_down_reach_cents"
+        ],
+        "before": 89.7034,
+        "after": 42.5,
+        "outcome": "fail",
+        "measured": 42.5,
+        "limit": 50.0
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "vent_ream_max_mm"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:short_ream (the vent reamed no further than 2.5 mm: the upward reach falls to 22 cents, the downward reach is untouched): vent plugged: 89.7 cents down; reamed to 2.5 mm: 22.3 cents up (limit 50.0 each way); a first print further off than this needs a reprint",
+  "measured": 22.3,
+  "limit": 50.0,
+  "units": "cents",
+  "digest": "aa6c4c536221808bc922b474fe2120325c974f8bebda83ee317e5a2677a371a6"
+}

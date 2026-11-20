@@ -1,0 +1,10 @@
+{
+  "kind": "zone",
+  "title": "Print compensation",
+  "line": "What is added to the holes and the windway gap in the print file, because they print small.",
+  "members": [
+    "hole_comp_mm",
+    "windway_gap_comp_mm"
+  ],
+  "order": 12
+}

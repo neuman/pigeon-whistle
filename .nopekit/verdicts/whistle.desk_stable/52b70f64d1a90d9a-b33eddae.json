@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "gate": "whistle.desk_stable",
+  "rho": "52b70f64d1a90d9a54c81189691a086745ff3c8a1b1e9b3d470969e925c4ba29",
+  "code": {
+    "digest": "6f79923188cbceb568583b4a85418cf69b562933e9cfe3085ae688851943cfad",
+    "files": [
+      "gates/_shared.py",
+      "gates/print_file.py",
+      "model/acoustics.py",
+      "model/geom.py",
+      "model/islands.py",
+      "model/pigeon.py",
+      "model/solve.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "fcdb5d2a5522a7a928922349fa8f8146c2269df293ef03ed5426bd6bedaee8b0",
+        "print/pigeon-whistle-e93208370219.stl"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ]
+    ],
+    "files": {
+      "print/pigeon-whistle-e93208370219.stl": "5a5941e2318470d6e450c1c6127a33fd41dd086550773a14c18da68d6331be25"
+    },
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C20": "f98ecde18cfce78798b951d98146538c441131cabc8688d8d03e8a2b07d052d3",
+      "acceptance:C20": "fe6542b298849c01c57ace49b66d782bc6ca3b9de94d3be272d95f626d4cd950"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {
+    "manifold3d": "unknown",
+    "numpy": "2.0.0",
+    "scipy": "1.13.1",
+    "skimage": "unknown",
+    "trimesh": "5.1.1"
+  },
+  "verdict": {
+    "passed": true,
+    "measured": 38.7,
+    "limit": 30.0,
+    "units": "deg",
+    "comparator": ">=",
+    "settles": "tipping angle",
+    "detail": "pigeon-whistle-e93208370219.stl: centre of mass 29.5 mm up, 23.7 mm inside the nearest edge of a 4309 mm^2 footprint (the hull of the bed patch): tips past 38.7 deg (limit 30.0); one density assumed, sparse infill not modelled",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "desk-stable"
+    ],
+    "tier": 1,
+    "pack": ""
+  },
+  "digest": "0fe1fd32fb3f2508382ff489946f411ddfffd25d07c9db620db5395c6d91dc06"
+}

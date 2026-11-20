@@ -1,0 +1,11 @@
+{
+  "kind": "zone",
+  "title": "Size limits",
+  "line": "The largest length, width and height a palm-size bird may have.",
+  "members": [
+    "max_length_mm",
+    "max_width_mm",
+    "max_height_mm"
+  ],
+  "order": 15
+}

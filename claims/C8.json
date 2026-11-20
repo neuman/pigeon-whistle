@@ -1,0 +1,27 @@
+{
+  "statement": "A fingertip can seal the finger hole: its printed diameter is at most 8 mm",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "finger hole diameter",
+    "comparator": "<=",
+    "limit": 8.0,
+    "units": "mm"
+  },
+  "rationale": "Real ocarinas use finger holes of 2.7 to 9.8 mm (input vessel-flute-acoustics-notes, section 4: Csoka's ABS alto). The same notes found no fingertip measurements and give 7 to 8 mm for a child as a judgement. In the design panel an 8.0 mm hole was called large for a small child and an 8.2 mm one marginal. 8 mm is the top of that range, applied to the diameter in the print file (the acoustic diameter plus the 0.2 mm hole compensation). The design spec's own target is tighter: 7.5 mm acoustic. Whether a given child seals it is found with a printed whistle (C25).",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "tags": [
+    "hole-sealable"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The finger hole's diameter as drawn for the printer, read from the model.",
+    "evaluators": [
+      "whistle.hole_sealable"
+    ]
+  },
+  "requirements": [
+    "R5"
+  ]
+}

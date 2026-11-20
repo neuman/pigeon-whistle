@@ -1,0 +1,27 @@
+{
+  "statement": "The windway exit gap as printed is at least 1.2 mm",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "windway exit gap",
+    "comparator": ">=",
+    "limit": 1.2,
+    "units": "mm"
+  },
+  "rationale": "The printing notes: draw the gap 1.2 to 1.5 mm and never below about 1.0 mm, because a slot between two perimeter walls closes up by 0.1 to 0.3 mm and 1.0 mm is barely over two line widths; a printed whistle head with a 1.3 mm windway is the working example there (input fdm-whistle-printing-notes, section 2.1). 1.2 mm is the low end of that range, applied to the gap in the print file. That the printed slot is clear is C24.",
+  "grounded_by": [
+    "fdm-whistle-printing-notes"
+  ],
+  "tags": [
+    "windway-printable"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The windway exit gap as drawn for the printer (the acoustic gap plus the slot compensation), read from the model.",
+    "evaluators": [
+      "whistle.windway_printable"
+    ]
+  },
+  "requirements": [
+    "R3"
+  ]
+}

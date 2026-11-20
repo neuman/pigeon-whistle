@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.no_islands",
+  "rho": "fa181011197977b20dadb18e770ec8038df6c5878a049b8e95f3fadd4b3e4f86",
+  "static": "c8f8667e9e014785f7d43625e2d32b75e8224dd7e183461385c6227a12739923",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "0b42961eab1cb49a1ab22baa5bbbcb71d6321a6e92fa4bf8f0ad0182fb6fdcc4",
+      "files": [
+        "gates/_shared.py",
+        "gates/print_file.py",
+        "model/acoustics.py",
+        "model/geom.py",
+        "model/islands.py",
+        "model/pigeon.py",
+        "model/solve.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:drooping_beak",
+      "expect": "fail",
+      "note": "a beak whose tip hangs 10 mm lower than its root: its first layers rest on nothing, and every face of it is inside the 45 degree rule the pack judges by",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "extrusion_width_mm"
+        ],
+        "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+        0.45
+      ],
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "96ca10d0b0fbbb71644017332eb950be42b08292c6703feb4ac8d00afc2979f1"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ],
+      [
+        [
+          "layer_height_mm"
+        ],
+        "58b5b27c8cdc80de8eb95feaa5dc14929b8d1ff17f8b67ae718e2e71325a0a2d",
+        0.12
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C12": "ea5bb7ac451b09322c211b7da402583a56676370a6bf892e2dd91fd3ea8c18f5",
+      "acceptance:C12": "5825e7739367f604684ddde1ae94866a05bf2f6017b230406c63366eed063c45"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "extrusion_width_mm"
+          ],
+          "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+          0.45
+        ],
+        [
+          [
+            "fdm.mesh_path"
+          ],
+          "1c3d204c99a39a4224f91d292825908c1862f2506a7528c5c3ad4090b2e9d280",
+          "<out>/selftest/known-good/pigeon-whistle-e93208370219.stl"
+        ],
+        [
+          [
+            "geometry_hash"
+          ],
+          "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+          "e93208370219"
+        ],
+        [
+          [
+            "layer_height_mm"
+          ],
+          "58b5b27c8cdc80de8eb95feaa5dc14929b8d1ff17f8b67ae718e2e71325a0a2d",
+          0.12
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C12": "ea5bb7ac451b09322c211b7da402583a56676370a6bf892e2dd91fd3ea8c18f5",
+        "acceptance:C12": "5825e7739367f604684ddde1ae94866a05bf2f6017b230406c63366eed063c45"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 0.0,
+    "limit": 0.0,
+    "units": "count",
+    "detail": "pigeon-whistle-e93208370219.stl: 0 islands and 0 hanging edges in 564 layers of 0.12 mm (0.45 mm line); 2 bridges, longest 4 mm; a raster check, not a slice",
+    "goalpost": [
+      {
+        "key": "C12",
+        "measured": 0.0,
+        "units": "count",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": -0.9,
+            "outcome": "fail",
+            "measured": 0.0,
+            "units": "count"
+          },
+          {
+            "end": "limit",
+            "limit": -0.5,
+            "outcome": "fail",
+            "measured": 0.0,
+            "units": "count"
+          },
+          {
+            "end": "limit",
+            "limit": 1.0,
+            "outcome": "pass",
+            "measured": 0.0,
+            "units": "count"
+          },
+          {
+            "end": "limit",
+            "limit": 9.0,
+            "outcome": "pass",
+            "measured": 0.0,
+            "units": "count"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 0,
+    "boundary": "tier:1",
+    "results": [],
+    "inconclusive": [],
+    "not_mutated": []
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:drooping_beak (a beak whose tip hangs 10 mm lower than its root: its first layers rest on nothing, and every face of it is inside the 45 degree rule the pack judges by): pigeon-whistle-e93208370219.stl: 1 islands and 3 hanging edges in 564 layers of 0.12 mm (0.45 mm line); first at x 126.3, y -0.0, z 19.62 mm; 2 bridges, longest 4 mm; a raster check, not a slice",
+  "measured": 4.0,
+  "limit": 0.0,
+  "units": "count",
+  "digest": "87d8ce6038c1e73a4dfcf6f3247660f05d931d30cdb779b6240e6a7c5d0cbdf1"
+}

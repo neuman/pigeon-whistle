@@ -1,0 +1,48 @@
+{
+  "title": "A window 7.0 mm by 6.3 mm",
+  "when": "2026-11-20T03:09:19Z",
+  "summary": "The window keeps the 7.0 mm cut-up and is 6.3 mm high, 44.1 mm^2: with the vent plugged the closed note then solves 90 cents under 340 Hz, so the open vent can trim both ways. It is under the 49 to 60 mm^2 the acoustics notes prefer and over their 36 mm^2 minimum.",
+  "rejected": [
+    {
+      "value": "7 x 8 mm, 56 mm^2 (the design spec)",
+      "why": "the window alone solved at 352 Hz on a 121 cm^3 chamber with a 3.5 mm wall and the full lobe: sharp of 340 Hz with the vent plugged; with the lobe narrowed and a 4 mm wall it was still about 25 cents above, where 60 to 140 cents below is needed for a vent that trims both ways",
+      "type": "infeasible",
+      "returns_if": {
+        "text": "when the low note is moved up toward 380 Hz, or the chamber may grow past the 125 cm^3 the design spec allows"
+      }
+    },
+    {
+      "value": "7.0 x 7.0 mm, 49 mm^2",
+      "why": "the vent-plugged note solved about 41 cents under 340 Hz: short of the 60 cents the tuning step wanted, and of the 50 cents of downward trim that C4 asks for",
+      "type": "infeasible",
+      "returns_if": {
+        "claim": "C4",
+        "quantity": "limit",
+        "comparator": "<=",
+        "value": 40.0
+      }
+    },
+    {
+      "value": "a deeper window wall (5.5 mm) in place of a lower window",
+      "why": "2 mm more wall lowered the window's conductance only 5 % where 16 % was needed: the passage flares on the ramp side and the lintel side",
+      "type": "infeasible",
+      "returns_if": {
+        "text": "not while the passage flares; a straight-sided neck is the throat that lost in the rump-lobe decision"
+      }
+    }
+  ],
+  "params_changed": [
+    "windway_height_mm",
+    "window_wall_mm",
+    "cutup_mm"
+  ],
+  "claims_changed": [
+    "C1",
+    "C4"
+  ],
+  "evidence": [
+    "model/solve.py",
+    "inputs/references/vessel-flute-acoustics-notes.md"
+  ],
+  "body": "The window height is also the width of the air jet. A narrower jet drives the note with less air: the model's estimate of the flow is 9.0 L/min at 200 Pa. No model here predicts loudness; C26 measures it on a printed whistle."
+}

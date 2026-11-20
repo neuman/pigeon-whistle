@@ -1,0 +1,14 @@
+{
+  "kind": "zone",
+  "title": "Window and labium",
+  "line": "The opening in the left flank of the rump, and the blade the jet meets.",
+  "members": [
+    "cutup_mm",
+    "window_wall_mm",
+    "lintel_flat_mm",
+    "labium_tip_mm",
+    "labium_ramp_deg",
+    "labium_offset_mm"
+  ],
+  "order": 8
+}

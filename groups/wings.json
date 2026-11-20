@@ -1,0 +1,16 @@
+{
+  "kind": "zone",
+  "title": "Wings and feet",
+  "line": "Low folded wings with two bars each, and two foot pads under the chest.",
+  "members": [
+    "wing_center_z_mm",
+    "wing_pitch_deg",
+    "wing_bar_width_mm",
+    "wing_bar_proud_mm",
+    "wing_bar_length_mm",
+    "foot_length_mm",
+    "foot_width_mm",
+    "foot_height_mm"
+  ],
+  "order": 4
+}

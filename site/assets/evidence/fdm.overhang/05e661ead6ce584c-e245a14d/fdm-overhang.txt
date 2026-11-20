@@ -1,0 +1,10 @@
+# fdm.overhang — /home/neuman/my-thing/print/pigeon-whistle-e93208370219.stl
+# build axis (0.0, 0.0, 1.0), limit 45.0 deg, 74690 faces, 34769.3 mm^2 total surface
+# 6 faces past the limit, 0.41 mm^2 (0.001% of surface)
+face_index	angle_deg	area_mm2	centroid_x	centroid_y	centroid_z
+53725	63.97	0.0334	82.499	30.807	22.011
+52642	55.59	0.0041	72.280	30.798	22.074
+58497	54.37	0.0340	110.886	13.240	29.999
+58318	52.46	0.1916	111.301	11.410	31.318
+28879	50.12	0.0726	98.497	-21.003	0.587
+14039	48.69	0.0784	37.217	13.211	11.442

@@ -4,5 +4,19 @@
   "description": "Feral rock pigeon 'Pedro' cooing, Paris, hand-held Olympus LS-12 under 50 cm (xeno-canto XC539061 via Wikimedia Commons)",
   "sha256": "43bdc3d715d7559cd7283620bed7e5d566a79983a44583c4e35edc07f1319309",
   "added": "2026-11-19T21:02:58Z",
+  "extractions": [
+    {
+      "what": "Tracked note by note (method and tables in input coo-pitch-analysis, section 3.1): 18 of 26 segments used. The fundamental is an arch, 193 Hz at the start of a note, 256 Hz at its top, 200 Hz at its end. The loudest partial is the second harmonic (92 % of the energy, 10.6 dB over the fundamental): 380 Hz at the start (quartiles 363 to 413), 511 Hz at its highest (455 to 533), 382 Hz at the end; energy-weighted 449 Hz. A note lasts 0.38 s and notes start 0.94 s apart.",
+      "grounds": [
+        "target_open_hz",
+        "C2",
+        "C22",
+        "C1",
+        "C21"
+      ],
+      "confidence": "measured",
+      "note": "One hand-fed feral pigeon in Paris, sex not known, hand-held recorder under 50 cm. This is the one recording in which the loudest partial sweeps low, high, low; its low end is 380 Hz, not the 340 Hz the person chose."
+    }
+  ],
   "licence": "CC BY-SA 4.0, Marie-Lan Tay Pamart, https://commons.wikimedia.org/wiki/File:Columba_livia_-_Rock_Dove_XC539061.mp3"
 }

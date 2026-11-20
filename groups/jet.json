@@ -1,0 +1,14 @@
+{
+  "kind": "station",
+  "title": "Jet",
+  "line": "The air jet at the assumed breath: its speed, its flow and the Strouhal number of each note.",
+  "members": [
+    "strouhal_closed",
+    "strouhal_open",
+    "jet_speed_m_s",
+    "flow_l_min",
+    "windway_exit_gap_cad_mm",
+    "radiated_fraction"
+  ],
+  "order": 6
+}

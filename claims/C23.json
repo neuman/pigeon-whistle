@@ -1,0 +1,14 @@
+{
+  "statement": "It reads as a chubby, cute city pigeon",
+  "kind": "physical",
+  "rationale": "R1 is a judgment about a look. The design panel read this shape as a pigeon from renders; no evaluator measures cute, and a render is not the printed thing in a hand.",
+  "mechanism": {
+    "by": "human",
+    "how": "Stand the printed whistle on a desk and look at it from the side, the front and above, at arm's length, then hold it. The authority says whether it reads as a chubby, cute city pigeon and not as another bird."
+  },
+  "authority": "neuman",
+  "requirements": [
+    "R1",
+    "R6"
+  ]
+}

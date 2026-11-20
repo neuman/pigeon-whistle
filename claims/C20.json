@@ -1,0 +1,24 @@
+{
+  "statement": "It sits steady on a desk: it tips only when tilted past 30 degrees",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "tipping angle",
+    "comparator": ">=",
+    "limit": 30.0,
+    "units": "deg"
+  },
+  "rationale": "R6: a desk piece. 30 degrees is the lead's judgement and has no outside source: the three panel concepts stood at 40 to 44 degrees and the character judge called all of them very stable; 30 keeps that class with room for the centre of mass not being where one density puts it. Measured on the print file with one density throughout; the sparse infill of the head, tail block and roof is not modelled, and the desk is taken as flat and hard.",
+  "tags": [
+    "desk-stable"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "On the print file: the convex hull of the faces lying on the bed, the centre of mass of the closed solid at one density, and the angle whose tangent is the plan distance from the centre of mass to the nearest hull edge over its height.",
+    "evaluators": [
+      "whistle.desk_stable"
+    ]
+  },
+  "requirements": [
+    "R6"
+  ]
+}

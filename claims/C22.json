@@ -1,0 +1,31 @@
+{
+  "statement": "The same whistle, finger hole open, sounds between 432 and 508 Hz",
+  "kind": "physical",
+  "acceptance": {
+    "quantity": "measured open note",
+    "comparator": "between",
+    "limit": 432.0,
+    "limit_hi": 508.0,
+    "units": "Hz"
+  },
+  "rationale": "470 Hz +-8 %, for the same reason as C21 (input coo-pitch-analysis). The interval the hole makes is the better-conditioned part of the model, but the open note still rides on the closed one, and a printed hole is 0.1 to 0.3 mm small: 0.1 mm of hole diameter is about 7 cents on this note.",
+  "grounded_by": [
+    "coo-pitch-analysis",
+    "vessel-flute-acoustics-notes",
+    "coo-xc539061-paris-feral-pigeon",
+    "coo-xc541143-paris-feral-pigeon",
+    "coo-sangli-blue-rock-pigeon"
+  ],
+  "mechanism": {
+    "by": "measurement",
+    "how": "The same whistle, with the vent as it was left for C21. Hold it as it is played: the tail in the mouth up to the lip stop, the fingers forward of the window, and the whistle in the hand, not resting on a desk (a surface under the belly lowers the note by about 2 %). Lift the finger clear of the hole by at least the hole's width. Blow the same gentle, steady breath and read the note on a tuner app held at arm's length. Blow three times and take the middle reading. If it is flat, the finger hole may be reamed as TUNING.md says; record the note after that and say what was done."
+  },
+  "expected_latency": {
+    "value": 1,
+    "units": "day"
+  },
+  "requirements": [
+    "R2",
+    "R5"
+  ]
+}

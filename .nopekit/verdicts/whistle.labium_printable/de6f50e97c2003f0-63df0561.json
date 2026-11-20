@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "gate": "whistle.labium_printable",
+  "rho": "de6f50e97c2003f02310092cb93a6bd03887d4fb0e9ae7748484232ee3136658",
+  "code": {
+    "digest": "277bcf41b20c8f6fe3e1122d57aa46dd72424caab2df92f7125cea1b7106d73e",
+    "files": [
+      "gates/printability.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "extrusion_width_mm"
+        ],
+        "cbf33abae742d83657db55a2278caf9b1a3e459bad89bd99e6ce2c9e112ffcb1",
+        0.45
+      ],
+      [
+        [
+          "labium_tip_mm"
+        ],
+        "8e29c97e40473267183acc8265cb574b1fb4dfcd9c281f368e487cf0a285a865",
+        0.5
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C17": "9df2af3a11710a6457a9ec77f0da93bdff2690797f9578b12eabafcdbc7bab6e",
+      "acceptance:C17": "003abc0c81b7dce1b6696ac87559a76945d13d2a0c82180edd26914207a8d1dd"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 0.5,
+    "limit": 0.45,
+    "units": "mm",
+    "comparator": ">=",
+    "settles": "labium tip width",
+    "detail": "labium tip flat 0.50 mm against a 0.45 mm line (limit 0.45 mm)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "labium-printable"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "9863435d4e813f2187c4e1733ee95eb3d4ee0804a8c4bc31d7d8be3e466ad364"
+}

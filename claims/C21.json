@@ -1,0 +1,30 @@
+{
+  "statement": "A printed whistle, finger hole closed, sounds between 313 and 367 Hz once the vent is trimmed",
+  "kind": "physical",
+  "acceptance": {
+    "quantity": "measured closed note",
+    "comparator": "between",
+    "limit": 313.0,
+    "limit_hi": 367.0,
+    "units": "Hz"
+  },
+  "rationale": "340 Hz +-8 %: the recordings do not justify a tighter tolerance on either note (input coo-pitch-analysis: the loudest partial is centred at 292, 388 and 449 Hz in the three recordings). No evaluator can settle this. Both models give the passive resonance of the geometry as designed; a played note differs from it by the jet, the lips, the temperature and the print, about +-10 % before trimming (input vessel-flute-acoustics-notes, section 3).",
+  "grounded_by": [
+    "coo-pitch-analysis",
+    "vessel-flute-acoustics-notes",
+    "coo-xc539061-paris-feral-pigeon",
+    "coo-xc541143-paris-feral-pigeon",
+    "coo-sangli-blue-rock-pigeon"
+  ],
+  "mechanism": {
+    "by": "measurement",
+    "how": "Print the whistle from the exported package. Hold it as it is played: the tail in the mouth up to the lip stop, the fingers forward of the window, and the whistle in the hand, not resting on a desk (a surface under the belly lowers the note by about 2 %). Seal the finger hole with a fingertip. Blow a gentle, steady breath and read the note on a tuner app held at arm's length. Blow three times and take the middle reading. If it is outside the band, trim the vent as TUNING.md in the package says (plug it with wax to lower the note, ream it toward 3.5 mm to raise it) and measure again. Record the note after trimming, and say in the detail what was done to the vent."
+  },
+  "expected_latency": {
+    "value": 1,
+    "units": "day"
+  },
+  "requirements": [
+    "R2"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "station",
+  "title": "Trim reach",
+  "line": "How far the closed note moves when the vent is plugged or reamed to its largest size.",
+  "members": [
+    "tune_up_reach_cents",
+    "tune_down_reach_cents",
+    "f_closed_plugged_hz",
+    "f_closed_reamed_hz",
+    "f_open_plugged_hz"
+  ],
+  "order": 2
+}

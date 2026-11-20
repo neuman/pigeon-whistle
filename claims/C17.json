@@ -1,0 +1,27 @@
+{
+  "statement": "The labium tip is a flat at least 0.45 mm wide",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "labium tip width",
+    "comparator": ">=",
+    "limit": 0.45,
+    "units": "mm"
+  },
+  "rationale": "A slicer drops or widens whatever is thinner than its minimum feature, so a modelled knife edge prints truncated and the cut-up grows by an amount the slicer decides: 0.7 to 1.4 mm on a 25 degree ramp for a minimum feature of 0.3 to 0.6 mm (input fdm-whistle-printing-notes, section 2.1, which asks for an explicit flat of 0.45 to 0.50 mm). 0.45 mm is one line at the configured width. Whether a blunt 0.45 mm edge voices as well as a sharper one is untested (same notes).",
+  "grounded_by": [
+    "fdm-whistle-printing-notes"
+  ],
+  "tags": [
+    "labium-printable"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The width of the flat on the labium tip, read from the model.",
+    "evaluators": [
+      "whistle.labium_printable"
+    ]
+  },
+  "requirements": [
+    "R3"
+  ]
+}

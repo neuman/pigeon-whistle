@@ -1,0 +1,32 @@
+{
+  "statement": "With the finger hole closed, the modelled note is within 10 cents of 340 Hz",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "closed pitch error",
+    "comparator": "<=",
+    "limit": 10.0,
+    "units": "cents"
+  },
+  "rationale": "340 Hz is the low note the person chose for the coo (R2). 10 cents (0.58 %) is the lead's centring tolerance for the MODEL, not a tuning tolerance for a whistle: it is about 1.5 times what one 0.6 mm solve can resolve (0.4 % = 7 cents, model/solve.py GRID_SCATTER) and far inside the +-8 % (133 cents) the recordings support (input coo-pitch-analysis, from the three coo recordings). The same analysis finds 340 Hz weakly supported and 380 Hz better supported; the person chose 340 rising to 470. Both models give the passive resonance of the geometry as designed. A played note is expected within about +-10 % of it before trimming (input vessel-flute-acoustics-notes, section 3); that is C21's question, not this one's.",
+  "grounded_by": [
+    "coo-pitch-analysis",
+    "vessel-flute-acoustics-notes",
+    "coo-xc539061-paris-feral-pigeon",
+    "coo-xc541143-paris-feral-pigeon",
+    "coo-sangli-blue-rock-pigeon"
+  ],
+  "tags": [
+    "pitch-closed"
+  ],
+  "mechanism": {
+    "by": "solver",
+    "how": "The passive resonance of the designed geometry with the finger hole closed and the vent open, found twice: by the lumped Helmholtz closed form in the model, and by a potential-flow solve of the same geometry on a 0.6 mm grid taken to zero grid size. Both must land within the limit, and both are run only while the chamber is short beside the wavelength (C7).",
+    "evaluators": [
+      "whistle.pitch_closed",
+      "whistle.pitch_closed_solved"
+    ]
+  },
+  "requirements": [
+    "R2"
+  ]
+}

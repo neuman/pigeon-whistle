@@ -1,0 +1,11 @@
+{
+  "kind": "zone",
+  "title": "Closed-form calibration",
+  "line": "Three end factors fitted to the potential-flow solve of this one geometry.",
+  "members": [
+    "k_window",
+    "k_hole",
+    "k_vent"
+  ],
+  "order": 11
+}

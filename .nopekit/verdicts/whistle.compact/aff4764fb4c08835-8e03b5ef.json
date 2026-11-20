@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.compact",
+  "rho": "aff4764fb4c088350c2189ee04b99f3010657429ce52ee80a94cd6ce58dd4556",
+  "code": {
+    "digest": "c7b110d13e600ec8425187bd6cace9bebd53a4ed798ebe81a758ade2611071c2",
+    "files": [
+      "gates/acoustics.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "cavity_length_mm"
+        ],
+        "92bbd4aad02ce68565ae7dd5baeab7e882be022f5e43640d9df1077eed7c978d",
+        81.9451
+      ],
+      [
+        [
+          "f_open_hz"
+        ],
+        "df6707a0313248ceb83fdaa2697cd31e554751432da16939428301ee58274fa9",
+        469.6275
+      ],
+      [
+        [
+          "lumped_ratio"
+        ],
+        "fc372d8203914b5ce4ede23411cfd6dabf0c8c1bc334fbe5df92512c2714cd1b",
+        0.1112
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C7": "8c1c18a83be205db91c752b3f7bbd29b423a68d77749aecf34710fe3d6939db4",
+      "acceptance:C7": "f7196b47be48989fb7911e2fbfb4d9244164e9ae38bff360de9aacdb34842ebf"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 0.1112,
+    "limit": 0.125,
+    "units": "wavelengths",
+    "comparator": "<=",
+    "settles": "chamber length over wavelength",
+    "detail": "chamber 81.9 mm long is 0.111 of the wavelength at the open note, 469.6 Hz (limit 0.125)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "compact"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "c83f359eb85503bd23ed972b885a7db06291146c7e55cc55709aee75cde741f6"
+}

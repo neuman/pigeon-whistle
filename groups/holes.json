@@ -1,0 +1,16 @@
+{
+  "kind": "station",
+  "title": "Finger hole and vent as drawn",
+  "line": "Both bores as the print file has them, with their lengths and what each adds to the note.",
+  "members": [
+    "hole_cad_d_mm",
+    "hole_area_mm2",
+    "hole_depth_mm",
+    "g_hole_mm",
+    "vent_cad_d_mm",
+    "vent_area_mm2",
+    "vent_depth_mm",
+    "g_vent_mm"
+  ],
+  "order": 5
+}

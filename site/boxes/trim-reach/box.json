@@ -1,0 +1,12 @@
+{
+ "schema": 1,
+ "kind": "custom",
+ "title": "What the vent trim can and cannot recover",
+ "caption": "Left: the modelled closed note with the vent plugged, as printed and reamed. Right: where a first print ends after the best trim, if the trim moves it as it moves the model. The band is the 8 % each way that the coo evidence tolerates. Nothing here is measured on a print.",
+ "src": "index.html",
+ "thumbnail": "thumb.png",
+ "view": "engineering",
+ "section": "implications",
+ "about": "C4",
+ "aspect": "16/9"
+}

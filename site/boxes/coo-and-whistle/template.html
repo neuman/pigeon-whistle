@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A real coo beside the whistle's two notes</title>
+<style>
+  :root { color-scheme: light; }
+  body.light {
+    --surface: #ffffff; --ink: #16191c; --ink2: #3d454e; --muted: #6b7480; --line: #ded9d2;
+    --closed: #2a78d6; --open: #eb6834; --btn: #f4f2ef; --btn-on: #e8eefc; --focus: #2f5fd0;
+  }
+  body.dark {
+    color-scheme: dark;
+    --surface: #16191d; --ink: #e8eaed; --ink2: #c3c9d1; --muted: #8d97a3; --line: #2b3037;
+    --closed: #3987e5; --open: #d95926; --btn: #1c2026; --btn-on: #1b2333; --focus: #7aa2f7;
+  }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--surface); color: var(--ink);
+    font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; padding: 8px 10px 4px; }
+  button {
+    font: inherit; color: var(--ink); background: var(--btn); border: 1px solid var(--line); border-radius: 8px;
+    padding: 5px 12px 5px 9px; display: flex; align-items: center; gap: 8px; cursor: pointer; text-align: left;
+  }
+  button:hover { border-color: var(--muted); }
+  button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button[aria-pressed="true"] { background: var(--btn-on); border-color: var(--focus); }
+  button svg { flex: none; width: 14px; height: 14px; fill: var(--ink); }
+  button b { display: block; font-weight: 600; }
+  button small { display: block; color: var(--ink2); font-size: 11px; }
+  .kind { font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; padding: 2px 12px 2px; color: var(--ink2); font-size: 12px; }
+  .legend i { display: inline-block; width: 16px; height: 0; border-top: 3px solid; vertical-align: middle; margin-right: 6px; border-radius: 2px; }
+  .legend .grey i { border-top: 9px solid var(--muted); opacity: .55; }
+  .plot { position: relative; flex: 1 1 auto; min-height: 110px; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #tip {
+    position: absolute; pointer-events: none; display: none; white-space: nowrap; z-index: 2;
+    background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+    padding: 3px 7px; font-size: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  }
+  .foot { padding: 3px 12px 8px; color: var(--ink2); font-size: 11.5px; }
+  .foot p { margin: 2px 0 0; }
+  .foot b { color: var(--ink); font-weight: 600; }
+  #status { align-self: center; color: var(--muted); font-size: 12px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  /* a small frame keeps the buttons, the picture and the credit; the rest gives way */
+  @media (max-height: 400px), (max-width: 600px) { .legend, #more { display: none; } .foot { font-size: 10.5px; padding-bottom: 5px; } }
+  @media (max-width: 600px) { .bar { gap: 6px; padding: 6px 8px 3px; } button { flex: 1 1 0; min-width: 0; padding: 4px 8px 4px 7px; } button small { display: none; } #status { display: none; } }
+  @media (max-height: 300px) { body { overflow-y: auto; } .plot { flex: 0 0 auto; height: 128px; } }
+</style>
+</head>
+<body class="light">
+<div class="bar">
+  <button id="bird" type="button" aria-pressed="false">
+    <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"/></svg>
+    <span><span class="kind">measured</span><b>The pigeon</b><small>a recording of a real bird</small></span>
+  </button>
+  <button id="model" type="button" aria-pressed="false">
+    <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"/></svg>
+    <span><span class="kind">modelled</span><b>The model's two notes</b><small>synthesised from the model: not a recording of a printed whistle</small></span>
+  </button>
+  <span id="status" role="status" aria-live="polite"></span>
+</div>
+<div class="legend" aria-hidden="true">
+  <span class="grey"><i></i><span id="greyword">the pigeon's sound (darker is louder)</span></span>
+  <span><i style="border-color: var(--closed)"></i>model, finger hole closed</span>
+  <span><i style="border-color: var(--open)"></i>model, finger hole open</span>
+</div>
+<div class="plot">
+  <canvas id="c" role="img" aria-label="Spectrogram of four pigeon coos with the whistle's two modelled notes drawn as lines"></canvas>
+  <div id="tip"></div>
+</div>
+<div class="foot">
+  <p id="credit"></p>
+  <p id="more"></p>
+</div>
+<p class="sr" id="summary"></p>
+<script>
+"use strict";
+const D = /*__DATA__*/null;
+const $ = id => document.getElementById(id);
+const canvas = $("c"), g = canvas.getContext("2d"), tip = $("tip");
+const SPEC = D.spec, M = D.model;
+const levels = Uint8Array.from(atob(SPEC.b64), ch => ch.charCodeAt(0));
+const css = name => getComputedStyle(document.body).getPropertyValue(name).trim();
+const fmt = (x, d) => Number(x).toFixed(d);
+
+// ---- the words: every number comes from the embedded data
+const lo = M.closed_hz, hi = M.open_hz, pct = Math.round(M.band * 100);
+$("credit").innerHTML = "<b>Measured:</b> the picture and the first sound, " + fmt(SPEC.seconds, 1) + " s of a feral pigeon in Paris. Recording: " +
+  D.attribution + " (an excerpt, re-encoded, same licence). <b>Modelled:</b> the two lines and the second sound, which is synthesised. No whistle is printed yet.";
+$("more").textContent = "The lines are the whistle's computed notes: " + fmt(lo, 0) + " Hz with the finger hole closed, " + fmt(hi, 0) +
+  " Hz with it open, each in a band of " + pct + " % each way (the tolerance the coo evidence supports). In this recording the second harmonic is the " +
+  "loudest part; in another recording of the same bird the fundamental is. The synthesised notes use the coo's measured note length (" +
+  fmt(D.coo.note_s, 2) + " s) and spacing (" + fmt(D.coo.onset_s, 2) + " s).";
+$("summary").textContent = "Spectrogram from " + SPEC.f_lo + " to " + SPEC.f_hi + " Hz over " + fmt(SPEC.seconds, 1) + " seconds. Four coos, each an arch. " +
+  "The second harmonic rises from about 380 to about 510 Hz and falls back. Two horizontal lines mark the model's notes at " +
+  fmt(lo, 0) + " and " + fmt(hi, 0) + " Hz.";
+
+// ---- the synthesised notes: a sine that glides closed -> open -> closed, once per note
+const starts = [];
+for (let s = D.clip.first_onset_s; s + D.coo.note_s <= SPEC.seconds; s += D.coo.onset_s) starts.push(s);
+function modelHz(t) {                        // null between notes
+  for (const s of starts) {
+    const u = (t - s) / D.coo.note_s;
+    if (u >= 0 && u <= 1) return lo * Math.pow(hi / lo, u < 0.5 ? 2 * u : 2 - 2 * u);
+  }
+  return null;
+}
+
+// ---- drawing
+let specImage = null, playT = null, playKind = null, hover = null;
+const PAD = { l: 52, r: 10, t: 6, b: 22 };
+function buildSpec(dark) {
+  const off = document.createElement("canvas");
+  off.width = SPEC.w; off.height = SPEC.h;
+  const o = off.getContext("2d"), im = o.createImageData(SPEC.w, SPEC.h);
+  for (let i = 0; i < levels.length; i++) {
+    const v = Math.pow(levels[i] / 255, 0.9);
+    const c = dark ? 22 + v * 200 : 255 - v * 215;      // one grey ramp: louder is further from the surface
+    im.data[4 * i] = c; im.data[4 * i + 1] = c + (dark ? 3 : 0); im.data[4 * i + 2] = c + (dark ? 7 : 0); im.data[4 * i + 3] = 255;
+  }
+  o.putImageData(im, 0, 0);
+  return off;
+}
+function geometry() {
+  const r = canvas.getBoundingClientRect();
+  return { W: r.width, H: r.height, x0: PAD.l, y0: PAD.t, x1: r.width - PAD.r, y1: r.height - PAD.b };
+}
+function draw() {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2), q = geometry();
+  if (q.W < 20 || q.H < 20) return;
+  if (canvas.width !== Math.round(q.W * dpr) || canvas.height !== Math.round(q.H * dpr)) {
+    canvas.width = Math.round(q.W * dpr); canvas.height = Math.round(q.H * dpr);
+  }
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, q.W, q.H);
+  const fx = t => q.x0 + t / SPEC.seconds * (q.x1 - q.x0);
+  const fy = f => q.y0 + (SPEC.f_hi - f) / (SPEC.f_hi - SPEC.f_lo) * (q.y1 - q.y0);
+  const ink = css("--ink"), muted = css("--muted"), line = css("--line"), surface = css("--surface");
+  g.imageSmoothingEnabled = true; g.imageSmoothingQuality = "high";
+  g.drawImage(specImage, q.x0, q.y0, q.x1 - q.x0, q.y1 - q.y0);
+  g.font = "11px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
+  // axes: recessive
+  g.fillStyle = muted; g.strokeStyle = line; g.lineWidth = 1;
+  g.textAlign = "right"; g.textBaseline = "middle";
+  for (let f = 200; f <= SPEC.f_hi; f += 100) {
+    g.beginPath(); g.moveTo(q.x0 - 4, fy(f)); g.lineTo(q.x0, fy(f)); g.stroke();
+    g.fillText(f + (f === 700 ? " Hz" : ""), q.x0 - 7, fy(f));
+  }
+  g.textAlign = "center"; g.textBaseline = "top";
+  for (let t = 0; t <= SPEC.seconds; t += 1) {
+    g.beginPath(); g.moveTo(fx(t), q.y1); g.lineTo(fx(t), q.y1 + 4); g.stroke();
+    g.fillText(t + " s", Math.max(fx(t), q.x0 + 8), q.y1 + 7);
+  }
+  g.strokeRect(q.x0 + 0.5, q.y0 + 0.5, q.x1 - q.x0 - 1, q.y1 - q.y0 - 1);
+  // the model: a band and a line per note, each labelled at its line
+  const notes = [[lo, css("--closed"), "model, hole closed: " + fmt(lo, 0) + " Hz"],
+                 [hi, css("--open"), "model, hole open: " + fmt(hi, 0) + " Hz"]];
+  for (const [f, colour, words] of notes) {
+    g.globalAlpha = 0.17; g.fillStyle = colour;
+    g.fillRect(q.x0, fy(f * (1 + M.band)), q.x1 - q.x0, fy(f * (1 - M.band)) - fy(f * (1 + M.band)));
+    g.globalAlpha = 1; g.strokeStyle = colour; g.lineWidth = 2;
+    g.beginPath(); g.moveTo(q.x0, fy(f)); g.lineTo(q.x1, fy(f)); g.stroke();
+    g.font = "600 12px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
+    const w = g.measureText(words).width, bx = q.x1 - w - 16, by = fy(f) - 21;
+    g.globalAlpha = 0.9; g.fillStyle = surface; g.fillRect(bx, by, w + 12, 17); g.globalAlpha = 1;
+    g.fillStyle = ink; g.textAlign = "left"; g.textBaseline = "middle"; g.fillText(words, bx + 6, by + 9);
+  }
+  // the bird's two partials, named once at the first note
+  g.font = "11px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
+  g.textAlign = "center"; g.lineWidth = 3; g.strokeStyle = surface; g.fillStyle = ink; g.lineJoin = "round";
+  const lx = Math.max(fx(D.clip.first_loud_s), q.x0 + 52);
+  g.textBaseline = "middle";
+  for (const [f, words] of [[D.clip.h2_top_hz + 48, "second harmonic"], [D.clip.f0_low_hz - 42, "fundamental"]]) {
+    const y = Math.min(Math.max(fy(f), q.y0 + 8), q.y1 - 8);
+    g.strokeText(words, lx, y); g.fillText(words, lx, y);
+  }
+  // the model's notes while they sound: the path so far and a marker
+  if (playKind === "model" && playT !== null) {
+    g.strokeStyle = ink; g.lineWidth = 2.5; g.lineJoin = "round";
+    for (const s of starts) {
+      const end = Math.min(playT, s + D.coo.note_s);
+      if (end <= s) continue;
+      g.beginPath();
+      for (let t = s; t <= end + 1e-9; t += 0.008) { const y = fy(modelHz(Math.min(t, s + D.coo.note_s))); if (t === s) g.moveTo(fx(t), y); else g.lineTo(fx(t), y); }
+      g.stroke();
+    }
+    const f = modelHz(playT);
+    if (f !== null) {
+      g.beginPath(); g.arc(fx(playT), fy(f), 5, 0, 2 * Math.PI); g.fillStyle = ink; g.fill();
+      g.lineWidth = 2; g.strokeStyle = surface; g.stroke();
+    }
+  }
+  if (playT !== null) {
+    g.strokeStyle = ink; g.lineWidth = 1.5; g.globalAlpha = 0.75;
+    g.beginPath(); g.moveTo(fx(playT), q.y0); g.lineTo(fx(playT), q.y1); g.stroke(); g.globalAlpha = 1;
+  }
+  if (hover) {
+    g.strokeStyle = muted; g.lineWidth = 1; g.setLineDash([3, 3]);
+    g.beginPath(); g.moveTo(hover.x, q.y0); g.lineTo(hover.x, q.y1); g.moveTo(q.x0, hover.y); g.lineTo(q.x1, hover.y); g.stroke();
+    g.setLineDash([]);
+  }
+}
+
+// ---- hover: time, frequency and level under the pointer
+canvas.addEventListener("pointermove", e => {
+  const q = geometry(), r = canvas.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  if (x < q.x0 || x > q.x1 || y < q.y0 || y > q.y1) { hover = null; tip.style.display = "none"; draw(); return; }
+  const t = (x - q.x0) / (q.x1 - q.x0) * SPEC.seconds, f = SPEC.f_hi - (y - q.y0) / (q.y1 - q.y0) * (SPEC.f_hi - SPEC.f_lo);
+  const col = Math.min(SPEC.w - 1, Math.max(0, Math.round(t / SPEC.seconds * (SPEC.w - 1))));
+  const row = Math.min(SPEC.h - 1, Math.max(0, Math.round((SPEC.f_hi - f) / (SPEC.f_hi - SPEC.f_lo) * (SPEC.h - 1))));
+  const v = levels[row * SPEC.w + col], db = (v / 255 - 1) * SPEC.range_db;
+  let where = "";
+  if (Math.abs(f / lo - 1) <= M.band) where = " · in the closed note's band";
+  else if (Math.abs(f / hi - 1) <= M.band) where = " · in the open note's band";
+  tip.textContent = fmt(t, 2) + " s · " + fmt(f, 0) + " Hz · " + (v === 0 ? "more than " + fmt(SPEC.range_db, 0) : fmt(-db, 0)) + " dB under the loudest point" + where;
+  tip.style.display = "block";
+  const tw = tip.offsetWidth;
+  tip.style.left = Math.max(4, Math.min(x + 12, r.width - tw - 4)) + "px";
+  tip.style.top = Math.max(2, y - 30) + "px";
+  hover = { x, y }; draw();
+});
+canvas.addEventListener("pointerleave", () => { hover = null; tip.style.display = "none"; draw(); });
+
+// ---- sound
+let ctx = null, birdBuffer = null, stopCurrent = null, raf = 0, turn = 0;
+function audio() {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return null;
+  if (!ctx) ctx = new AC();
+  if (ctx.state === "suspended") ctx.resume();
+  return ctx;
+}
+function decodeBird(ac) {
+  if (birdBuffer) return Promise.resolve(birdBuffer);
+  const bin = atob(D.audio.slice(D.audio.indexOf(",") + 1)), bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new Promise((ok, no) => ac.decodeAudioData(bytes.buffer, b => { birdBuffer = b; ok(b); }, no));
+}
+function setPlaying(kind) {
+  for (const id of ["bird", "model"]) {
+    const on = id === kind, b = $(id);
+    b.setAttribute("aria-pressed", String(on));
+    b.querySelector("path").setAttribute("d", on ? "M2.5 2.5h9v9h-9z" : "M3 1.5v11l9-5.5z");
+  }
+  playKind = kind;
+  $("status").textContent = kind === "bird" ? "Playing the recording." : kind === "model" ? "Playing a synthesised sound, not a whistle." : "";
+}
+function stop() {
+  if (stopCurrent) { try { stopCurrent(); } catch (e) { /* already stopped */ } stopCurrent = null; }
+  turn += 1;                                   // a start still waiting on the decoder is now out of date
+  cancelAnimationFrame(raf); playT = null; setPlaying(null); draw();
+}
+function follow(ac, t0, seconds) {
+  const tick = () => {
+    const t = ac.currentTime - t0;
+    if (t >= seconds) { stop(); return; }
+    playT = Math.max(0, t); draw(); raf = requestAnimationFrame(tick);
+  };
+  raf = requestAnimationFrame(tick);
+}
+function play(kind) {
+  const same = playKind === kind;
+  stop();
+  if (same) return;
+  const ac = audio();
+  if (!ac) { $("status").textContent = "This browser gives the box no sound."; return; }
+  const mine = turn;
+  if (kind === "bird") {
+    $("status").textContent = "Loading the recording.";
+    decodeBird(ac).then(buffer => {
+      if (mine !== turn) return;
+      const src = ac.createBufferSource(), t0 = ac.currentTime + 0.06;
+      src.buffer = buffer; src.connect(ac.destination); src.start(t0);
+      stopCurrent = () => src.stop();
+      setPlaying("bird"); follow(ac, t0, Math.min(buffer.duration, SPEC.seconds));
+    }).catch(() => { if (mine === turn) $("status").textContent = "The recording did not decode in this browser."; });
+  } else {
+    const osc = ac.createOscillator(), gain = ac.createGain(), t0 = ac.currentTime + 0.06, n = D.coo.note_s;
+    osc.type = "sine"; osc.frequency.setValueAtTime(lo, t0); gain.gain.setValueAtTime(0, t0);
+    for (const s of starts) {
+      osc.frequency.setValueAtTime(lo, t0 + s);
+      osc.frequency.exponentialRampToValueAtTime(hi, t0 + s + n / 2);
+      osc.frequency.exponentialRampToValueAtTime(lo, t0 + s + n);
+      gain.gain.setValueAtTime(0, t0 + s);
+      gain.gain.linearRampToValueAtTime(0.22, t0 + s + 0.04);
+      gain.gain.setValueAtTime(0.22, t0 + s + n - 0.07);
+      gain.gain.linearRampToValueAtTime(0, t0 + s + n);
+    }
+    osc.connect(gain); gain.connect(ac.destination); osc.start(t0); osc.stop(t0 + SPEC.seconds + 0.05);
+    stopCurrent = () => osc.stop();
+    setPlaying("model"); follow(ac, t0, SPEC.seconds);
+  }
+}
+$("bird").addEventListener("click", () => play("bird"));
+$("model").addEventListener("click", () => play("model"));
+
+// ---- theme and size
+function theme() {
+  const dark = location.hash === "#dark";
+  document.body.className = dark ? "dark" : "light";
+  specImage = buildSpec(dark);
+  $("greyword").textContent = "the pigeon's sound (" + (dark ? "lighter" : "darker") + " is louder)";
+  draw();
+}
+window.addEventListener("hashchange", theme);
+if (window.ResizeObserver) new ResizeObserver(draw).observe(canvas); else window.addEventListener("resize", draw);
+theme();
+parent.postMessage({ eddy: "ready" }, "*");
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What the vent trim can and cannot recover</title>
+<style>
+  :root { color-scheme: light; }
+  body.light {
+    --surface: #ffffff; --ink: #16191c; --ink2: #3d454e; --muted: #6b7480; --line: #ded9d2;
+    --note: #2a78d6; --band: #1baf7a;
+  }
+  body.dark {
+    color-scheme: dark;
+    --surface: #16191d; --ink: #e8eaed; --ink2: #c3c9d1; --muted: #8d97a3; --line: #2b3037;
+    --note: #3987e5; --band: #199e70;
+  }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--surface); color: var(--ink);
+    font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 3px 16px; padding: 8px 12px 0; color: var(--ink2); font-size: 12px; }
+  .legend span { white-space: nowrap; }
+  .legend i { display: inline-block; vertical-align: middle; margin-right: 6px; }
+  .legend .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--note); }
+  .legend .fill { width: 16px; height: 9px; background: var(--band); opacity: .3; border-radius: 2px; }
+  .legend .dash { width: 18px; height: 0; border-top: 2px dashed var(--muted); }
+  .legend .dots { width: 18px; height: 0; border-top: 2px dotted var(--muted); }
+  .legend .rule { width: 18px; height: 0; border-top: 2px solid var(--ink); }
+  .panels { position: relative; flex: 1 1 auto; min-height: 120px; display: flex; }
+  .panel { position: relative; flex: 1 1 50%; min-width: 0; }
+  svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  svg text { font: 11px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: var(--muted); }
+  svg text.ink { fill: var(--ink); }
+  svg text.title { fill: var(--ink); font-weight: 600; font-size: 12.5px; }
+  svg .axis { stroke: var(--line); stroke-width: 1; fill: none; }
+  svg .halo { stroke: var(--surface); stroke-width: 3.5px; paint-order: stroke; stroke-linejoin: round; }
+  svg .hit { fill: transparent; cursor: default; }
+  #tip {
+    position: absolute; pointer-events: none; display: none; z-index: 2; max-width: 250px;
+    background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+    padding: 4px 8px; font-size: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  }
+  .foot { padding: 2px 12px 8px; color: var(--ink2); font-size: 11.5px; }
+  .foot b { color: var(--ink); font-weight: 600; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  @media (max-height: 380px), (max-width: 600px) { #detail { display: none; } .foot { font-size: 10.5px; padding-bottom: 5px; } .legend { font-size: 11px; padding-top: 5px; } }
+</style>
+</head>
+<body class="light">
+<div class="legend" aria-hidden="true">
+  <span><i class="dot"></i>closed note, solver</span>
+  <span><i class="dash"></i>closed form / no trim</span>
+  <span><i class="rule"></i>target</span>
+  <span><i class="fill"></i>band the coo evidence tolerates</span>
+  <span><i class="dots"></i>a first print: typical error</span>
+</div>
+<div class="panels" id="panels">
+  <div class="panel"><svg id="a" role="img"></svg></div>
+  <div class="panel"><svg id="b" role="img"></svg></div>
+  <div id="tip"></div>
+</div>
+<div class="foot" id="foot"></div>
+<table class="sr" id="table"></table>
+<script>
+"use strict";
+const D = {"band":0.08,"first":0.1,"formula":[[0.0,322.92],[0.1,323.02],[0.2,323.29],[0.3,323.71],[0.4,324.23],[0.5,324.85],[0.6,325.54],[0.7,326.29],[0.8,327.1],[0.9,327.96],[1.0,328.85],[1.1,329.77],[1.2,330.73],[1.3,331.71],[1.4,332.7],[1.5,333.72],[1.6,334.75],[1.7,335.8],[1.8,336.86],[1.9,337.93],[2.0,339.01],[2.1,340.09],[2.2,341.18],[2.3,342.28],[2.4,343.38],[2.5,344.49],[2.6,345.6],[2.7,346.71],[2.8,347.83],[2.9,348.95],[3.0,350.07],[3.1,351.19],[3.2,352.31],[3.3,353.43],[3.4,354.55],[3.5,355.68]],"points":[{"cents":-89.8,"d":0.0,"from":"solver, grid limit","hz":322.93,"name":"plugged"},{"cents":0.0,"d":2.1,"from":"solver, grid limit","hz":340.12,"name":"as printed"},{"cents":24.1,"d":2.5,"from":"solver, mean of two grids","hz":344.9,"name":"reamed"},{"cents":56.2,"d":3.0,"from":"solver, mean of two grids","hz":351.3,"name":"reamed"},{"cents":88.7,"d":3.5,"from":"solver, mean of two grids","hz":358.0,"name":"reamed"}],"reach":{"down_cents":89.8,"formula_short_cents":11,"formula_up_cents":77.6,"up_cents":88.7},"recover":{"band_high":386.7,"band_low":297.2,"exact_high":358.1,"exact_low":323.0},"target":340.0,"worst":[0.15,0.2]};
+const NS = "http://www.w3.org/2000/svg";
+const $ = id => document.getElementById(id);
+const fmt = (x, d) => Number(x).toFixed(d);
+const signed = (x, d) => (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(d);
+const T = D.target, up = D.reach.up_cents, down = D.reach.down_cents;
+const pctOf = hz => 100 * (hz / T - 1);
+const best = x => x < D.recover.exact_low ? x * Math.pow(2, up / 1200) : x > D.recover.exact_high ? x * Math.pow(2, -down / 1200) : T;
+
+function el(parent, name, attrs, text) {
+  const node = document.createElementNS(NS, name);
+  for (const k in attrs) node.setAttribute(k, attrs[k]);
+  if (text !== undefined) node.textContent = text;
+  parent.appendChild(node);
+  return node;
+}
+function tipFor(node, words) {
+  const tip = $("tip"), host = $("panels");
+  const show = e => {
+    tip.textContent = words; tip.style.display = "block";
+    const r = host.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+    tip.style.left = Math.max(4, Math.min(x + 12, r.width - tip.offsetWidth - 4)) + "px";
+    tip.style.top = Math.max(2, y - tip.offsetHeight - 10) + "px";
+  };
+  node.addEventListener("pointerenter", show); node.addEventListener("pointermove", show);
+  node.addEventListener("pointerleave", () => { tip.style.display = "none"; });
+}
+function frame(svg, title, xLabel) {
+  const r = svg.getBoundingClientRect(), W = r.width, H = r.height;
+  svg.innerHTML = ""; svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+  const q = { W, H, x0: 44, x1: W - 14, y0: 30, y1: H - 40 };
+  el(svg, "text", { x: 12, y: 16, class: "title" }, title);
+  el(svg, "text", { x: (q.x0 + q.x1) / 2, y: H - 6, "text-anchor": "middle" }, xLabel);
+  return q;
+}
+function bandAndTarget(svg, q, fy, labelX) {
+  const b = D.band;
+  el(svg, "rect", { x: q.x0, y: fy(T * (1 + b)), width: q.x1 - q.x0, height: fy(T * (1 - b)) - fy(T * (1 + b)), fill: "var(--band)", opacity: 0.16 });
+  el(svg, "line", { x1: q.x0, x2: q.x1, y1: fy(T), y2: fy(T), stroke: "var(--ink)", "stroke-width": 1.5 });
+  el(svg, "text", { x: labelX, y: fy(T) - 5, class: "ink halo" }, "target " + fmt(T, 0) + " Hz");
+}
+function yAxis(svg, q, fy, lo, hi) {
+  for (let f = Math.ceil(lo / 20) * 20; f <= hi; f += 20) {
+    el(svg, "line", { class: "axis", x1: q.x0 - 4, x2: q.x0, y1: fy(f), y2: fy(f) });
+    el(svg, "text", { x: q.x0 - 7, y: fy(f) + 4, "text-anchor": "end" }, f);
+  }
+  el(svg, "path", { class: "axis", d: "M" + q.x0 + " " + q.y0 + "V" + q.y1 + "H" + q.x1 });
+}
+function dot(svg, x, y, words) {
+  el(svg, "circle", { cx: x, cy: y, r: 5, fill: "var(--note)", stroke: "var(--surface)", "stroke-width": 2 });
+  tipFor(el(svg, "circle", { cx: x, cy: y, r: 10, class: "hit" }), words);
+}
+
+function panelA() {
+  const svg = $("a"), q = frame(svg, "The closed note against the vent (Hz)", "vent diameter, mm");
+  const lo = T * 0.87, hi = T * 1.13, d0 = -0.3, d1 = 3.8;
+  const fx = d => q.x0 + (d - d0) / (d1 - d0) * (q.x1 - q.x0), fy = f => q.y0 + (hi - f) / (hi - lo) * (q.y1 - q.y0);
+  bandAndTarget(svg, q, fy, fx(0.75));
+  el(svg, "text", { x: q.x0 + 8, y: fy(T * (1 + D.band)) + 14, class: "ink halo" }, "±" + Math.round(D.band * 100) + " %: coo evidence");
+  for (const s of [-1, 1]) {
+    const f = T * (1 + s * D.first);
+    el(svg, "line", { x1: q.x0, x2: q.x1, y1: fy(f), y2: fy(f), stroke: "var(--muted)", "stroke-width": 1.5, "stroke-dasharray": "1.5 4", "stroke-linecap": "round" });
+  }
+  el(svg, "text", { x: q.x0 + 8, y: fy(T * (1 + D.first)) - 5, class: "ink halo" }, "±" + Math.round(D.first * 100) + " %: a first print");
+  yAxis(svg, q, fy, lo, hi);
+  for (const p of D.points) {
+    el(svg, "line", { class: "axis", x1: fx(p.d), x2: fx(p.d), y1: q.y1, y2: q.y1 + 4 });
+    el(svg, "text", { x: fx(p.d), y: q.y1 + 16, "text-anchor": "middle" }, p.d === 0 ? "plugged" : fmt(p.d, 1));
+  }
+  el(svg, "path", { d: D.formula.map((p, i) => (i ? "L" : "M") + fx(p[0]) + " " + fy(p[1])).join(""), fill: "none", stroke: "var(--muted)", "stroke-width": 1.5, "stroke-dasharray": "5 4" });
+  el(svg, "path", { d: D.points.slice(1).map((p, i) => (i ? "L" : "M") + fx(p.d) + " " + fy(p.hz)).join(""), fill: "none", stroke: "var(--note)", "stroke-width": 2 });
+  for (const p of D.points) {
+    const words = (p.d === 0 ? "Vent plugged" : "Vent " + fmt(p.d, 1) + " mm, " + p.name) + ": " + fmt(p.hz, 1) + " Hz, " +
+      signed(p.cents, 0) + " cents from the printed size, " + signed(pctOf(p.hz), 1) + " % from the target (" + p.from + ")";
+    dot(svg, fx(p.d), fy(p.hz), words);
+  }
+  const first = D.points[0], last = D.points[D.points.length - 1], mid = D.points[1];
+  el(svg, "text", { x: fx(first.d) + 9, y: fy(first.hz) + 16, class: "ink halo" }, fmt(first.hz, 0) + " Hz (" + signed(first.cents, 0) + " cents)");
+  el(svg, "text", { x: fx(last.d) - 9, y: fy(last.hz) - 7, class: "ink halo", "text-anchor": "end" }, fmt(last.hz, 0) + " Hz (" + signed(last.cents, 0) + " cents)");
+  el(svg, "text", { x: fx(mid.d) + 4, y: fy(mid.hz) + 17, class: "ink halo", "text-anchor": "middle" }, fmt(mid.hz, 0) + " Hz");
+  svg.setAttribute("aria-label", "Closed note against vent diameter: " + D.points.map(p => (p.d === 0 ? "plugged" : fmt(p.d, 1) + " mm") + " " + fmt(p.hz, 0) + " Hz").join(", "));
+}
+
+function panelB() {
+  const svg = $("b"), q = frame(svg, "After the best trim (Hz)", "closed note of the first print, against " + fmt(T, 0) + " Hz");
+  const lo = T * 0.78, hi = T * 1.22;
+  const fx = f => q.x0 + (f - lo) / (hi - lo) * (q.x1 - q.x0), fy = f => q.y0 + (hi - f) / (hi - lo) * (q.y1 - q.y0);
+  // beyond the worst-case first print the page is left plain; the typical error is marked
+  bandAndTarget(svg, q, fy, fx(T * 0.795));
+  for (const s of [-1, 1]) {
+    const f = T * (1 + s * D.first);
+    el(svg, "line", { x1: fx(f), x2: fx(f), y1: q.y0, y2: q.y1, stroke: "var(--muted)", "stroke-width": 1.5, "stroke-dasharray": "1.5 4", "stroke-linecap": "round" });
+  }
+  yAxis(svg, q, fy, lo, hi);
+  for (const k of [-0.2, -0.1, 0, 0.1, 0.2]) {
+    const f = T * (1 + k);
+    el(svg, "line", { class: "axis", x1: fx(f), x2: fx(f), y1: q.y1, y2: q.y1 + 4 });
+    el(svg, "text", { x: fx(f), y: q.y1 + 16, "text-anchor": "middle" }, k === 0 ? fmt(T, 0) + " Hz" : signed(100 * k, 0) + " %");
+  }
+  el(svg, "line", { x1: fx(lo), y1: fy(lo), x2: fx(hi), y2: fy(hi), stroke: "var(--muted)", "stroke-width": 1.5, "stroke-dasharray": "5 4" });
+  el(svg, "text", { x: fx(T * 1.13) - 6, y: fy(T * 1.13) - 7, class: "ink halo", "text-anchor": "end" }, "no trim");
+  const xs = [lo, D.recover.exact_low, D.recover.exact_high, hi];
+  el(svg, "path", { d: xs.map((x, i) => (i ? "L" : "M") + fx(x) + " " + fy(best(x))).join(""), fill: "none", stroke: "var(--note)", "stroke-width": 2 });
+  const marks = [[D.recover.band_low, "The flattest first print that the largest ream still brings inside the band"],
+                 [D.recover.exact_low, "The flattest first print that the largest ream brings to the target"],
+                 [D.recover.exact_high, "The sharpest first print that the plug brings to the target"],
+                 [D.recover.band_high, "The sharpest first print that the plug still brings inside the band"]];
+  for (const k of D.worst) for (const s of [-1, 1]) marks.push([T * (1 + s * k), "A first print " + Math.round(k * 100) + " % " + (s < 0 ? "flat" : "sharp") + ": outside the band even after the trim, so it means a reprint"]);
+  for (const [x, words] of marks) {
+    dot(svg, fx(x), fy(best(x)), words + ": " + fmt(x, 0) + " Hz printed (" + signed(pctOf(x), 1) + " %), " + fmt(best(x), 0) + " Hz after the trim (" + signed(pctOf(best(x)), 1) + " %).");
+  }
+  const bl = D.recover.band_low, bh = D.recover.band_high;
+  el(svg, "text", { x: fx(bl) + 9, y: fy(best(bl)) + 15, class: "ink halo" }, fmt(bl, 0) + " Hz (" + signed(pctOf(bl), 1) + " %)");
+  el(svg, "text", { x: fx(bh) - 9, y: fy(best(bh)) - 8, class: "ink halo", "text-anchor": "end" }, fmt(bh, 0) + " Hz (" + signed(pctOf(bh), 1) + " %)");
+  el(svg, "text", { x: fx(T * (1 + D.first)) + 5, y: q.y1 - 8, class: "ink halo" }, "±" + Math.round(D.first * 100) + " %");
+  svg.setAttribute("aria-label", "Closed note after the best trim against the closed note of the first print. The trim brings a first print between " +
+    fmt(bl, 0) + " and " + fmt(bh, 0) + " Hz inside the band.");
+}
+
+function words() {
+  const r = D.recover;
+  $("foot").innerHTML = "<b>Modelled, not measured. Nothing is printed yet.</b><span id=\"detail\"> Plugging the vent lowers the closed note " + fmt(down, 0) + " cents; reaming it to " +
+    fmt(D.points[D.points.length - 1].d, 1) + " mm raises it " + fmt(up, 0) + " cents (the closed form, dashed, reads " + D.reach.formula_short_cents +
+    " cents short there). If a printed whistle answers the trim as the model does, a first print between " + fmt(r.band_low, 0) + " and " + fmt(r.band_high, 0) +
+    " Hz (" + signed(pctOf(r.band_low), 1) + " % to " + signed(pctOf(r.band_high), 1) + " %) ends inside the band. A miss of " +
+    Math.round(D.worst[0] * 100) + " to " + Math.round(D.worst[1] * 100) + " % does not: that is a reprint.</span>";
+  const t = $("table");
+  t.innerHTML = "<caption>Closed note by vent state</caption><tr><th>Vent</th><th>Closed note, Hz</th><th>Cents from the printed size</th></tr>" +
+    D.points.map(p => "<tr><td>" + (p.d === 0 ? "plugged" : fmt(p.d, 1) + " mm") + "</td><td>" + fmt(p.hz, 1) + "</td><td>" + fmt(p.cents, 1) + "</td></tr>").join("");
+}
+function draw() { panelA(); panelB(); }
+function theme() { document.body.className = location.hash === "#dark" ? "dark" : "light"; }
+window.addEventListener("hashchange", theme);
+if (window.ResizeObserver) new ResizeObserver(draw).observe($("panels")); else window.addEventListener("resize", draw);
+theme(); words(); draw();
+parent.postMessage({ eddy: "ready" }, "*");
+</script>
+</body>
+</html>

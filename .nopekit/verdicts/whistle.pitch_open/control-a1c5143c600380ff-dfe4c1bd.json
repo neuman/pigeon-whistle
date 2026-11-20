@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.pitch_open",
+  "rho": "a1c5143c600380ff30fa2ab6da7fbb64a792d41695b69e8f4b23009b2e826a5a",
+  "static": "e4abd84c1160738a461fa6bf00836cd182e6e7c78ce544aabe0e88db8e3011af",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "2c7481ea5b732497935fc497b45f52ecb84f43a1203ff19a9e1a39c8ea384c6f",
+      "files": [
+        "gates/acoustics.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:first_build_hole",
+      "expect": "fail",
+      "note": "the finger hole at 6.6 mm, as first built: the open note falls to 461 Hz, 34 cents flat",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "f_open_hz"
+        ],
+        "2ff6397bc4338a910703ab2505fe89f915501b8a9e2879083b1090fbee5191a5",
+        460.9707
+      ],
+      [
+        [
+          "open_error_cents"
+        ],
+        "79fcbfc56c4a0ad8864935bc6f32e0413b9184c07b75ac0f9eb2e227409af622",
+        -33.583
+      ],
+      [
+        [
+          "target_open_hz"
+        ],
+        "a52e6917c3a4ea3922ec05fe842ba4c4563382bc9c576bf0f27581681a5846f1",
+        470.0
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C2": "12e564b65a8d1690fded53ce505581d2e374b3e3e8443b5ff1eeb31e65e1bcc0",
+      "acceptance:C2": "34648850704117fb4d0f63df95227c0041972bae74e9ffbf0cf505de2121b3e9"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "f_open_hz"
+          ],
+          "df6707a0313248ceb83fdaa2697cd31e554751432da16939428301ee58274fa9",
+          469.6275
+        ],
+        [
+          [
+            "open_error_cents"
+          ],
+          "6abd93a7d402832b3675b5a5fc7e40b64b569852b08ebda3c309ed304411ea36",
+          -1.3725
+        ],
+        [
+          [
+            "target_open_hz"
+          ],
+          "a52e6917c3a4ea3922ec05fe842ba4c4563382bc9c576bf0f27581681a5846f1",
+          470.0
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C2": "12e564b65a8d1690fded53ce505581d2e374b3e3e8443b5ff1eeb31e65e1bcc0",
+        "acceptance:C2": "34648850704117fb4d0f63df95227c0041972bae74e9ffbf0cf505de2121b3e9"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 1.37,
+    "limit": 10.0,
+    "units": "cents",
+    "detail": "closed form: 469.63 Hz with the hole open, -1.37 cents from 470 Hz (limit 10.0 cents); the model's note, not a played one",
+    "goalpost": [
+      {
+        "key": "C2",
+        "measured": 1.37,
+        "units": "cents",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 1.0,
+            "outcome": "fail",
+            "measured": 1.37,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 5.0,
+            "outcome": "pass",
+            "measured": 1.37,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 20.0,
+            "outcome": "pass",
+            "measured": 1.37,
+            "units": "cents"
+          },
+          {
+            "end": "limit",
+            "limit": 100.0,
+            "outcome": "pass",
+            "measured": 1.37,
+            "units": "cents"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 64,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "open_error_cents"
+        ],
+        "before": -1.3725,
+        "after": -11.5,
+        "outcome": "fail",
+        "measured": 11.5,
+        "limit": 10.0
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "f_open_hz"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "target_open_hz"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:first_build_hole (the finger hole at 6.6 mm, as first built: the open note falls to 461 Hz, 34 cents flat): closed form: 460.97 Hz with the hole open, -33.58 cents from 470 Hz (limit 10.0 cents); the model's note, not a played one",
+  "measured": 33.58,
+  "limit": 10.0,
+  "units": "cents",
+  "digest": "df0f8725b9fd681692a8dd5bc58cc16e96c480efe92c5af2d7e05d2017524c4a"
+}

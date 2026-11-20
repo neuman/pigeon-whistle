@@ -1,0 +1,15 @@
+{
+  "kind": "zone",
+  "title": "Print settings",
+  "line": "Nozzle, line, layer, walls, infill, speed and filament.",
+  "members": [
+    "nozzle_d_mm",
+    "extrusion_width_mm",
+    "layer_height_mm",
+    "perimeters",
+    "infill_fraction",
+    "print_speed_mm_s",
+    "filament_density_g_cm3"
+  ],
+  "order": 13
+}

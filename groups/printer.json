@@ -1,0 +1,14 @@
+{
+  "kind": "zone",
+  "title": "Printer",
+  "line": "The bed that is assumed, a brim, and the overhang and bridge it prints with no support.",
+  "members": [
+    "bed_x_mm",
+    "bed_y_mm",
+    "bed_z_mm",
+    "brim_mm",
+    "overhang_limit_deg",
+    "max_bridge_mm"
+  ],
+  "order": 14
+}

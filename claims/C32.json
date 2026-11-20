@@ -1,0 +1,13 @@
+{
+  "statement": "The printer bed is at least 180 x 180 x 180 mm",
+  "kind": "assumption",
+  "rationale": "The person's printer is not recorded; R3 says only FDM with a 0.4 mm nozzle. 180 mm is the smallest common bed. The whistle is 118 x 68 x 68 mm, so the pack's bed-fit evaluator passes with room, and would on any bed over about 130 mm. It is bed_x_mm, bed_y_mm and bed_z_mm in the model.",
+  "owner": "neuman",
+  "mechanism": {
+    "by": "none",
+    "how": "The person naming a printer whose bed or height is under 180 mm fails this; the model's bed values are then set to the real ones."
+  },
+  "requirements": [
+    "R3"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "station",
+  "title": "Chamber air",
+  "line": "The volume of air, its longest dimension against the wavelength, and the lobe beside the jet.",
+  "members": [
+    "chamber_volume_mm3",
+    "cavity_length_mm",
+    "lumped_ratio",
+    "lobe_area_mm2",
+    "lobe_to_window_ratio",
+    "lobe_eave_clearance_mm"
+  ],
+  "order": 3
+}

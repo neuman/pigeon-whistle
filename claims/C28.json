@@ -1,0 +1,13 @@
+{
+  "statement": "It prints in one piece with no supports inside the airway",
+  "kind": "assumption",
+  "rationale": "The design is one closed shell. Its windway, window and chamber cannot be reached to clear supports, and every voicing face is a vertical wall for that reason. C11, C12 and C13 check the file against it and C24 settles it on a printed part. If it has to be split or supported, the chamber seam and the windway are designed again.",
+  "owner": "neuman",
+  "mechanism": {
+    "by": "none",
+    "how": "A print that needs supports inside the windway or the chamber, or that only works as two glued halves, fails this."
+  },
+  "requirements": [
+    "R3"
+  ]
+}

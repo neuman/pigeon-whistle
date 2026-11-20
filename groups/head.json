@@ -1,0 +1,19 @@
+{
+  "kind": "zone",
+  "title": "Head and face",
+  "line": "A small solid head tucked on the chest, a slim bill and side-set eyes.",
+  "members": [
+    "head_center_x_mm",
+    "head_center_z_mm",
+    "head_radius_mm",
+    "beak_length_mm",
+    "beak_pitch_deg",
+    "beak_base_radius_mm",
+    "beak_tip_radius_mm",
+    "eye_radius_mm",
+    "eye_depth_mm",
+    "eye_azimuth_deg",
+    "eye_elevation_deg"
+  ],
+  "order": 3
+}

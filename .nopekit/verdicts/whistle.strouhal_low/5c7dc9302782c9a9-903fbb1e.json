@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "gate": "whistle.strouhal_low",
+  "rho": "5c7dc9302782c9a90dd61963398a7b6de7be67896d15572f69372808664efde3",
+  "code": {
+    "digest": "2f26642a3d0fb444ac0b2495c15222c69b545c5e9e7b17dcea23ea42cc8cafd6",
+    "files": [
+      "gates/acoustics.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "blow_pressure_pa"
+        ],
+        "b04c347c9927317b212342cd4222915664e2cb72612da8395de807e69f427ec0",
+        200.0
+      ],
+      [
+        [
+          "cutup_mm"
+        ],
+        "c59945d5b10fe896f3bcdd0e9ee6a87e8a4927bb2a7965e4ac96d221cec21cc5",
+        7.0
+      ],
+      [
+        [
+          "jet_speed_m_s"
+        ],
+        "d80740d390de89f7ed8b85288eb1067e6d5ba036213ca80cd7aec2ef1de06003",
+        18.4115
+      ],
+      [
+        [
+          "strouhal_closed"
+        ],
+        "375325120dafd1fd01f0dd9b02d8e8412ac10e79fb16863431d524992a9eef3f",
+        0.1293
+      ],
+      [
+        [
+          "strouhal_open"
+        ],
+        "8d578f1c64514a497b2314f41ff2595554a9669ab183995d0b145bc684f39824",
+        0.1786
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C5": "de31835830375986f3d8d30d9d9db1a0ad5502947150eb0fe770907353643a25",
+      "acceptance:C5": "4fafa823cf5775b96ff0dd3203b2e38908b20651a546b4c051951bddee81a950"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 0.1293,
+    "limit": 0.07,
+    "units": "St",
+    "comparator": ">=",
+    "settles": "lowest Strouhal number",
+    "detail": "lowest Strouhal number 0.129 (closed note 0.129, open note 0.179) at 200 Pa, jet 18.4 m/s over a 7 mm cut-up (limit 0.07)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "strouhal-low"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "32b19f7d3f5a794a2925d45ca49fb6615c2aa37ce10f0de503ae9353de251d46"
+}

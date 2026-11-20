@@ -4,5 +4,18 @@
   "description": "Blue rock pigeon song recorded May 2012 at Sangli, India; pulsed coos, 100 Hz hum",
   "sha256": "3b80a0babedf6042a7911ec50833942d89ce5d3725c3eb5dd33d9b0c658fc7d5",
   "added": "2026-11-19T21:02:58Z",
+  "extractions": [
+    {
+      "what": "Tracked as a pulsed call (input coo-pitch-analysis, section 3.3): 4 of 6 segments used, each about 0.84 s, pulsed at about 19 Hz. The carrier in the loud core is 388 Hz, energy-weighted 390 Hz; three of the four notes open with a short element near 470 Hz, so each note opens high and settles lower. No component at half the carrier, so a fundamental cannot be separated from it.",
+      "grounds": [
+        "C1",
+        "C2",
+        "C21",
+        "C22"
+      ],
+      "confidence": "measured",
+      "note": "Bird or birds not identified, equipment and distance not stated, 100 Hz hum and signs of clipping in the file, 7.47 s in all. Weak evidence: four noisy notes."
+    }
+  ],
   "licence": "CC BY-SA 4.0, Sharadapte, https://commons.wikimedia.org/wiki/File:Blue_rock_pigeon_song_recorded_in_May_2012_at_Sangli.wav"
 }

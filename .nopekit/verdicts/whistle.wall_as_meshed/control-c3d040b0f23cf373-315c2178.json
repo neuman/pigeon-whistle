@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.wall_as_meshed",
+  "rho": "c3d040b0f23cf3731d9d87b6ec56858b6e1f4e13ede5eeffb9eb9693b3cfef4b",
+  "static": "abdbab28e38d8b59df93c5567de77ed5909ac77e0c204224192a9067d7e94c67",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "2d1305497b2261378e859fe5d5829b172b5cbd096d69e391a11a899cf1d11fa5",
+      "files": [
+        "gates/_shared.py",
+        "gates/print_file.py",
+        "model/acoustics.py",
+        "model/geom.py",
+        "model/islands.py",
+        "model/pigeon.py",
+        "model/solve.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:thin_floor_printed",
+      "expect": "fail",
+      "note": "the print file's chamber floor is 1.2 mm where the model says 2.1, and its sidecar records it",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "97e03e0fbdd243115363885e4512cbffd43975166ff74c10352c9660d7bee94e"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C15": "5f4ebdff38f4e0ea156a81cca0b975975440319e4c30ee7b063eb860e883eb12",
+      "acceptance:C15": "70544b29a8d3491f15398a04c96d37bf1b0a2be3a0dac70328df8a5a2414c8c6"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "fdm.mesh_path"
+          ],
+          "1c3d204c99a39a4224f91d292825908c1862f2506a7528c5c3ad4090b2e9d280",
+          "<out>/selftest/known-good/pigeon-whistle-e93208370219.stl"
+        ],
+        [
+          [
+            "geometry_hash"
+          ],
+          "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+          "e93208370219"
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C15": "5f4ebdff38f4e0ea156a81cca0b975975440319e4c30ee7b063eb860e883eb12",
+        "acceptance:C15": "70544b29a8d3491f15398a04c96d37bf1b0a2be3a0dac70328df8a5a2414c8c6"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 2.1,
+    "limit": 1.8,
+    "units": "mm",
+    "detail": "pigeon-whistle-e93208370219.stl: thinnest shell wall 2.10 mm as measured by model/mesh.py and recorded beside the file (limit 1.8 mm); read, not re-measured",
+    "goalpost": [
+      {
+        "key": "C15",
+        "measured": 2.1,
+        "units": "mm",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.18000000000000002,
+            "outcome": "pass",
+            "measured": 2.1,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 0.9,
+            "outcome": "pass",
+            "measured": 2.1,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 3.6,
+            "outcome": "fail",
+            "measured": 2.1,
+            "units": "mm"
+          },
+          {
+            "end": "limit",
+            "limit": 18.0,
+            "outcome": "fail",
+            "measured": 2.1,
+            "units": "mm"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 0,
+    "boundary": "tier:1",
+    "results": [],
+    "inconclusive": [],
+    "not_mutated": []
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:thin_floor_printed (the print file's chamber floor is 1.2 mm where the model says 2.1, and its sidecar records it): pigeon-whistle-e93208370219.stl: thinnest shell wall 1.20 mm as measured by model/mesh.py and recorded beside the file (limit 1.8 mm); read, not re-measured",
+  "measured": 1.2,
+  "limit": 1.8,
+  "units": "mm",
+  "digest": "de83e4cd78fd3c394275788d3c0c1109cd8739b2038ae3e71478ffc23ae29e47"
+}

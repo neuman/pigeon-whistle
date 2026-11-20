@@ -1,0 +1,19 @@
+{
+  "statement": "It prints in one piece with supports off, the windway is clear end to end, and it speaks on the first gentle breath",
+  "kind": "physical",
+  "rationale": "Nothing here slices or prints. The evaluators judge the geometry of the file; strings, sag in the two bridges, a windway that closed up, a wall that leaks and whether the edge tone starts are found only on a printed part.",
+  "mechanism": {
+    "by": "measurement",
+    "how": "Print it belly-down with supports off, as PRINT.md in the exported package says. It passes when all three hold: the print finishes as one piece and nothing rattles inside or hangs in the window or the finger hole; a 1 mm drill shank or feeler passes through the windway from the tail to the window; with the finger hole sealed, a gentle breath gives a steady note at once, not hiss alone. Any one failing fails it. A photo of the print and a sound clip are the evidence."
+  },
+  "expected_latency": {
+    "value": 1,
+    "units": "day"
+  },
+  "resolves": [
+    "C28"
+  ],
+  "requirements": [
+    "R3"
+  ]
+}

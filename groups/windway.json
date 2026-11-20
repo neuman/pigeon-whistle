@@ -1,0 +1,15 @@
+{
+  "kind": "zone",
+  "title": "Windway",
+  "line": "The vertical slot through the tail that shapes the breath into a jet.",
+  "members": [
+    "windway_length_mm",
+    "windway_height_mm",
+    "windway_floor_z_mm",
+    "windway_gap_inlet_mm",
+    "windway_gap_exit_mm",
+    "windway_skew_deg",
+    "windway_exit_chamfer_mm"
+  ],
+  "order": 7
+}

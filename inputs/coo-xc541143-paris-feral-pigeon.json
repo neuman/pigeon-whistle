@@ -4,5 +4,18 @@
   "description": "The same Paris feral pigeon on another day, about 30 cm, vacuum cleaner in the background (xeno-canto XC541143 via Wikimedia Commons)",
   "sha256": "ff7f3f1b6ab83f145b0363230e80ed2aa650879e36265c4490548c669632c2fa",
   "added": "2026-11-19T21:02:58Z",
+  "extractions": [
+    {
+      "what": "Tracked the same way (input coo-pitch-analysis, section 3.2): 22 of 23 segments used. The fundamental runs 238 Hz, 296 Hz at the top, 231 Hz. Here the fundamental itself is the loudest partial (92 % of the energy; the second harmonic is 6.9 dB under it), energy-weighted 292 Hz; the loudest partial is 467 Hz at its highest. A note lasts 0.42 s and notes start 1.13 s apart.",
+      "grounds": [
+        "C1",
+        "C2",
+        "C21",
+        "C22"
+      ],
+      "confidence": "measured",
+      "note": "The same Paris bird six days later, about 30 cm, a vacuum cleaner running, the bird not seen. It disagrees with the first recording on which partial is loudest: at the same fundamental the two differ by 10 to 12 dB below 250 Hz, cause not separable (recorder low-cut, placement, or the bird)."
+    }
+  ],
   "licence": "CC BY-SA 4.0, Marie-Lan Tay Pamart, https://commons.wikimedia.org/wiki/File:Columba_livia_-_Rock_Dove_XC541143.mp3"
 }

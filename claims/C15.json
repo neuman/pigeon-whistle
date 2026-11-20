@@ -1,0 +1,28 @@
+{
+  "statement": "The shell is thick enough to print airtight: it is nowhere thinner than four perimeters, 1.8 mm",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "thinnest shell wall",
+    "comparator": ">=",
+    "limit": 1.8,
+    "units": "mm"
+  },
+  "rationale": "Prusa's water tests on printed cylinders found four perimeters the minimum for PLA and PETG to hold water (input fdm-whistle-printing-notes, section 3). Four lines of 0.45 mm are 1.8 mm. A wall this thick CAN be printed airtight; that a print IS airtight is seen when it speaks (C24). The labium tip and the rims of the openings are thinner on purpose and are not shell.",
+  "grounded_by": [
+    "fdm-whistle-printing-notes"
+  ],
+  "tags": [
+    "wall-airtight"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The thinnest section of the shell as designed (the smaller of the shell wall and the chamber floor), and the thinnest shell wall model/mesh.py measured on the print file before the voicing cuts, each held to the limit.",
+    "evaluators": [
+      "whistle.wall_airtight",
+      "whistle.wall_as_meshed"
+    ]
+  },
+  "requirements": [
+    "R3"
+  ]
+}

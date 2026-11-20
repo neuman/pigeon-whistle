@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.compact",
+  "rho": "af488690ce1cc2576a6ae3a4cfc5f1b968d62c11329b31da089f383d5a8c76a6",
+  "static": "3720bcbd8bc1d605eb0acd089db709dba9e6fc06408de6f820d2b0bb3e31e7e9",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "c7b110d13e600ec8425187bd6cace9bebd53a4ed798ebe81a758ade2611071c2",
+      "files": [
+        "gates/acoustics.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:huge_hole",
+      "expect": "fail",
+      "note": "a 12 mm finger hole: the open note rises to 561 Hz while the chamber stays 82 mm long, 0.133 of a wavelength",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "cavity_length_mm"
+        ],
+        "92bbd4aad02ce68565ae7dd5baeab7e882be022f5e43640d9df1077eed7c978d",
+        81.9451
+      ],
+      [
+        [
+          "f_open_hz"
+        ],
+        "c0def44f0650ea7cf5d6cbe56eb13905b697d019a07fdc796d8d5a3e5af6bbb8",
+        560.6329
+      ],
+      [
+        [
+          "lumped_ratio"
+        ],
+        "21552498ac31a2393028b4feda784e3391f5830c77d5c45b93bb2751bc5a4610",
+        0.1328
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C7": "8c1c18a83be205db91c752b3f7bbd29b423a68d77749aecf34710fe3d6939db4",
+      "acceptance:C7": "f7196b47be48989fb7911e2fbfb4d9244164e9ae38bff360de9aacdb34842ebf"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "cavity_length_mm"
+          ],
+          "92bbd4aad02ce68565ae7dd5baeab7e882be022f5e43640d9df1077eed7c978d",
+          81.9451
+        ],
+        [
+          [
+            "f_open_hz"
+          ],
+          "df6707a0313248ceb83fdaa2697cd31e554751432da16939428301ee58274fa9",
+          469.6275
+        ],
+        [
+          [
+            "lumped_ratio"
+          ],
+          "fc372d8203914b5ce4ede23411cfd6dabf0c8c1bc334fbe5df92512c2714cd1b",
+          0.1112
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C7": "8c1c18a83be205db91c752b3f7bbd29b423a68d77749aecf34710fe3d6939db4",
+        "acceptance:C7": "f7196b47be48989fb7911e2fbfb4d9244164e9ae38bff360de9aacdb34842ebf"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 0.1112,
+    "limit": 0.125,
+    "units": "wavelengths",
+    "detail": "chamber 81.9 mm long is 0.111 of the wavelength at the open note, 469.6 Hz (limit 0.125)",
+    "goalpost": [
+      {
+        "key": "C7",
+        "measured": 0.1112,
+        "units": "wavelengths",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.0125,
+            "outcome": "fail",
+            "measured": 0.1112,
+            "units": "wavelengths"
+          },
+          {
+            "end": "limit",
+            "limit": 0.0625,
+            "outcome": "fail",
+            "measured": 0.1112,
+            "units": "wavelengths"
+          },
+          {
+            "end": "limit",
+            "limit": 0.25,
+            "outcome": "pass",
+            "measured": 0.1112,
+            "units": "wavelengths"
+          },
+          {
+            "end": "limit",
+            "limit": 1.25,
+            "outcome": "pass",
+            "measured": 0.1112,
+            "units": "wavelengths"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 56,
+    "boundary": "",
+    "results": [
+      {
+        "key": [
+          "lumped_ratio"
+        ],
+        "before": 0.1112,
+        "after": 0.144,
+        "outcome": "fail",
+        "measured": 0.144,
+        "limit": 0.125
+      }
+    ],
+    "inconclusive": [],
+    "not_mutated": [
+      {
+        "key": [
+          "cavity_length_mm"
+        ],
+        "why": "never-lands"
+      },
+      {
+        "key": [
+          "f_open_hz"
+        ],
+        "why": "never-lands"
+      }
+    ]
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:huge_hole (a 12 mm finger hole: the open note rises to 561 Hz while the chamber stays 82 mm long, 0.133 of a wavelength): chamber 81.9 mm long is 0.133 of the wavelength at the open note, 560.6 Hz (limit 0.125)",
+  "measured": 0.1328,
+  "limit": 0.125,
+  "units": "wavelengths",
+  "digest": "9ba8f81944653e653550f4c8651cad5be272a0d9c444099449891f96908afadf"
+}

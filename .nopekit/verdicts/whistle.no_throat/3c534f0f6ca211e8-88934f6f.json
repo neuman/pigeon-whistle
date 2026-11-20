@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.no_throat",
+  "rho": "3c534f0f6ca211e8b9b0f821c3d475df5ac28e7de367554aa8275d9e95d758be",
+  "code": {
+    "digest": "07ff90cb1b8e6fc76b7cfbc17dbd175e6d40f1c2e4918aa2531ee264c08382c4",
+    "files": [
+      "gates/acoustics.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "lobe_area_mm2"
+        ],
+        "9975e0abd51644e42dde91adbe39de5796456d80dae993689ccc5a7a661e7545",
+        252.51
+      ],
+      [
+        [
+          "lobe_to_window_ratio"
+        ],
+        "264a6d874e04b014abeeecabc98a2b0b780d2879f3a3a41d2a5069135aec34dc",
+        5.7259
+      ],
+      [
+        [
+          "window_area_mm2"
+        ],
+        "506396be7510d945d730e9a2fdfb638cf6ff9103216e4bf23664ddca5d7656c6",
+        44.1
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C9": "f4a4d604590d6134d918f3bfb2b28599bba8eea80b80582019337427c3e7ec1a",
+      "acceptance:C9": "23b3889e1f13b12ea28012976e11fc8fa9ed0d1830a20e5130f4c71bd9f3fb26"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 5.73,
+    "limit": 4.5,
+    "units": "ratio",
+    "comparator": ">=",
+    "settles": "lobe to window area ratio",
+    "detail": "lobe section 253 mm^2 beside the jet is 5.73 x the 44.1 mm^2 window (limit 4.5)",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "no-throat"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "f8f6f41783b2c3d8a53232c16ac4e3ddbefd8b135e2ec88eef0a4bf6e66004c5"
+}

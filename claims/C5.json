@@ -1,0 +1,27 @@
+{
+  "statement": "At the nominal blowing pressure the jet's Strouhal number is at least 0.07 on both notes; the closed note is the low end",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "lowest Strouhal number",
+    "comparator": ">=",
+    "limit": 0.07,
+    "units": "St"
+  },
+  "rationale": "A recorder head feeds its note only while St = f W / U lies between 0.07 and about 0.27, with W the cut-up and U the jet speed (input vessel-flute-acoustics-notes, section 2.2: Price; McKinnon's re-analysis of Verge). Below 0.07 the jet crosses the mouth too fast for the note. The band was measured on recorders, not on vessel flutes, and the pressure it is evaluated at is an assumption (C31). Inside the band says the note CAN be fed; whether this whistle speaks is C24.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "tags": [
+    "strouhal-low"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "The Strouhal number of each note from the closed form's frequency, the cut-up and the jet speed at the nominal blowing pressure (Bernoulli); the lower of the two is held to the limit.",
+    "evaluators": [
+      "whistle.strouhal_low"
+    ]
+  },
+  "requirements": [
+    "R2"
+  ]
+}

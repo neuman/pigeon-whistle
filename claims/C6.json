@@ -1,0 +1,28 @@
+{
+  "statement": "At the same blowing pressure the jet's Strouhal number is at most 0.27 on both notes; the open note is the high end",
+  "kind": "measurable",
+  "acceptance": {
+    "quantity": "highest Strouhal number",
+    "comparator": "<=",
+    "limit": 0.27,
+    "units": "St"
+  },
+  "rationale": "0.27 is the measured low-pressure edge of the band in which a recorder head feeds its note (input vessel-flute-acoustics-notes, section 2.2: Price). Above it the jet is too slow to drive the note. One breath has to hold both notes for the finger to roll between them (R5), which is why both ends are checked at one pressure. The same cautions as C5: a recorder's band, an assumed pressure (C31).",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "tags": [
+    "strouhal-high"
+  ],
+  "mechanism": {
+    "by": "closed_form",
+    "how": "As C5; the higher of the two Strouhal numbers is held to the limit.",
+    "evaluators": [
+      "whistle.strouhal_high"
+    ]
+  },
+  "requirements": [
+    "R2",
+    "R5"
+  ]
+}

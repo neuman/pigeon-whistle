@@ -1,0 +1,218 @@
+{
+  "schema": 1,
+  "kind": "control",
+  "gate": "whistle.mesh_agrees",
+  "rho": "2ad37e387b6b6fdc2c4d6203e98d75bd3ac24fafc88f9b7a0ba70f10a1286382",
+  "static": "d5ed884af7a389a0d7eae4f4019f821014fcd0f937a9fca5ee416cf5783b6c1b",
+  "static_parts": {
+    "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+    "code": {
+      "digest": "111ee795bb4295b16181bd6c3a6eef76f3a54336bb2f177bced3eef0a8dd4867",
+      "files": [
+        "gates/_shared.py",
+        "gates/print_file.py",
+        "model/acoustics.py",
+        "model/geom.py",
+        "model/islands.py",
+        "model/pigeon.py",
+        "model/solve.py"
+      ]
+    },
+    "selftest": {
+      "digest": "fe8b850005c2370f0b5f21494db96e64c1aecf76353f83e482e7b237e9411679",
+      "files": {
+        "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+        "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+        "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+      }
+    },
+    "nc": {
+      "fixture": "selftest/bad_configs.py:short_chamber",
+      "expect": "fail",
+      "note": "the print file's chamber is 4 mm shorter than the model's: 3.9 % less air, about 34 cents sharp if printed, with the outside unchanged",
+      "good": "",
+      "mutation": true
+    }
+  },
+  "host": "known-good",
+  "fixture": {
+    "digest": "2eda376870cdf2323c5cd9e601c3e40894af4c1fcd6c243d1fc552a531b2ddbd",
+    "files": {
+      "model/acoustics.py": "28b89156ddf874b7989dd1007feb6d7a5a42afeb2843f56880eef6eb76d40115",
+      "model/geom.py": "18c00ef31ffbd7e74065d1c3a153ba6e10168c2876718f46b8cb4f71234ba05c",
+      "model/islands.py": "4bfa9f40676a6e9c5200ec3bfcd756f1163e243917b379a2b4ac57406a302f15",
+      "model/pigeon.py": "3cadd5b49ef3ad2c6296388635ec22faf3a08ec33d3509d4c63f393bebef8973",
+      "model/solve.py": "ae6a19bd48ee75228ce0f4fd97be49ba05ad702469d566090f45e51ee4bc75b4",
+      "selftest/bad_configs.py": "8916a4a33364c0b056b548a9a0e5968171d5a19ffaead79f2eecb70fc69ae9b7",
+      "selftest/known_good.py": "71a4602dbadf60a96ab3483632a08c71b7e641d2cd4069a51764a69800f99bb8",
+      "selftest/standin.py": "4d25b71dd2bc8948a51f6789673510cd03b36504b2dfee62f1ba0e8b00aff55b"
+    }
+  },
+  "reads": {
+    "params": [
+      [
+        [
+          "chamber_volume_mm3"
+        ],
+        "8e9b5d84ef8c2cc56cec415ecb9377ba14046500b34d749812c944e1cb3b43a7",
+        118775.1812
+      ],
+      [
+        [
+          "fdm.mesh_path"
+        ],
+        "b4e2e14ef34bd53854dc145abb827f493baeeb4b08a5eb2424af78e90c610eb6"
+      ],
+      [
+        [
+          "geometry_hash"
+        ],
+        "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+        "e93208370219"
+      ],
+      [
+        [
+          "overall_height_mm"
+        ],
+        "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+        67.6998
+      ],
+      [
+        [
+          "overall_length_mm"
+        ],
+        "b7710a2141015ba76fbd003291460cb0ebdc8504afec84216472f2b224c86118",
+        117.7683
+      ],
+      [
+        [
+          "overall_width_mm"
+        ],
+        "b96c745a8ca28e64e042ce06890922cadda65c933d08fadee5c59fc0516c2543",
+        67.6777
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C14": "5ea6dd5a157ab1f8c9e23daaef238e7e06896461b5050a3e037f6d0e8346e1d0",
+      "acceptance:C14": "49664e60d167845bc6c455fa76b4b114be1950f87197a7c2dfa753eb9d3374b5"
+    },
+    "host": [],
+    "opaque": []
+  },
+  "bad": "fail",
+  "bad_extra": [],
+  "good": {
+    "outcome": "pass",
+    "reads": {
+      "params": [
+        [
+          [
+            "chamber_volume_mm3"
+          ],
+          "8e9b5d84ef8c2cc56cec415ecb9377ba14046500b34d749812c944e1cb3b43a7",
+          118775.1812
+        ],
+        [
+          [
+            "fdm.mesh_path"
+          ],
+          "1c3d204c99a39a4224f91d292825908c1862f2506a7528c5c3ad4090b2e9d280",
+          "<out>/selftest/known-good/pigeon-whistle-e93208370219.stl"
+        ],
+        [
+          [
+            "geometry_hash"
+          ],
+          "8fd917fd554e53c5a9f9b3f4a3e64d2970f1a2b6754c24a17bb6a704e63154c8",
+          "e93208370219"
+        ],
+        [
+          [
+            "overall_height_mm"
+          ],
+          "65b92110b72b695e08b8b7f0c55aeff9f6b18f30f8114794db5523ce23667ccd",
+          67.6998
+        ],
+        [
+          [
+            "overall_length_mm"
+          ],
+          "b7710a2141015ba76fbd003291460cb0ebdc8504afec84216472f2b224c86118",
+          117.7683
+        ],
+        [
+          [
+            "overall_width_mm"
+          ],
+          "b96c745a8ca28e64e042ce06890922cadda65c933d08fadee5c59fc0516c2543",
+          67.6777
+        ]
+      ],
+      "files": {},
+      "dirs": {},
+      "ledger": {
+        "acceptance-shape:C14": "5ea6dd5a157ab1f8c9e23daaef238e7e06896461b5050a3e037f6d0e8346e1d0",
+        "acceptance:C14": "49664e60d167845bc6c455fa76b4b114be1950f87197a7c2dfa753eb9d3374b5"
+      },
+      "host": [],
+      "opaque": []
+    },
+    "extra": [],
+    "measured": 0.295,
+    "limit": 0.5,
+    "units": "%",
+    "detail": "pigeon-whistle-e93208370219.stl: chamber 118425 mm^3 as measured by model/mesh.py vs 118775 in the model (-0.295 %); 117.77 x 67.68 x 67.70 mm vs 117.77 x 67.68 x 67.70; worst chamber -0.295 % (limit 0.5 %)",
+    "goalpost": [
+      {
+        "key": "C14",
+        "measured": 0.295,
+        "units": "%",
+        "runs": [
+          {
+            "end": "limit",
+            "limit": 0.05,
+            "outcome": "fail",
+            "measured": 0.295,
+            "units": "%"
+          },
+          {
+            "end": "limit",
+            "limit": 0.25,
+            "outcome": "fail",
+            "measured": 0.295,
+            "units": "%"
+          },
+          {
+            "end": "limit",
+            "limit": 1.0,
+            "outcome": "pass",
+            "measured": 0.295,
+            "units": "%"
+          },
+          {
+            "end": "limit",
+            "limit": 5.0,
+            "outcome": "pass",
+            "measured": 0.295,
+            "units": "%"
+          }
+        ]
+      }
+    ]
+  },
+  "mutation": {
+    "runs": 0,
+    "boundary": "tier:1",
+    "results": [],
+    "inconclusive": [],
+    "not_mutated": []
+  },
+  "admitted": "paired",
+  "detail": "correctly failed on selftest/bad_configs.py:short_chamber (the print file's chamber is 4 mm shorter than the model's: 3.9 % less air, about 34 cents sharp if printed, with the outside unchanged): pigeon-whistle-e93208370219.stl: chamber 114107 mm^3 as measured by model/mesh.py vs 118775 in the model (-3.931 %); 117.77 x 67.68 x 67.70 mm vs 117.77 x 67.68 x 67.70; worst chamber -3.931 % (limit 0.5 %)",
+  "measured": 3.931,
+  "limit": 0.5,
+  "units": "%",
+  "digest": "f06d60bda99eb0d5ec582eb1c0a91e89415ce998970265318eb10dad0dfad877"
+}

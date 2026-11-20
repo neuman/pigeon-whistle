@@ -1,0 +1,13 @@
+{
+  "statement": "It is blown through the tail",
+  "kind": "assumption",
+  "rationale": "The whole layout follows from it: the windway runs through the tail, the lip stop is on the tail top, the window is in the rump flank and the fingers hold forward of it. The person was shown this guess with the requirements and said the list looks good; that is not a recorded acceptance. If the beak or the breast should be the mouthpiece, the layout is drawn again.",
+  "owner": "neuman",
+  "mechanism": {
+    "by": "none",
+    "how": "The person saying they would rather blow it another way, or a first player putting the wrong end to the mouth, fails this."
+  },
+  "requirements": [
+    "R6"
+  ]
+}

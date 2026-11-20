@@ -1,0 +1,16 @@
+{
+  "statement": "The air in the chamber is at about 25.5 C when played, so sound travels at 346 m/s",
+  "kind": "assumption",
+  "rationale": "Every modelled pitch is proportional to the speed of sound. 25.5 C is the equilibrium of a warmed, played wind instrument (input vessel-flute-acoustics-notes, section 1.3: Fuks; oboe 25.6 C, flute 26.8 C), and the humidity and the carbon dioxide of the breath roughly cancel. A cold first toot is about 13 cents flat of the model and long play about 17 cents sharp. It is c_air_m_s in the model.",
+  "grounded_by": [
+    "vessel-flute-acoustics-notes"
+  ],
+  "owner": "neuman",
+  "mechanism": {
+    "by": "none",
+    "how": "A thermometer in the chamber of a played whistle reading far from 25 C, or the note of C21 drifting more than about 30 cents between the first toot and a minute of play, fails this."
+  },
+  "requirements": [
+    "R2"
+  ]
+}

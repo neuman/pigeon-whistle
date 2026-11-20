@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "gate": "whistle.pitch_closed",
+  "rho": "58de64387bb2325de8de16baee852cc12a6c93183aecb436a474bc64b6280c2e",
+  "code": {
+    "digest": "c6cf2131a4e449badd5196f7e95b5313297a609e7ceb23c4914685da1efab7f3",
+    "files": [
+      "gates/acoustics.py"
+    ],
+    "fallback": ""
+  },
+  "spine": "b9c5046a0430346c084cc073ce23a13dab1788c34c118bdc75b3a3aabc9cee29",
+  "reads": {
+    "params": [
+      [
+        [
+          "closed_error_cents"
+        ],
+        "f95a1fc0821e61da0fe73613afcb883873b03206778fa031775a4207d367e1c9",
+        0.4527
+      ],
+      [
+        [
+          "f_closed_hz"
+        ],
+        "a384ca3b957966653ae415260dbf226379146ecd0868b22b58e7d5ee8fae7e1a",
+        340.0889
+      ],
+      [
+        [
+          "target_closed_hz"
+        ],
+        "2c23af5d3913543c12727b1e66240b0f62a58958ce31cc1286b74abd3172d4a3",
+        340.0
+      ]
+    ],
+    "files": {},
+    "dirs": {},
+    "ledger": {
+      "acceptance-shape:C1": "76c6c52705d87082e1a1d4c522618712f0aad87645314011d1fcbfab10bd658a",
+      "acceptance:C1": "632627ef6d595ac0fdcc593e1cf0989005cab4daba82dfc4d3282de165cbb89c"
+    },
+    "model": null,
+    "opaque": []
+  },
+  "instruments": {},
+  "verdict": {
+    "passed": true,
+    "measured": 0.45,
+    "limit": 10.0,
+    "units": "cents",
+    "comparator": "<=",
+    "settles": "closed pitch error",
+    "detail": "closed form: 340.09 Hz with the hole closed, +0.45 cents from 340 Hz (limit 10.0 cents); the model's note, not a played one",
+    "evidence": [],
+    "locators": [],
+    "claims": [
+      "pitch-closed"
+    ],
+    "tier": 0,
+    "pack": ""
+  },
+  "digest": "c90ded01709b29a29d6093e4096a46e05156d60bde7e77eba0dc1b3cf75e7e4b"
+}

@@ -1,0 +1,14 @@
+{
+  "statement": "'Loud enough' means heard across a room",
+  "kind": "assumption",
+  "rationale": "R2 and R6 ask for a toy that sounds like a pigeon and is fun to blow; nobody gave a level. The chamber was made as large as the palm allows on this reading: a 92 cm^3 concept was rejected as the quietest. C26 turns it into a number and measures it.",
+  "owner": "neuman",
+  "mechanism": {
+    "by": "none",
+    "how": "The person saying it should carry outdoors, or should be quiet enough for a flat at night, fails this."
+  },
+  "requirements": [
+    "R2",
+    "R6"
+  ]
+}

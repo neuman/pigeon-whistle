@@ -1,0 +1,39 @@
+{
+  "title": "Print belly-down, with the voicing on its side",
+  "when": "2026-11-20T03:09:44Z",
+  "summary": "The bird prints in the pose it sits in, belly and tail on the bed, and the voicing is turned on its side: the windway is a vertical slot and the labium a vertical blade, so every voicing face is a perimeter wall. The window opens on the left flank of the rump.",
+  "rejected": [
+    {
+      "value": "standing on the tail",
+      "why": "on the printing notes' simplified bird the bed patch is 198 mm^2 against 2082 mm^2 belly-down, 4.32 % of the shell is past 45 degrees (0.5 % allowed) with a 9.4 mm unanchored span; the labium then points down and is the first strand of a bridge, and the mouthpiece is loaded across its layers",
+      "type": "infeasible",
+      "returns_if": {
+        "text": "when the shell is drawn again as a teardrop that widens from the tail at 45 degrees or less and a brim is accepted; the labium still bridges"
+      },
+      "input": "fdm-whistle-printing-notes"
+    },
+    {
+      "value": "a horizontal windway with the window on top of the tail",
+      "why": "the windway roof is then a bridge 8 to 12 mm wide with its strands across the airflow, the 1.3 mm gap is made of 0.12 mm layers and can only change in steps of one, and the labium edge is one bridged strand; the fdm-print pack sees none of this",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when a sideways voicing does not speak on a printed part and a horizontal one printed beside it does: no source compared the two on one model"
+      },
+      "input": "fdm-whistle-printing-notes"
+    }
+  ],
+  "params_changed": [
+    "windway_skew_deg",
+    "windway_floor_z_mm",
+    "tail_half_width_mm"
+  ],
+  "claims_changed": [
+    "C11",
+    "C12",
+    "C28"
+  ],
+  "evidence": [
+    "inputs/references/fdm-whistle-printing-notes.md"
+  ],
+  "body": "What it costs: the bird is not symmetric (one flank carries the window), the walls of the windway cannot be reached with sandpaper, the jet can be no wider than the tail is high, and the chamber roof is a ridge, not a dome."
+}

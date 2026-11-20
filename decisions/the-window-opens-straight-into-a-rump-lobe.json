@@ -1,0 +1,38 @@
+{
+  "title": "The window opens straight into a rump lobe",
+  "when": "2026-11-20T03:09:56Z",
+  "summary": "The chamber runs back into the rump as a lobe 15 mm wide, and the window in the left flank opens straight into that air: 253 mm^2 of chamber beside the jet, 5.7 times the window. The windway is a straight 30 mm slot through the tail and the lips stop 15 mm short of the window.",
+  "rejected": [
+    {
+      "value": "a window behind a throat (the print-first and character-first concepts)",
+      "why": "window paths 15.8 and 17.0 mm long, 3.7 and 4.3 equal-area radii, outside every recipe in the acoustics notes: quiet and breathy by the panel's estimate; their designers' pitch models read high, and an independent solve gave 317 and 331 Hz against a designed 340 Hz",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when the chamber has to shrink below about 100 cm^3: a throat then works as a neck, if its junction is in the model and it is 7.5 mm wide or more"
+      },
+      "input": "vessel-flute-acoustics-notes"
+    },
+    {
+      "value": "a long skewed windway to a 21 x 17 mm scoop on the flank (the acoustics-first concept)",
+      "why": "the scoop lies where the thumb goes (64 cents flat with a pad resting over it) and a fingertip reaches the labium inside it; the 43.5 mm slot has about twice the length in which a string or a seam can sit; as drawn the concept failed the overhang evaluator (0.71 to 0.82 % against 0.5 %) and its print estimate was about 21 h and 107 g",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when a guard rib keeps fingers off the scoop and its roof is drawn again at 42 degrees: its pitch model was the only one of the three an independent solve confirmed"
+      }
+    }
+  ],
+  "params_changed": [
+    "lobe_width_mm",
+    "lobe_ridge_z_mm",
+    "windway_length_mm",
+    "lip_stop_x_mm"
+  ],
+  "claims_changed": [
+    "C9",
+    "C10"
+  ],
+  "evidence": [
+    "model/pigeon.py"
+  ],
+  "body": "The lobe is the narrowest the design allows (250 mm^2 and 4.5 times the window). It was taken that narrow on purpose: the window's own conductance was 16 % too high for 340 Hz, and a narrower lobe lowers it without narrowing the jet. C9 holds it from becoming a throat again."
+}

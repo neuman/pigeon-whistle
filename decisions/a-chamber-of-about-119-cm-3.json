@@ -1,0 +1,40 @@
+{
+  "title": "A chamber of about 119 cm^3",
+  "when": "2026-11-20T03:09:20Z",
+  "summary": "The chamber holds 118.8 cm^3 of air: inside the 115 to 125 cm^3 the design panel settled on, large enough to keep the window out of a throat and small enough that the finger hole stays under 8 mm as printed.",
+  "rejected": [
+    {
+      "value": "92 cm^3 (the character-first concept)",
+      "why": "the quietest and breathiest of the three by the panel's estimate: 4.7 % of the oscillation loss radiated, behind a window path 17 mm long, outside every recipe in the acoustics notes",
+      "type": "dominated",
+      "returns_if": {
+        "text": "when the bird has to be shorter than about 110 mm and a quieter whistle is accepted"
+      },
+      "input": "vessel-flute-acoustics-notes"
+    },
+    {
+      "value": "145 cm^3 (the acoustics-first concept)",
+      "why": "its finger hole comes out at 8.1 to 8.2 mm (8.3 to 8.4 mm as drawn for print), over the 8 mm of C8 and marginal for a child; it radiates best of the three (7.4 % against 5.7 % here, both estimates) and it got its volume from flat roof strips that are bridges inside the chamber",
+      "type": "infeasible",
+      "returns_if": {
+        "claim": "C8",
+        "quantity": "limit",
+        "comparator": ">=",
+        "value": 8.4
+      }
+    }
+  ],
+  "params_changed": [
+    "body_radius_x_mm",
+    "body_radius_y_mm",
+    "body_radius_z_mm"
+  ],
+  "claims_changed": [
+    "C8",
+    "C9",
+    "C18"
+  ],
+  "evidence": [
+    "inputs/references/vessel-flute-acoustics-notes.md"
+  ]
+}

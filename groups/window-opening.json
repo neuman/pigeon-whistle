@@ -1,0 +1,17 @@
+{
+  "kind": "station",
+  "title": "Window",
+  "line": "The window's size, depth and place, and its distance from the lips.",
+  "members": [
+    "window_area_mm2",
+    "window_cutup_mm",
+    "window_height_mm",
+    "window_depth_mm",
+    "window_aperture_mm2",
+    "window_sill_z_mm",
+    "window_pos_frac",
+    "g_window_mm",
+    "lip_to_window_mm"
+  ],
+  "order": 4
+}
