@@ -26,6 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: List the Eddy boxes for site/eddy-boxes.js
+        run: python3 .github/scripts/boxes_index.py site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
